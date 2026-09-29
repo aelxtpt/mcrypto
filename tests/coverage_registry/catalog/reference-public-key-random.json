@@ -1,0 +1,3769 @@
+{
+  "catalog": {
+    "REFERENCE_PUBLIC_KEY/RSA": {
+      "operations": {
+        "pk-encryption-keygen": {
+          "unit": [
+            "test_rsa_pure.mojo::test_os2ip_i2osp",
+            "test_rsa_pure.mojo::test_reference_oaep_sha1_decrypt_kat",
+            "test_rsa_pure.mojo::test_reference_pss_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_reference_pkcs1_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_generated_key_roundtrips_and_tamper",
+            "test_public_key.mojo::test_rsa_oaep_roundtrip",
+            "test_public_key.mojo::test_rsa_pss_tamper",
+            "test_public_key.mojo::test_every_encryption_dispatch_branch",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_rsa_pure.mojo",
+              "id": "test_rsa_pure.mojo::test_os2ip_i2osp"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_rsa_pure.mojo::test_os2ip_i2osp",
+            "test_rsa_pure.mojo::test_reference_oaep_sha1_decrypt_kat",
+            "test_rsa_pure.mojo::test_reference_pss_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_reference_pkcs1_sha1_verify_kat"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "pk-encrypt": {
+          "unit": [
+            "test_rsa_pure.mojo::test_os2ip_i2osp",
+            "test_rsa_pure.mojo::test_reference_oaep_sha1_decrypt_kat",
+            "test_rsa_pure.mojo::test_reference_pss_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_reference_pkcs1_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_generated_key_roundtrips_and_tamper",
+            "test_public_key.mojo::test_rsa_oaep_roundtrip",
+            "test_public_key.mojo::test_rsa_pss_tamper",
+            "test_public_key.mojo::test_every_encryption_dispatch_branch",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_rsa_pure.mojo",
+              "id": "test_rsa_pure.mojo::test_os2ip_i2osp"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_rsa_pure.mojo::test_os2ip_i2osp",
+            "test_rsa_pure.mojo::test_reference_oaep_sha1_decrypt_kat",
+            "test_rsa_pure.mojo::test_reference_pss_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_reference_pkcs1_sha1_verify_kat"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "pk-decrypt": {
+          "unit": [
+            "test_rsa_pure.mojo::test_os2ip_i2osp",
+            "test_rsa_pure.mojo::test_reference_oaep_sha1_decrypt_kat",
+            "test_rsa_pure.mojo::test_reference_pss_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_reference_pkcs1_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_generated_key_roundtrips_and_tamper",
+            "test_public_key.mojo::test_rsa_oaep_roundtrip",
+            "test_public_key.mojo::test_rsa_pss_tamper",
+            "test_public_key.mojo::test_every_encryption_dispatch_branch",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_rsa_pure.mojo",
+              "id": "test_rsa_pure.mojo::test_os2ip_i2osp"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_rsa_pure.mojo::test_os2ip_i2osp",
+            "test_rsa_pure.mojo::test_reference_oaep_sha1_decrypt_kat",
+            "test_rsa_pure.mojo::test_reference_pss_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_reference_pkcs1_sha1_verify_kat"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "pk-signature-keygen": {
+          "unit": [
+            "test_rsa_pure.mojo::test_os2ip_i2osp",
+            "test_rsa_pure.mojo::test_reference_oaep_sha1_decrypt_kat",
+            "test_rsa_pure.mojo::test_reference_pss_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_reference_pkcs1_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_generated_key_roundtrips_and_tamper",
+            "test_public_key.mojo::test_rsa_oaep_roundtrip",
+            "test_public_key.mojo::test_rsa_pss_tamper",
+            "test_public_key.mojo::test_every_encryption_dispatch_branch",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_rsa_pure.mojo",
+              "id": "test_rsa_pure.mojo::test_os2ip_i2osp"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_rsa_pure.mojo::test_os2ip_i2osp",
+            "test_rsa_pure.mojo::test_reference_oaep_sha1_decrypt_kat",
+            "test_rsa_pure.mojo::test_reference_pss_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_reference_pkcs1_sha1_verify_kat"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "pk-sign": {
+          "unit": [
+            "test_rsa_pure.mojo::test_os2ip_i2osp",
+            "test_rsa_pure.mojo::test_reference_oaep_sha1_decrypt_kat",
+            "test_rsa_pure.mojo::test_reference_pss_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_reference_pkcs1_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_generated_key_roundtrips_and_tamper",
+            "test_public_key.mojo::test_rsa_oaep_roundtrip",
+            "test_public_key.mojo::test_rsa_pss_tamper",
+            "test_public_key.mojo::test_every_encryption_dispatch_branch",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_rsa_pure.mojo",
+              "id": "test_rsa_pure.mojo::test_os2ip_i2osp"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_rsa_pure.mojo::test_os2ip_i2osp",
+            "test_rsa_pure.mojo::test_reference_oaep_sha1_decrypt_kat",
+            "test_rsa_pure.mojo::test_reference_pss_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_reference_pkcs1_sha1_verify_kat"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "pk-verify": {
+          "unit": [
+            "test_rsa_pure.mojo::test_os2ip_i2osp",
+            "test_rsa_pure.mojo::test_reference_oaep_sha1_decrypt_kat",
+            "test_rsa_pure.mojo::test_reference_pss_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_reference_pkcs1_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_generated_key_roundtrips_and_tamper",
+            "test_public_key.mojo::test_rsa_oaep_roundtrip",
+            "test_public_key.mojo::test_rsa_pss_tamper",
+            "test_public_key.mojo::test_every_encryption_dispatch_branch",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_rsa_pure.mojo",
+              "id": "test_rsa_pure.mojo::test_os2ip_i2osp"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_rsa_pure.mojo::test_os2ip_i2osp",
+            "test_rsa_pure.mojo::test_reference_oaep_sha1_decrypt_kat",
+            "test_rsa_pure.mojo::test_reference_pss_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_reference_pkcs1_sha1_verify_kat"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_PUBLIC_KEY/DSA": {
+      "operations": {
+        "pk-signature-keygen": {
+          "unit": [
+            "test_finite_field_signatures.mojo::test_rfc6979_dsa_sha256_vector_and_tamper",
+            "test_finite_field_signatures.mojo::test_dsa_and_nr_generated_key_roundtrips",
+            "test_finite_field_signatures.mojo::test_rejects_malformed_parameters_and_keys",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_finite_field_signatures.mojo",
+              "id": "test_finite_field_signatures.mojo::test_rfc6979_dsa_sha256_vector_and_tamper"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_finite_field_signatures.mojo::test_rfc6979_dsa_sha256_vector_and_tamper",
+            "test_finite_field_signatures.mojo::test_rejects_malformed_parameters_and_keys"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "pk-sign": {
+          "unit": [
+            "test_finite_field_signatures.mojo::test_rfc6979_dsa_sha256_vector_and_tamper",
+            "test_finite_field_signatures.mojo::test_dsa_and_nr_generated_key_roundtrips",
+            "test_finite_field_signatures.mojo::test_rejects_malformed_parameters_and_keys",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_finite_field_signatures.mojo",
+              "id": "test_finite_field_signatures.mojo::test_rfc6979_dsa_sha256_vector_and_tamper"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_finite_field_signatures.mojo::test_rfc6979_dsa_sha256_vector_and_tamper",
+            "test_finite_field_signatures.mojo::test_rejects_malformed_parameters_and_keys"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "pk-verify": {
+          "unit": [
+            "test_finite_field_signatures.mojo::test_rfc6979_dsa_sha256_vector_and_tamper",
+            "test_finite_field_signatures.mojo::test_dsa_and_nr_generated_key_roundtrips",
+            "test_finite_field_signatures.mojo::test_rejects_malformed_parameters_and_keys",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_finite_field_signatures.mojo",
+              "id": "test_finite_field_signatures.mojo::test_rfc6979_dsa_sha256_vector_and_tamper"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_finite_field_signatures.mojo::test_rfc6979_dsa_sha256_vector_and_tamper",
+            "test_finite_field_signatures.mojo::test_rejects_malformed_parameters_and_keys"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_PUBLIC_KEY/DSA-RFC6979": {
+      "operations": {
+        "pk-signature-keygen": {
+          "unit": [
+            "test_finite_field_signatures.mojo::test_rfc6979_dsa_sha256_vector_and_tamper",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_finite_field_signatures.mojo",
+              "id": "test_finite_field_signatures.mojo::test_rfc6979_dsa_sha256_vector_and_tamper"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_finite_field_signatures.mojo::test_rfc6979_dsa_sha256_vector_and_tamper"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "pk-sign": {
+          "unit": [
+            "test_finite_field_signatures.mojo::test_rfc6979_dsa_sha256_vector_and_tamper",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_finite_field_signatures.mojo",
+              "id": "test_finite_field_signatures.mojo::test_rfc6979_dsa_sha256_vector_and_tamper"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_finite_field_signatures.mojo::test_rfc6979_dsa_sha256_vector_and_tamper"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "pk-verify": {
+          "unit": [
+            "test_finite_field_signatures.mojo::test_rfc6979_dsa_sha256_vector_and_tamper",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_finite_field_signatures.mojo",
+              "id": "test_finite_field_signatures.mojo::test_rfc6979_dsa_sha256_vector_and_tamper"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_finite_field_signatures.mojo::test_rfc6979_dsa_sha256_vector_and_tamper"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_PUBLIC_KEY/ElGamal": {
+      "operations": {
+        "pk-encryption-keygen": {
+          "unit": [
+            "test_finite_field_signatures.mojo::test_elgamal_encrypt_sign_roundtrip_and_tamper",
+            "test_finite_field_signatures.mojo::test_rejects_malformed_parameters_and_keys",
+            "test_public_key.mojo::test_every_encryption_dispatch_branch",
+            "test_public_key.mojo::test_every_signature_dispatch_branch",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_finite_field_signatures.mojo",
+              "id": "test_finite_field_signatures.mojo::test_elgamal_encrypt_sign_roundtrip_and_tamper"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_finite_field_signatures.mojo::test_elgamal_encrypt_sign_roundtrip_and_tamper",
+            "test_finite_field_signatures.mojo::test_rejects_malformed_parameters_and_keys",
+            "test_public_key.mojo::test_every_signature_dispatch_branch"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "pk-encrypt": {
+          "unit": [
+            "test_finite_field_signatures.mojo::test_elgamal_encrypt_sign_roundtrip_and_tamper",
+            "test_finite_field_signatures.mojo::test_rejects_malformed_parameters_and_keys",
+            "test_public_key.mojo::test_every_encryption_dispatch_branch",
+            "test_public_key.mojo::test_every_signature_dispatch_branch",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_finite_field_signatures.mojo",
+              "id": "test_finite_field_signatures.mojo::test_elgamal_encrypt_sign_roundtrip_and_tamper"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_finite_field_signatures.mojo::test_elgamal_encrypt_sign_roundtrip_and_tamper",
+            "test_finite_field_signatures.mojo::test_rejects_malformed_parameters_and_keys",
+            "test_public_key.mojo::test_every_signature_dispatch_branch"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "pk-decrypt": {
+          "unit": [
+            "test_finite_field_signatures.mojo::test_elgamal_encrypt_sign_roundtrip_and_tamper",
+            "test_finite_field_signatures.mojo::test_rejects_malformed_parameters_and_keys",
+            "test_public_key.mojo::test_every_encryption_dispatch_branch",
+            "test_public_key.mojo::test_every_signature_dispatch_branch",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_finite_field_signatures.mojo",
+              "id": "test_finite_field_signatures.mojo::test_elgamal_encrypt_sign_roundtrip_and_tamper"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_finite_field_signatures.mojo::test_elgamal_encrypt_sign_roundtrip_and_tamper",
+            "test_finite_field_signatures.mojo::test_rejects_malformed_parameters_and_keys",
+            "test_public_key.mojo::test_every_signature_dispatch_branch"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_PUBLIC_KEY/NR": {
+      "operations": {
+        "pk-signature-keygen": {
+          "unit": [
+            "test_finite_field_signatures.mojo::test_elgamal_encrypt_sign_roundtrip_and_tamper",
+            "test_finite_field_signatures.mojo::test_reference_nr_vector_and_roundtrip",
+            "test_finite_field_signatures.mojo::test_dsa_and_nr_generated_key_roundtrips",
+            "test_finite_field_signatures.mojo::test_rejects_malformed_parameters_and_keys",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_finite_field_signatures.mojo",
+              "id": "test_finite_field_signatures.mojo::test_elgamal_encrypt_sign_roundtrip_and_tamper"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_finite_field_signatures.mojo::test_elgamal_encrypt_sign_roundtrip_and_tamper",
+            "test_finite_field_signatures.mojo::test_reference_nr_vector_and_roundtrip",
+            "test_finite_field_signatures.mojo::test_rejects_malformed_parameters_and_keys"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "pk-sign": {
+          "unit": [
+            "test_finite_field_signatures.mojo::test_elgamal_encrypt_sign_roundtrip_and_tamper",
+            "test_finite_field_signatures.mojo::test_reference_nr_vector_and_roundtrip",
+            "test_finite_field_signatures.mojo::test_dsa_and_nr_generated_key_roundtrips",
+            "test_finite_field_signatures.mojo::test_rejects_malformed_parameters_and_keys",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_finite_field_signatures.mojo",
+              "id": "test_finite_field_signatures.mojo::test_elgamal_encrypt_sign_roundtrip_and_tamper"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_finite_field_signatures.mojo::test_elgamal_encrypt_sign_roundtrip_and_tamper",
+            "test_finite_field_signatures.mojo::test_reference_nr_vector_and_roundtrip",
+            "test_finite_field_signatures.mojo::test_rejects_malformed_parameters_and_keys"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "pk-verify": {
+          "unit": [
+            "test_finite_field_signatures.mojo::test_elgamal_encrypt_sign_roundtrip_and_tamper",
+            "test_finite_field_signatures.mojo::test_reference_nr_vector_and_roundtrip",
+            "test_finite_field_signatures.mojo::test_dsa_and_nr_generated_key_roundtrips",
+            "test_finite_field_signatures.mojo::test_rejects_malformed_parameters_and_keys",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_finite_field_signatures.mojo",
+              "id": "test_finite_field_signatures.mojo::test_elgamal_encrypt_sign_roundtrip_and_tamper"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_finite_field_signatures.mojo::test_elgamal_encrypt_sign_roundtrip_and_tamper",
+            "test_finite_field_signatures.mojo::test_reference_nr_vector_and_roundtrip",
+            "test_finite_field_signatures.mojo::test_rejects_malformed_parameters_and_keys"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_PUBLIC_KEY/Rabin-Williams": {
+      "operations": {
+        "pk-signature-keygen": {
+          "unit": [
+            "test_legacy_public_key.mojo::test_reference_rabin_williams_emsa2_vector",
+            "test_legacy_public_key.mojo::test_rabin_sign_verify_tamper",
+            "test_public_key.mojo::test_rabin_williams_raw_dispatch_roundtrip",
+            "test_public_key.mojo::test_every_signature_dispatch_branch",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_legacy_public_key.mojo",
+              "id": "test_legacy_public_key.mojo::test_reference_rabin_williams_emsa2_vector"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_legacy_public_key.mojo::test_reference_rabin_williams_emsa2_vector",
+            "test_legacy_public_key.mojo::test_rabin_sign_verify_tamper",
+            "test_public_key.mojo::test_every_signature_dispatch_branch"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "pk-sign": {
+          "unit": [
+            "test_legacy_public_key.mojo::test_reference_rabin_williams_emsa2_vector",
+            "test_legacy_public_key.mojo::test_rabin_sign_verify_tamper",
+            "test_public_key.mojo::test_rabin_williams_raw_dispatch_roundtrip",
+            "test_public_key.mojo::test_every_signature_dispatch_branch",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_legacy_public_key.mojo",
+              "id": "test_legacy_public_key.mojo::test_reference_rabin_williams_emsa2_vector"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_legacy_public_key.mojo::test_reference_rabin_williams_emsa2_vector",
+            "test_legacy_public_key.mojo::test_rabin_sign_verify_tamper",
+            "test_public_key.mojo::test_every_signature_dispatch_branch"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "pk-verify": {
+          "unit": [
+            "test_legacy_public_key.mojo::test_reference_rabin_williams_emsa2_vector",
+            "test_legacy_public_key.mojo::test_rabin_sign_verify_tamper",
+            "test_public_key.mojo::test_rabin_williams_raw_dispatch_roundtrip",
+            "test_public_key.mojo::test_every_signature_dispatch_branch",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_legacy_public_key.mojo",
+              "id": "test_legacy_public_key.mojo::test_reference_rabin_williams_emsa2_vector"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_legacy_public_key.mojo::test_reference_rabin_williams_emsa2_vector",
+            "test_legacy_public_key.mojo::test_rabin_sign_verify_tamper",
+            "test_public_key.mojo::test_every_signature_dispatch_branch"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "pk-encryption-keygen": {
+          "unit": [
+            "test_public_key.mojo::test_rabin_raw_dispatch_roundtrip",
+            "test_public_key.mojo::test_rabin_williams_raw_dispatch_roundtrip",
+            "test_public_key.mojo::test_rabin_oaep_dispatch_key_contract",
+            "test_public_key.mojo::test_rabin_encryption_rejects_bad_frames_and_lengths"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_public_key.mojo",
+              "id": "test_public_key.mojo::test_rabin_williams_raw_dispatch_roundtrip"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_public_key.mojo::test_rabin_encryption_rejects_bad_frames_and_lengths"
+          ],
+          "state": [],
+          "paths": [
+            "scalar"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "pk-encrypt": {
+          "unit": [
+            "test_public_key.mojo::test_rabin_raw_dispatch_roundtrip",
+            "test_public_key.mojo::test_rabin_williams_raw_dispatch_roundtrip",
+            "test_public_key.mojo::test_rabin_oaep_dispatch_key_contract",
+            "test_public_key.mojo::test_rabin_encryption_rejects_bad_frames_and_lengths"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_public_key.mojo",
+              "id": "test_public_key.mojo::test_rabin_williams_raw_dispatch_roundtrip"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_public_key.mojo::test_rabin_encryption_rejects_bad_frames_and_lengths"
+          ],
+          "state": [],
+          "paths": [
+            "scalar"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "pk-decrypt": {
+          "unit": [
+            "test_public_key.mojo::test_rabin_raw_dispatch_roundtrip",
+            "test_public_key.mojo::test_rabin_williams_raw_dispatch_roundtrip",
+            "test_public_key.mojo::test_rabin_oaep_dispatch_key_contract",
+            "test_public_key.mojo::test_rabin_encryption_rejects_bad_frames_and_lengths"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_public_key.mojo",
+              "id": "test_public_key.mojo::test_rabin_williams_raw_dispatch_roundtrip"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_public_key.mojo::test_rabin_encryption_rejects_bad_frames_and_lengths"
+          ],
+          "state": [],
+          "paths": [
+            "scalar"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_PUBLIC_KEY/LUC": {
+      "operations": {
+        "pk-encryption-keygen": {
+          "unit": [
+            "test_legacy_public_key.mojo::test_luc_known_sequence_and_roundtrip",
+            "test_legacy_public_key.mojo::test_reference_luc_ies_sha1_decrypt_vector",
+            "test_legacy_public_key.mojo::test_lucelg_roundtrip_and_authentication",
+            "test_public_key.mojo::test_every_encryption_dispatch_branch",
+            "test_public_key.mojo::test_luc_raw_dispatch_roundtrip",
+            "test_public_key.mojo::test_every_signature_dispatch_branch",
+            "test_public_key.mojo::test_all_agreement_families",
+            "test_public_key.mojo::test_prepared_agreement_key_generators",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_legacy_public_key.mojo",
+              "id": "test_legacy_public_key.mojo::test_luc_known_sequence_and_roundtrip"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_legacy_public_key.mojo::test_reference_luc_ies_sha1_decrypt_vector",
+            "test_legacy_public_key.mojo::test_lucelg_roundtrip_and_authentication",
+            "test_public_key.mojo::test_every_signature_dispatch_branch"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "pk-encrypt": {
+          "unit": [
+            "test_legacy_public_key.mojo::test_luc_known_sequence_and_roundtrip",
+            "test_legacy_public_key.mojo::test_reference_luc_ies_sha1_decrypt_vector",
+            "test_legacy_public_key.mojo::test_lucelg_roundtrip_and_authentication",
+            "test_public_key.mojo::test_every_encryption_dispatch_branch",
+            "test_public_key.mojo::test_luc_raw_dispatch_roundtrip",
+            "test_public_key.mojo::test_every_signature_dispatch_branch",
+            "test_public_key.mojo::test_all_agreement_families",
+            "test_public_key.mojo::test_prepared_agreement_key_generators",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_legacy_public_key.mojo",
+              "id": "test_legacy_public_key.mojo::test_luc_known_sequence_and_roundtrip"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_legacy_public_key.mojo::test_reference_luc_ies_sha1_decrypt_vector",
+            "test_legacy_public_key.mojo::test_lucelg_roundtrip_and_authentication",
+            "test_public_key.mojo::test_every_signature_dispatch_branch"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "pk-decrypt": {
+          "unit": [
+            "test_legacy_public_key.mojo::test_luc_known_sequence_and_roundtrip",
+            "test_legacy_public_key.mojo::test_reference_luc_ies_sha1_decrypt_vector",
+            "test_legacy_public_key.mojo::test_lucelg_roundtrip_and_authentication",
+            "test_public_key.mojo::test_every_encryption_dispatch_branch",
+            "test_public_key.mojo::test_luc_raw_dispatch_roundtrip",
+            "test_public_key.mojo::test_every_signature_dispatch_branch",
+            "test_public_key.mojo::test_all_agreement_families",
+            "test_public_key.mojo::test_prepared_agreement_key_generators",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_legacy_public_key.mojo",
+              "id": "test_legacy_public_key.mojo::test_luc_known_sequence_and_roundtrip"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_legacy_public_key.mojo::test_reference_luc_ies_sha1_decrypt_vector",
+            "test_legacy_public_key.mojo::test_lucelg_roundtrip_and_authentication",
+            "test_public_key.mojo::test_every_signature_dispatch_branch"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "pk-signature-keygen": {
+          "unit": [
+            "test_legacy_public_key.mojo::test_luc_known_sequence_and_roundtrip",
+            "test_legacy_public_key.mojo::test_reference_luc_ies_sha1_decrypt_vector",
+            "test_legacy_public_key.mojo::test_lucelg_roundtrip_and_authentication",
+            "test_public_key.mojo::test_every_encryption_dispatch_branch",
+            "test_public_key.mojo::test_luc_raw_dispatch_roundtrip",
+            "test_public_key.mojo::test_every_signature_dispatch_branch",
+            "test_public_key.mojo::test_all_agreement_families",
+            "test_public_key.mojo::test_prepared_agreement_key_generators",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_legacy_public_key.mojo",
+              "id": "test_legacy_public_key.mojo::test_luc_known_sequence_and_roundtrip"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_legacy_public_key.mojo::test_reference_luc_ies_sha1_decrypt_vector",
+            "test_legacy_public_key.mojo::test_lucelg_roundtrip_and_authentication",
+            "test_public_key.mojo::test_every_signature_dispatch_branch"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "pk-sign": {
+          "unit": [
+            "test_legacy_public_key.mojo::test_luc_known_sequence_and_roundtrip",
+            "test_legacy_public_key.mojo::test_reference_luc_ies_sha1_decrypt_vector",
+            "test_legacy_public_key.mojo::test_lucelg_roundtrip_and_authentication",
+            "test_public_key.mojo::test_every_encryption_dispatch_branch",
+            "test_public_key.mojo::test_luc_raw_dispatch_roundtrip",
+            "test_public_key.mojo::test_every_signature_dispatch_branch",
+            "test_public_key.mojo::test_all_agreement_families",
+            "test_public_key.mojo::test_prepared_agreement_key_generators",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_legacy_public_key.mojo",
+              "id": "test_legacy_public_key.mojo::test_luc_known_sequence_and_roundtrip"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_legacy_public_key.mojo::test_reference_luc_ies_sha1_decrypt_vector",
+            "test_legacy_public_key.mojo::test_lucelg_roundtrip_and_authentication",
+            "test_public_key.mojo::test_every_signature_dispatch_branch"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "pk-verify": {
+          "unit": [
+            "test_legacy_public_key.mojo::test_luc_known_sequence_and_roundtrip",
+            "test_legacy_public_key.mojo::test_reference_luc_ies_sha1_decrypt_vector",
+            "test_legacy_public_key.mojo::test_lucelg_roundtrip_and_authentication",
+            "test_public_key.mojo::test_every_encryption_dispatch_branch",
+            "test_public_key.mojo::test_luc_raw_dispatch_roundtrip",
+            "test_public_key.mojo::test_every_signature_dispatch_branch",
+            "test_public_key.mojo::test_all_agreement_families",
+            "test_public_key.mojo::test_prepared_agreement_key_generators",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_legacy_public_key.mojo",
+              "id": "test_legacy_public_key.mojo::test_luc_known_sequence_and_roundtrip"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_legacy_public_key.mojo::test_reference_luc_ies_sha1_decrypt_vector",
+            "test_legacy_public_key.mojo::test_lucelg_roundtrip_and_authentication",
+            "test_public_key.mojo::test_every_signature_dispatch_branch"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_PUBLIC_KEY/LUCELG": {
+      "operations": {
+        "pk-encryption-keygen": {
+          "unit": [
+            "test_legacy_public_key.mojo::test_reference_luc_ies_sha1_decrypt_vector",
+            "test_legacy_public_key.mojo::test_lucelg_roundtrip_and_authentication",
+            "test_public_key.mojo::test_every_encryption_dispatch_branch",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_legacy_public_key.mojo",
+              "id": "test_legacy_public_key.mojo::test_reference_luc_ies_sha1_decrypt_vector"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_legacy_public_key.mojo::test_reference_luc_ies_sha1_decrypt_vector",
+            "test_legacy_public_key.mojo::test_lucelg_roundtrip_and_authentication"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "pk-encrypt": {
+          "unit": [
+            "test_legacy_public_key.mojo::test_reference_luc_ies_sha1_decrypt_vector",
+            "test_legacy_public_key.mojo::test_lucelg_roundtrip_and_authentication",
+            "test_public_key.mojo::test_every_encryption_dispatch_branch",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_legacy_public_key.mojo",
+              "id": "test_legacy_public_key.mojo::test_reference_luc_ies_sha1_decrypt_vector"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_legacy_public_key.mojo::test_reference_luc_ies_sha1_decrypt_vector",
+            "test_legacy_public_key.mojo::test_lucelg_roundtrip_and_authentication"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "pk-decrypt": {
+          "unit": [
+            "test_legacy_public_key.mojo::test_reference_luc_ies_sha1_decrypt_vector",
+            "test_legacy_public_key.mojo::test_lucelg_roundtrip_and_authentication",
+            "test_public_key.mojo::test_every_encryption_dispatch_branch",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_legacy_public_key.mojo",
+              "id": "test_legacy_public_key.mojo::test_reference_luc_ies_sha1_decrypt_vector"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_legacy_public_key.mojo::test_reference_luc_ies_sha1_decrypt_vector",
+            "test_legacy_public_key.mojo::test_lucelg_roundtrip_and_authentication"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_PUBLIC_KEY/ECGDSA": {
+      "operations": {
+        "pk-signature-keygen": {
+          "unit": [
+            "test_ecdsa_ecies.mojo::test_reference_ecnr_and_ecgdsa_families",
+            "test_public_key.mojo::test_every_signature_dispatch_branch",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_ecdsa_ecies.mojo",
+              "id": "test_ecdsa_ecies.mojo::test_reference_ecnr_and_ecgdsa_families"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_ecdsa_ecies.mojo::test_reference_ecnr_and_ecgdsa_families",
+            "test_public_key.mojo::test_every_signature_dispatch_branch"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "pk-sign": {
+          "unit": [
+            "test_ecdsa_ecies.mojo::test_reference_ecnr_and_ecgdsa_families",
+            "test_public_key.mojo::test_every_signature_dispatch_branch",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_ecdsa_ecies.mojo",
+              "id": "test_ecdsa_ecies.mojo::test_reference_ecnr_and_ecgdsa_families"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_ecdsa_ecies.mojo::test_reference_ecnr_and_ecgdsa_families",
+            "test_public_key.mojo::test_every_signature_dispatch_branch"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "pk-verify": {
+          "unit": [
+            "test_ecdsa_ecies.mojo::test_reference_ecnr_and_ecgdsa_families",
+            "test_public_key.mojo::test_every_signature_dispatch_branch",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_ecdsa_ecies.mojo",
+              "id": "test_ecdsa_ecies.mojo::test_reference_ecnr_and_ecgdsa_families"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_ecdsa_ecies.mojo::test_reference_ecnr_and_ecgdsa_families",
+            "test_public_key.mojo::test_every_signature_dispatch_branch"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_PUBLIC_KEY/DLIES": {
+      "operations": {
+        "pk-encryption-keygen": {
+          "unit": [
+            "test_legacy_public_key.mojo::test_reference_dlies_sha1_decrypt_vector",
+            "test_legacy_public_key.mojo::test_dlies_roundtrip_and_authentication",
+            "test_legacy_public_key.mojo::test_malformed_keys_raise",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_legacy_public_key.mojo",
+              "id": "test_legacy_public_key.mojo::test_reference_dlies_sha1_decrypt_vector"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_legacy_public_key.mojo::test_reference_dlies_sha1_decrypt_vector",
+            "test_legacy_public_key.mojo::test_dlies_roundtrip_and_authentication",
+            "test_legacy_public_key.mojo::test_malformed_keys_raise",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "pk-encrypt": {
+          "unit": [
+            "test_legacy_public_key.mojo::test_reference_dlies_sha1_decrypt_vector",
+            "test_legacy_public_key.mojo::test_dlies_roundtrip_and_authentication",
+            "test_legacy_public_key.mojo::test_malformed_keys_raise",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_legacy_public_key.mojo",
+              "id": "test_legacy_public_key.mojo::test_reference_dlies_sha1_decrypt_vector"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_legacy_public_key.mojo::test_reference_dlies_sha1_decrypt_vector",
+            "test_legacy_public_key.mojo::test_dlies_roundtrip_and_authentication",
+            "test_legacy_public_key.mojo::test_malformed_keys_raise",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "pk-decrypt": {
+          "unit": [
+            "test_legacy_public_key.mojo::test_reference_dlies_sha1_decrypt_vector",
+            "test_legacy_public_key.mojo::test_dlies_roundtrip_and_authentication",
+            "test_legacy_public_key.mojo::test_malformed_keys_raise",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_legacy_public_key.mojo",
+              "id": "test_legacy_public_key.mojo::test_reference_dlies_sha1_decrypt_vector"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_legacy_public_key.mojo::test_reference_dlies_sha1_decrypt_vector",
+            "test_legacy_public_key.mojo::test_dlies_roundtrip_and_authentication",
+            "test_legacy_public_key.mojo::test_malformed_keys_raise",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_PUBLIC_KEY/ESIGN": {
+      "operations": {
+        "pk-signature-keygen": {
+          "unit": [
+            "test_legacy_public_key.mojo::test_rabin_sign_verify_tamper",
+            "test_legacy_public_key.mojo::test_ntt_esign_emsa5_vector",
+            "test_legacy_public_key.mojo::test_esign_roundtrip_tamper",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_legacy_public_key.mojo",
+              "id": "test_legacy_public_key.mojo::test_rabin_sign_verify_tamper"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_legacy_public_key.mojo::test_rabin_sign_verify_tamper",
+            "test_legacy_public_key.mojo::test_ntt_esign_emsa5_vector",
+            "test_legacy_public_key.mojo::test_esign_roundtrip_tamper"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "pk-sign": {
+          "unit": [
+            "test_legacy_public_key.mojo::test_rabin_sign_verify_tamper",
+            "test_legacy_public_key.mojo::test_ntt_esign_emsa5_vector",
+            "test_legacy_public_key.mojo::test_esign_roundtrip_tamper",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_legacy_public_key.mojo",
+              "id": "test_legacy_public_key.mojo::test_rabin_sign_verify_tamper"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_legacy_public_key.mojo::test_rabin_sign_verify_tamper",
+            "test_legacy_public_key.mojo::test_ntt_esign_emsa5_vector",
+            "test_legacy_public_key.mojo::test_esign_roundtrip_tamper"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "pk-verify": {
+          "unit": [
+            "test_legacy_public_key.mojo::test_rabin_sign_verify_tamper",
+            "test_legacy_public_key.mojo::test_ntt_esign_emsa5_vector",
+            "test_legacy_public_key.mojo::test_esign_roundtrip_tamper",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_legacy_public_key.mojo",
+              "id": "test_legacy_public_key.mojo::test_rabin_sign_verify_tamper"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_legacy_public_key.mojo::test_rabin_sign_verify_tamper",
+            "test_legacy_public_key.mojo::test_ntt_esign_emsa5_vector",
+            "test_legacy_public_key.mojo::test_esign_roundtrip_tamper"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_PUBLIC_KEY/ECDSA": {
+      "operations": {
+        "pk-signature-keygen": {
+          "unit": [
+            "test_ecdsa_ecies.mojo::test_rfc6979_p256_sha256_sample",
+            "test_ecdsa_ecies.mojo::test_reference_ecnr_and_ecgdsa_families",
+            "test_ecdsa_ecies.mojo::test_named_curves_and_sec1_validation",
+            "test_ecdsa_ecies.mojo::test_ecies_roundtrip_tamper_and_invalid_point",
+            "test_public_key.mojo::test_every_signature_dispatch_branch",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_ecdsa_ecies.mojo",
+              "id": "test_ecdsa_ecies.mojo::test_rfc6979_p256_sha256_sample"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_ecdsa_ecies.mojo::test_rfc6979_p256_sha256_sample",
+            "test_ecdsa_ecies.mojo::test_reference_ecnr_and_ecgdsa_families",
+            "test_ecdsa_ecies.mojo::test_named_curves_and_sec1_validation",
+            "test_ecdsa_ecies.mojo::test_ecies_roundtrip_tamper_and_invalid_point"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "pk-sign": {
+          "unit": [
+            "test_ecdsa_ecies.mojo::test_rfc6979_p256_sha256_sample",
+            "test_ecdsa_ecies.mojo::test_reference_ecnr_and_ecgdsa_families",
+            "test_ecdsa_ecies.mojo::test_named_curves_and_sec1_validation",
+            "test_ecdsa_ecies.mojo::test_ecies_roundtrip_tamper_and_invalid_point",
+            "test_public_key.mojo::test_every_signature_dispatch_branch",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_ecdsa_ecies.mojo",
+              "id": "test_ecdsa_ecies.mojo::test_rfc6979_p256_sha256_sample"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_ecdsa_ecies.mojo::test_rfc6979_p256_sha256_sample",
+            "test_ecdsa_ecies.mojo::test_reference_ecnr_and_ecgdsa_families",
+            "test_ecdsa_ecies.mojo::test_named_curves_and_sec1_validation",
+            "test_ecdsa_ecies.mojo::test_ecies_roundtrip_tamper_and_invalid_point"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "pk-verify": {
+          "unit": [
+            "test_ecdsa_ecies.mojo::test_rfc6979_p256_sha256_sample",
+            "test_ecdsa_ecies.mojo::test_reference_ecnr_and_ecgdsa_families",
+            "test_ecdsa_ecies.mojo::test_named_curves_and_sec1_validation",
+            "test_ecdsa_ecies.mojo::test_ecies_roundtrip_tamper_and_invalid_point",
+            "test_public_key.mojo::test_every_signature_dispatch_branch",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_ecdsa_ecies.mojo",
+              "id": "test_ecdsa_ecies.mojo::test_rfc6979_p256_sha256_sample"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_ecdsa_ecies.mojo::test_rfc6979_p256_sha256_sample",
+            "test_ecdsa_ecies.mojo::test_reference_ecnr_and_ecgdsa_families",
+            "test_ecdsa_ecies.mojo::test_named_curves_and_sec1_validation",
+            "test_ecdsa_ecies.mojo::test_ecies_roundtrip_tamper_and_invalid_point"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_PUBLIC_KEY/ECDSA-RFC6979": {
+      "operations": {
+        "pk-signature-keygen": {
+          "unit": [
+            "test_ecdsa_ecies.mojo::test_rfc6979_p256_sha256_sample",
+            "test_ecdsa_ecies.mojo::test_reference_ecnr_and_ecgdsa_families",
+            "test_ecdsa_ecies.mojo::test_named_curves_and_sec1_validation",
+            "test_ecdsa_ecies.mojo::test_ecies_roundtrip_tamper_and_invalid_point",
+            "test_public_key.mojo::test_every_signature_dispatch_branch",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_ecdsa_ecies.mojo",
+              "id": "test_ecdsa_ecies.mojo::test_rfc6979_p256_sha256_sample"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_ecdsa_ecies.mojo::test_rfc6979_p256_sha256_sample",
+            "test_ecdsa_ecies.mojo::test_reference_ecnr_and_ecgdsa_families",
+            "test_ecdsa_ecies.mojo::test_named_curves_and_sec1_validation",
+            "test_ecdsa_ecies.mojo::test_ecies_roundtrip_tamper_and_invalid_point"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "pk-sign": {
+          "unit": [
+            "test_ecdsa_ecies.mojo::test_rfc6979_p256_sha256_sample",
+            "test_ecdsa_ecies.mojo::test_reference_ecnr_and_ecgdsa_families",
+            "test_ecdsa_ecies.mojo::test_named_curves_and_sec1_validation",
+            "test_ecdsa_ecies.mojo::test_ecies_roundtrip_tamper_and_invalid_point",
+            "test_public_key.mojo::test_every_signature_dispatch_branch",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_ecdsa_ecies.mojo",
+              "id": "test_ecdsa_ecies.mojo::test_rfc6979_p256_sha256_sample"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_ecdsa_ecies.mojo::test_rfc6979_p256_sha256_sample",
+            "test_ecdsa_ecies.mojo::test_reference_ecnr_and_ecgdsa_families",
+            "test_ecdsa_ecies.mojo::test_named_curves_and_sec1_validation",
+            "test_ecdsa_ecies.mojo::test_ecies_roundtrip_tamper_and_invalid_point"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "pk-verify": {
+          "unit": [
+            "test_ecdsa_ecies.mojo::test_rfc6979_p256_sha256_sample",
+            "test_ecdsa_ecies.mojo::test_reference_ecnr_and_ecgdsa_families",
+            "test_ecdsa_ecies.mojo::test_named_curves_and_sec1_validation",
+            "test_ecdsa_ecies.mojo::test_ecies_roundtrip_tamper_and_invalid_point",
+            "test_public_key.mojo::test_every_signature_dispatch_branch",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_ecdsa_ecies.mojo",
+              "id": "test_ecdsa_ecies.mojo::test_rfc6979_p256_sha256_sample"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_ecdsa_ecies.mojo::test_rfc6979_p256_sha256_sample",
+            "test_ecdsa_ecies.mojo::test_reference_ecnr_and_ecgdsa_families",
+            "test_ecdsa_ecies.mojo::test_named_curves_and_sec1_validation",
+            "test_ecdsa_ecies.mojo::test_ecies_roundtrip_tamper_and_invalid_point"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_PUBLIC_KEY/Ed25519": {
+      "operations": {
+        "pk-signature-keygen": {
+          "unit": [
+            "test_ed25519_pure.mojo::test_rfc8032_vector_1_and_interop_key_format",
+            "test_ed25519_pure.mojo::test_rfc8032_vector_2_tamper_and_strictness",
+            "test_ed25519_pure.mojo::test_rfc8032_ed25519ph_vector",
+            "test_ed25519_pure.mojo::test_interop_sign_exp_keypair",
+            "test_ed25519_pure.mojo::test_invalid_lengths_and_random_generation",
+            "test_public_key.mojo::test_every_signature_dispatch_branch",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_ed25519_pure.mojo",
+              "id": "test_ed25519_pure.mojo::test_rfc8032_vector_1_and_interop_key_format"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_ed25519_pure.mojo::test_rfc8032_vector_2_tamper_and_strictness",
+            "test_ed25519_pure.mojo::test_rfc8032_ed25519ph_vector",
+            "test_ed25519_pure.mojo::test_invalid_lengths_and_random_generation",
+            "test_public_key.mojo::test_every_signature_dispatch_branch"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "pk-sign": {
+          "unit": [
+            "test_ed25519_pure.mojo::test_rfc8032_vector_1_and_interop_key_format",
+            "test_ed25519_pure.mojo::test_rfc8032_vector_2_tamper_and_strictness",
+            "test_ed25519_pure.mojo::test_rfc8032_ed25519ph_vector",
+            "test_ed25519_pure.mojo::test_interop_sign_exp_keypair",
+            "test_ed25519_pure.mojo::test_invalid_lengths_and_random_generation",
+            "test_public_key.mojo::test_every_signature_dispatch_branch",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_ed25519_pure.mojo",
+              "id": "test_ed25519_pure.mojo::test_rfc8032_vector_1_and_interop_key_format"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_ed25519_pure.mojo::test_rfc8032_vector_2_tamper_and_strictness",
+            "test_ed25519_pure.mojo::test_rfc8032_ed25519ph_vector",
+            "test_ed25519_pure.mojo::test_invalid_lengths_and_random_generation",
+            "test_public_key.mojo::test_every_signature_dispatch_branch"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "pk-verify": {
+          "unit": [
+            "test_ed25519_pure.mojo::test_rfc8032_vector_1_and_interop_key_format",
+            "test_ed25519_pure.mojo::test_rfc8032_vector_2_tamper_and_strictness",
+            "test_ed25519_pure.mojo::test_rfc8032_ed25519ph_vector",
+            "test_ed25519_pure.mojo::test_interop_sign_exp_keypair",
+            "test_ed25519_pure.mojo::test_invalid_lengths_and_random_generation",
+            "test_public_key.mojo::test_every_signature_dispatch_branch",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_ed25519_pure.mojo",
+              "id": "test_ed25519_pure.mojo::test_rfc8032_vector_1_and_interop_key_format"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_ed25519_pure.mojo::test_rfc8032_vector_2_tamper_and_strictness",
+            "test_ed25519_pure.mojo::test_rfc8032_ed25519ph_vector",
+            "test_ed25519_pure.mojo::test_invalid_lengths_and_random_generation",
+            "test_public_key.mojo::test_every_signature_dispatch_branch"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_PUBLIC_KEY/ECNR": {
+      "operations": {
+        "pk-signature-keygen": {
+          "unit": [
+            "test_ecdsa_ecies.mojo::test_reference_ecnr_and_ecgdsa_families",
+            "test_public_key.mojo::test_every_signature_dispatch_branch",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_ecdsa_ecies.mojo",
+              "id": "test_ecdsa_ecies.mojo::test_reference_ecnr_and_ecgdsa_families"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_ecdsa_ecies.mojo::test_reference_ecnr_and_ecgdsa_families",
+            "test_public_key.mojo::test_every_signature_dispatch_branch"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "pk-sign": {
+          "unit": [
+            "test_ecdsa_ecies.mojo::test_reference_ecnr_and_ecgdsa_families",
+            "test_public_key.mojo::test_every_signature_dispatch_branch",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_ecdsa_ecies.mojo",
+              "id": "test_ecdsa_ecies.mojo::test_reference_ecnr_and_ecgdsa_families"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_ecdsa_ecies.mojo::test_reference_ecnr_and_ecgdsa_families",
+            "test_public_key.mojo::test_every_signature_dispatch_branch"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "pk-verify": {
+          "unit": [
+            "test_ecdsa_ecies.mojo::test_reference_ecnr_and_ecgdsa_families",
+            "test_public_key.mojo::test_every_signature_dispatch_branch",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_ecdsa_ecies.mojo",
+              "id": "test_ecdsa_ecies.mojo::test_reference_ecnr_and_ecgdsa_families"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_ecdsa_ecies.mojo::test_reference_ecnr_and_ecgdsa_families",
+            "test_public_key.mojo::test_every_signature_dispatch_branch"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_PUBLIC_KEY/ECIES": {
+      "operations": {
+        "pk-encryption-keygen": {
+          "unit": [
+            "test_ecdsa_ecies.mojo::test_rfc6979_p256_sha256_sample",
+            "test_ecdsa_ecies.mojo::test_reference_ecnr_and_ecgdsa_families",
+            "test_ecdsa_ecies.mojo::test_named_curves_and_sec1_validation",
+            "test_ecdsa_ecies.mojo::test_ecies_roundtrip_tamper_and_invalid_point",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_ecdsa_ecies.mojo",
+              "id": "test_ecdsa_ecies.mojo::test_rfc6979_p256_sha256_sample"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_ecdsa_ecies.mojo::test_rfc6979_p256_sha256_sample",
+            "test_ecdsa_ecies.mojo::test_reference_ecnr_and_ecgdsa_families",
+            "test_ecdsa_ecies.mojo::test_named_curves_and_sec1_validation",
+            "test_ecdsa_ecies.mojo::test_ecies_roundtrip_tamper_and_invalid_point"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "pk-encrypt": {
+          "unit": [
+            "test_ecdsa_ecies.mojo::test_rfc6979_p256_sha256_sample",
+            "test_ecdsa_ecies.mojo::test_reference_ecnr_and_ecgdsa_families",
+            "test_ecdsa_ecies.mojo::test_named_curves_and_sec1_validation",
+            "test_ecdsa_ecies.mojo::test_ecies_roundtrip_tamper_and_invalid_point",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_ecdsa_ecies.mojo",
+              "id": "test_ecdsa_ecies.mojo::test_rfc6979_p256_sha256_sample"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_ecdsa_ecies.mojo::test_rfc6979_p256_sha256_sample",
+            "test_ecdsa_ecies.mojo::test_reference_ecnr_and_ecgdsa_families",
+            "test_ecdsa_ecies.mojo::test_named_curves_and_sec1_validation",
+            "test_ecdsa_ecies.mojo::test_ecies_roundtrip_tamper_and_invalid_point"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "pk-decrypt": {
+          "unit": [
+            "test_ecdsa_ecies.mojo::test_rfc6979_p256_sha256_sample",
+            "test_ecdsa_ecies.mojo::test_reference_ecnr_and_ecgdsa_families",
+            "test_ecdsa_ecies.mojo::test_named_curves_and_sec1_validation",
+            "test_ecdsa_ecies.mojo::test_ecies_roundtrip_tamper_and_invalid_point",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_ecdsa_ecies.mojo",
+              "id": "test_ecdsa_ecies.mojo::test_rfc6979_p256_sha256_sample"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_ecdsa_ecies.mojo::test_rfc6979_p256_sha256_sample",
+            "test_ecdsa_ecies.mojo::test_reference_ecnr_and_ecgdsa_families",
+            "test_ecdsa_ecies.mojo::test_named_curves_and_sec1_validation",
+            "test_ecdsa_ecies.mojo::test_ecies_roundtrip_tamper_and_invalid_point"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_PADDING/PKCS1-v1.5": {
+      "operations": {
+        "pk-encryption-keygen": {
+          "unit": [
+            "test_rsa_pure.mojo::test_reference_pss_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_reference_pkcs1_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_generated_key_roundtrips_and_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_rsa_pure.mojo",
+              "id": "test_rsa_pure.mojo::test_reference_pss_sha1_verify_kat"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_rsa_pure.mojo::test_reference_pss_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_reference_pkcs1_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_generated_key_roundtrips_and_tamper"
+          ],
+          "state": [],
+          "paths": [
+            "scalar"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "pk-encrypt": {
+          "unit": [
+            "test_rsa_pure.mojo::test_reference_pss_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_reference_pkcs1_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_generated_key_roundtrips_and_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_rsa_pure.mojo",
+              "id": "test_rsa_pure.mojo::test_reference_pss_sha1_verify_kat"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_rsa_pure.mojo::test_reference_pss_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_reference_pkcs1_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_generated_key_roundtrips_and_tamper"
+          ],
+          "state": [],
+          "paths": [
+            "scalar"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "pk-decrypt": {
+          "unit": [
+            "test_rsa_pure.mojo::test_reference_pss_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_reference_pkcs1_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_generated_key_roundtrips_and_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_rsa_pure.mojo",
+              "id": "test_rsa_pure.mojo::test_reference_pss_sha1_verify_kat"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_rsa_pure.mojo::test_reference_pss_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_reference_pkcs1_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_generated_key_roundtrips_and_tamper"
+          ],
+          "state": [],
+          "paths": [
+            "scalar"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "pk-signature-keygen": {
+          "unit": [
+            "test_rsa_pure.mojo::test_reference_pss_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_reference_pkcs1_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_generated_key_roundtrips_and_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_rsa_pure.mojo",
+              "id": "test_rsa_pure.mojo::test_reference_pss_sha1_verify_kat"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_rsa_pure.mojo::test_reference_pss_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_reference_pkcs1_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_generated_key_roundtrips_and_tamper"
+          ],
+          "state": [],
+          "paths": [
+            "scalar"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "pk-sign": {
+          "unit": [
+            "test_rsa_pure.mojo::test_reference_pss_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_reference_pkcs1_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_generated_key_roundtrips_and_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_rsa_pure.mojo",
+              "id": "test_rsa_pure.mojo::test_reference_pss_sha1_verify_kat"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_rsa_pure.mojo::test_reference_pss_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_reference_pkcs1_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_generated_key_roundtrips_and_tamper"
+          ],
+          "state": [],
+          "paths": [
+            "scalar"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "pk-verify": {
+          "unit": [
+            "test_rsa_pure.mojo::test_reference_pss_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_reference_pkcs1_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_generated_key_roundtrips_and_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_rsa_pure.mojo",
+              "id": "test_rsa_pure.mojo::test_reference_pss_sha1_verify_kat"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_rsa_pure.mojo::test_reference_pss_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_reference_pkcs1_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_generated_key_roundtrips_and_tamper"
+          ],
+          "state": [],
+          "paths": [
+            "scalar"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_PADDING/PKCS1-v2.0": {
+      "operations": {
+        "pk-encryption-keygen": {
+          "unit": [
+            "test_rsa_pure.mojo::test_reference_pss_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_reference_pkcs1_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_generated_key_roundtrips_and_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_rsa_pure.mojo",
+              "id": "test_rsa_pure.mojo::test_reference_pss_sha1_verify_kat"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_rsa_pure.mojo::test_reference_pss_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_reference_pkcs1_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_generated_key_roundtrips_and_tamper"
+          ],
+          "state": [],
+          "paths": [
+            "scalar"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "pk-encrypt": {
+          "unit": [
+            "test_rsa_pure.mojo::test_reference_pss_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_reference_pkcs1_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_generated_key_roundtrips_and_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_rsa_pure.mojo",
+              "id": "test_rsa_pure.mojo::test_reference_pss_sha1_verify_kat"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_rsa_pure.mojo::test_reference_pss_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_reference_pkcs1_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_generated_key_roundtrips_and_tamper"
+          ],
+          "state": [],
+          "paths": [
+            "scalar"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "pk-decrypt": {
+          "unit": [
+            "test_rsa_pure.mojo::test_reference_pss_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_reference_pkcs1_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_generated_key_roundtrips_and_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_rsa_pure.mojo",
+              "id": "test_rsa_pure.mojo::test_reference_pss_sha1_verify_kat"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_rsa_pure.mojo::test_reference_pss_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_reference_pkcs1_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_generated_key_roundtrips_and_tamper"
+          ],
+          "state": [],
+          "paths": [
+            "scalar"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "pk-signature-keygen": {
+          "unit": [
+            "test_rsa_pure.mojo::test_reference_pss_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_reference_pkcs1_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_generated_key_roundtrips_and_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_rsa_pure.mojo",
+              "id": "test_rsa_pure.mojo::test_reference_pss_sha1_verify_kat"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_rsa_pure.mojo::test_reference_pss_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_reference_pkcs1_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_generated_key_roundtrips_and_tamper"
+          ],
+          "state": [],
+          "paths": [
+            "scalar"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "pk-sign": {
+          "unit": [
+            "test_rsa_pure.mojo::test_reference_pss_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_reference_pkcs1_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_generated_key_roundtrips_and_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_rsa_pure.mojo",
+              "id": "test_rsa_pure.mojo::test_reference_pss_sha1_verify_kat"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_rsa_pure.mojo::test_reference_pss_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_reference_pkcs1_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_generated_key_roundtrips_and_tamper"
+          ],
+          "state": [],
+          "paths": [
+            "scalar"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "pk-verify": {
+          "unit": [
+            "test_rsa_pure.mojo::test_reference_pss_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_reference_pkcs1_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_generated_key_roundtrips_and_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_rsa_pure.mojo",
+              "id": "test_rsa_pure.mojo::test_reference_pss_sha1_verify_kat"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_rsa_pure.mojo::test_reference_pss_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_reference_pkcs1_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_generated_key_roundtrips_and_tamper"
+          ],
+          "state": [],
+          "paths": [
+            "scalar"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_PADDING/OAEP": {
+      "operations": {
+        "pk-encryption-keygen": {
+          "unit": [
+            "test_rsa_pure.mojo::test_reference_oaep_sha1_decrypt_kat",
+            "test_rsa_pure.mojo::test_generated_key_roundtrips_and_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_rsa_pure.mojo",
+              "id": "test_rsa_pure.mojo::test_reference_oaep_sha1_decrypt_kat"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_rsa_pure.mojo::test_reference_oaep_sha1_decrypt_kat",
+            "test_rsa_pure.mojo::test_generated_key_roundtrips_and_tamper"
+          ],
+          "state": [],
+          "paths": [
+            "scalar"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "pk-encrypt": {
+          "unit": [
+            "test_rsa_pure.mojo::test_reference_oaep_sha1_decrypt_kat",
+            "test_rsa_pure.mojo::test_generated_key_roundtrips_and_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_rsa_pure.mojo",
+              "id": "test_rsa_pure.mojo::test_reference_oaep_sha1_decrypt_kat"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_rsa_pure.mojo::test_reference_oaep_sha1_decrypt_kat",
+            "test_rsa_pure.mojo::test_generated_key_roundtrips_and_tamper"
+          ],
+          "state": [],
+          "paths": [
+            "scalar"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "pk-decrypt": {
+          "unit": [
+            "test_rsa_pure.mojo::test_reference_oaep_sha1_decrypt_kat",
+            "test_rsa_pure.mojo::test_generated_key_roundtrips_and_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_rsa_pure.mojo",
+              "id": "test_rsa_pure.mojo::test_reference_oaep_sha1_decrypt_kat"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_rsa_pure.mojo::test_reference_oaep_sha1_decrypt_kat",
+            "test_rsa_pure.mojo::test_generated_key_roundtrips_and_tamper"
+          ],
+          "state": [],
+          "paths": [
+            "scalar"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_PADDING/PSS": {
+      "operations": {
+        "pk-signature-keygen": {
+          "unit": [
+            "test_rsa_pure.mojo::test_reference_pss_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_generated_key_roundtrips_and_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_rsa_pure.mojo",
+              "id": "test_rsa_pure.mojo::test_reference_pss_sha1_verify_kat"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_rsa_pure.mojo::test_reference_pss_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_generated_key_roundtrips_and_tamper"
+          ],
+          "state": [],
+          "paths": [
+            "scalar"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "pk-sign": {
+          "unit": [
+            "test_rsa_pure.mojo::test_reference_pss_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_generated_key_roundtrips_and_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_rsa_pure.mojo",
+              "id": "test_rsa_pure.mojo::test_reference_pss_sha1_verify_kat"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_rsa_pure.mojo::test_reference_pss_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_generated_key_roundtrips_and_tamper"
+          ],
+          "state": [],
+          "paths": [
+            "scalar"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "pk-verify": {
+          "unit": [
+            "test_rsa_pure.mojo::test_reference_pss_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_generated_key_roundtrips_and_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_rsa_pure.mojo",
+              "id": "test_rsa_pure.mojo::test_reference_pss_sha1_verify_kat"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_rsa_pure.mojo::test_reference_pss_sha1_verify_kat",
+            "test_rsa_pure.mojo::test_generated_key_roundtrips_and_tamper"
+          ],
+          "state": [],
+          "paths": [
+            "scalar"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_PADDING/PSSR": {
+      "operations": {
+        "pk-signature-keygen": {
+          "unit": [
+            "test_rsa_pure.mojo::test_generated_key_roundtrips_and_tamper",
+            "test_public_key.mojo::test_every_signature_dispatch_branch"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_rsa_pure.mojo",
+              "id": "test_rsa_pure.mojo::test_generated_key_roundtrips_and_tamper"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_rsa_pure.mojo::test_generated_key_roundtrips_and_tamper",
+            "test_public_key.mojo::test_every_signature_dispatch_branch"
+          ],
+          "state": [],
+          "paths": [
+            "scalar"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "pk-sign": {
+          "unit": [
+            "test_rsa_pure.mojo::test_generated_key_roundtrips_and_tamper",
+            "test_public_key.mojo::test_every_signature_dispatch_branch"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_rsa_pure.mojo",
+              "id": "test_rsa_pure.mojo::test_generated_key_roundtrips_and_tamper"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_rsa_pure.mojo::test_generated_key_roundtrips_and_tamper",
+            "test_public_key.mojo::test_every_signature_dispatch_branch"
+          ],
+          "state": [],
+          "paths": [
+            "scalar"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "pk-verify": {
+          "unit": [
+            "test_rsa_pure.mojo::test_generated_key_roundtrips_and_tamper",
+            "test_public_key.mojo::test_every_signature_dispatch_branch"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_rsa_pure.mojo",
+              "id": "test_rsa_pure.mojo::test_generated_key_roundtrips_and_tamper"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_rsa_pure.mojo::test_generated_key_roundtrips_and_tamper",
+            "test_public_key.mojo::test_every_signature_dispatch_branch"
+          ],
+          "state": [],
+          "paths": [
+            "scalar"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_PADDING/IEEE-P1363-EMSA2": {
+      "operations": {
+        "pk-signature-keygen": {
+          "unit": [
+            "test_legacy_public_key.mojo::test_reference_rabin_williams_emsa2_vector",
+            "test_public_key.mojo::test_every_signature_dispatch_branch"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_legacy_public_key.mojo",
+              "id": "test_legacy_public_key.mojo::test_reference_rabin_williams_emsa2_vector"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_legacy_public_key.mojo::test_reference_rabin_williams_emsa2_vector",
+            "test_public_key.mojo::test_every_signature_dispatch_branch"
+          ],
+          "state": [],
+          "paths": [
+            "scalar"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "pk-sign": {
+          "unit": [
+            "test_legacy_public_key.mojo::test_reference_rabin_williams_emsa2_vector",
+            "test_public_key.mojo::test_every_signature_dispatch_branch"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_legacy_public_key.mojo",
+              "id": "test_legacy_public_key.mojo::test_reference_rabin_williams_emsa2_vector"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_legacy_public_key.mojo::test_reference_rabin_williams_emsa2_vector",
+            "test_public_key.mojo::test_every_signature_dispatch_branch"
+          ],
+          "state": [],
+          "paths": [
+            "scalar"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "pk-verify": {
+          "unit": [
+            "test_legacy_public_key.mojo::test_reference_rabin_williams_emsa2_vector",
+            "test_public_key.mojo::test_every_signature_dispatch_branch"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_legacy_public_key.mojo",
+              "id": "test_legacy_public_key.mojo::test_reference_rabin_williams_emsa2_vector"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_legacy_public_key.mojo::test_reference_rabin_williams_emsa2_vector",
+            "test_public_key.mojo::test_every_signature_dispatch_branch"
+          ],
+          "state": [],
+          "paths": [
+            "scalar"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_PADDING/IEEE-P1363-EMSA5": {
+      "operations": {
+        "pk-signature-keygen": {
+          "unit": [
+            "test_legacy_public_key.mojo::test_ntt_esign_emsa5_vector",
+            "test_legacy_public_key.mojo::test_esign_roundtrip_tamper",
+            "test_public_key.mojo::test_every_signature_dispatch_branch"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_legacy_public_key.mojo",
+              "id": "test_legacy_public_key.mojo::test_ntt_esign_emsa5_vector"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_legacy_public_key.mojo::test_ntt_esign_emsa5_vector",
+            "test_legacy_public_key.mojo::test_esign_roundtrip_tamper",
+            "test_public_key.mojo::test_every_signature_dispatch_branch"
+          ],
+          "state": [],
+          "paths": [
+            "scalar"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "pk-sign": {
+          "unit": [
+            "test_legacy_public_key.mojo::test_ntt_esign_emsa5_vector",
+            "test_legacy_public_key.mojo::test_esign_roundtrip_tamper",
+            "test_public_key.mojo::test_every_signature_dispatch_branch"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_legacy_public_key.mojo",
+              "id": "test_legacy_public_key.mojo::test_ntt_esign_emsa5_vector"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_legacy_public_key.mojo::test_ntt_esign_emsa5_vector",
+            "test_legacy_public_key.mojo::test_esign_roundtrip_tamper",
+            "test_public_key.mojo::test_every_signature_dispatch_branch"
+          ],
+          "state": [],
+          "paths": [
+            "scalar"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "pk-verify": {
+          "unit": [
+            "test_legacy_public_key.mojo::test_ntt_esign_emsa5_vector",
+            "test_legacy_public_key.mojo::test_esign_roundtrip_tamper",
+            "test_public_key.mojo::test_every_signature_dispatch_branch"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_legacy_public_key.mojo",
+              "id": "test_legacy_public_key.mojo::test_ntt_esign_emsa5_vector"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_legacy_public_key.mojo::test_ntt_esign_emsa5_vector",
+            "test_legacy_public_key.mojo::test_esign_roundtrip_tamper",
+            "test_public_key.mojo::test_every_signature_dispatch_branch"
+          ],
+          "state": [],
+          "paths": [
+            "scalar"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_AGREEMENT/DH": {
+      "operations": {
+        "agreement-keygen": {
+          "unit": [
+            "test_key_agreements.mojo::test_dh_and_dh2_agree_and_reject_peer",
+            "test_key_agreements.mojo::test_p256_sec2_base_vector_and_ecdh",
+            "test_key_agreements.mojo::test_lucdif_composition_and_tamper",
+            "test_key_agreements.mojo::test_xtr_trace_vector_and_agreement",
+            "test_public_key.mojo::test_all_agreement_families",
+            "test_public_key.mojo::test_agreement_rejects_peer_tamper",
+            "test_public_key.mojo::test_prepared_agreement_key_generators",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_key_agreements.mojo",
+              "id": "test_key_agreements.mojo::test_dh_and_dh2_agree_and_reject_peer"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_key_agreements.mojo::test_dh_and_dh2_agree_and_reject_peer",
+            "test_key_agreements.mojo::test_p256_sec2_base_vector_and_ecdh",
+            "test_key_agreements.mojo::test_lucdif_composition_and_tamper",
+            "test_key_agreements.mojo::test_xtr_trace_vector_and_agreement"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "agreement-agree": {
+          "unit": [
+            "test_key_agreements.mojo::test_dh_and_dh2_agree_and_reject_peer",
+            "test_key_agreements.mojo::test_p256_sec2_base_vector_and_ecdh",
+            "test_key_agreements.mojo::test_lucdif_composition_and_tamper",
+            "test_key_agreements.mojo::test_xtr_trace_vector_and_agreement",
+            "test_public_key.mojo::test_all_agreement_families",
+            "test_public_key.mojo::test_agreement_rejects_peer_tamper",
+            "test_public_key.mojo::test_prepared_agreement_key_generators",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_key_agreements.mojo",
+              "id": "test_key_agreements.mojo::test_dh_and_dh2_agree_and_reject_peer"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_key_agreements.mojo::test_dh_and_dh2_agree_and_reject_peer",
+            "test_key_agreements.mojo::test_p256_sec2_base_vector_and_ecdh",
+            "test_key_agreements.mojo::test_lucdif_composition_and_tamper",
+            "test_key_agreements.mojo::test_xtr_trace_vector_and_agreement"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_AGREEMENT/DH2": {
+      "operations": {
+        "agreement-keygen": {
+          "unit": [
+            "test_key_agreements.mojo::test_dh_and_dh2_agree_and_reject_peer",
+            "test_public_key.mojo::test_all_agreement_families",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_key_agreements.mojo",
+              "id": "test_key_agreements.mojo::test_dh_and_dh2_agree_and_reject_peer"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_key_agreements.mojo::test_dh_and_dh2_agree_and_reject_peer"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "agreement-agree": {
+          "unit": [
+            "test_key_agreements.mojo::test_dh_and_dh2_agree_and_reject_peer",
+            "test_public_key.mojo::test_all_agreement_families",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_key_agreements.mojo",
+              "id": "test_key_agreements.mojo::test_dh_and_dh2_agree_and_reject_peer"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_key_agreements.mojo::test_dh_and_dh2_agree_and_reject_peer"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_AGREEMENT/MQV": {
+      "operations": {
+        "agreement-keygen": {
+          "unit": [
+            "test_key_agreements.mojo::test_ff_mqv_families_are_distinct_and_symmetric",
+            "test_key_agreements.mojo::test_ec_authenticated_families",
+            "test_public_key.mojo::test_all_agreement_families",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_key_agreements.mojo",
+              "id": "test_key_agreements.mojo::test_ff_mqv_families_are_distinct_and_symmetric"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_key_agreements.mojo::test_ff_mqv_families_are_distinct_and_symmetric"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "agreement-agree": {
+          "unit": [
+            "test_key_agreements.mojo::test_ff_mqv_families_are_distinct_and_symmetric",
+            "test_key_agreements.mojo::test_ec_authenticated_families",
+            "test_public_key.mojo::test_all_agreement_families",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_key_agreements.mojo",
+              "id": "test_key_agreements.mojo::test_ff_mqv_families_are_distinct_and_symmetric"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_key_agreements.mojo::test_ff_mqv_families_are_distinct_and_symmetric"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_AGREEMENT/HMQV": {
+      "operations": {
+        "agreement-keygen": {
+          "unit": [
+            "test_key_agreements.mojo::test_ff_mqv_families_are_distinct_and_symmetric",
+            "test_key_agreements.mojo::test_ec_authenticated_families",
+            "test_public_key.mojo::test_all_agreement_families",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_key_agreements.mojo",
+              "id": "test_key_agreements.mojo::test_ff_mqv_families_are_distinct_and_symmetric"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_key_agreements.mojo::test_ff_mqv_families_are_distinct_and_symmetric"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "agreement-agree": {
+          "unit": [
+            "test_key_agreements.mojo::test_ff_mqv_families_are_distinct_and_symmetric",
+            "test_key_agreements.mojo::test_ec_authenticated_families",
+            "test_public_key.mojo::test_all_agreement_families",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_key_agreements.mojo",
+              "id": "test_key_agreements.mojo::test_ff_mqv_families_are_distinct_and_symmetric"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_key_agreements.mojo::test_ff_mqv_families_are_distinct_and_symmetric"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_AGREEMENT/FHMQV": {
+      "operations": {
+        "agreement-keygen": {
+          "unit": [
+            "test_key_agreements.mojo::test_ff_mqv_families_are_distinct_and_symmetric",
+            "test_key_agreements.mojo::test_ec_authenticated_families",
+            "test_public_key.mojo::test_all_agreement_families",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_key_agreements.mojo",
+              "id": "test_key_agreements.mojo::test_ff_mqv_families_are_distinct_and_symmetric"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_key_agreements.mojo::test_ff_mqv_families_are_distinct_and_symmetric"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "agreement-agree": {
+          "unit": [
+            "test_key_agreements.mojo::test_ff_mqv_families_are_distinct_and_symmetric",
+            "test_key_agreements.mojo::test_ec_authenticated_families",
+            "test_public_key.mojo::test_all_agreement_families",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_key_agreements.mojo",
+              "id": "test_key_agreements.mojo::test_ff_mqv_families_are_distinct_and_symmetric"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_key_agreements.mojo::test_ff_mqv_families_are_distinct_and_symmetric"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_AGREEMENT/LUCDIF": {
+      "operations": {
+        "agreement-keygen": {
+          "unit": [
+            "test_key_agreements.mojo::test_lucdif_composition_and_tamper",
+            "test_public_key.mojo::test_all_agreement_families",
+            "test_public_key.mojo::test_prepared_agreement_key_generators",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_key_agreements.mojo",
+              "id": "test_key_agreements.mojo::test_lucdif_composition_and_tamper"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_key_agreements.mojo::test_lucdif_composition_and_tamper"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "agreement-agree": {
+          "unit": [
+            "test_key_agreements.mojo::test_lucdif_composition_and_tamper",
+            "test_public_key.mojo::test_all_agreement_families",
+            "test_public_key.mojo::test_prepared_agreement_key_generators",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_key_agreements.mojo",
+              "id": "test_key_agreements.mojo::test_lucdif_composition_and_tamper"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_key_agreements.mojo::test_lucdif_composition_and_tamper"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_AGREEMENT/XTR-DH": {
+      "operations": {
+        "agreement-keygen": {
+          "unit": [
+            "test_key_agreements.mojo::test_xtr_trace_vector_and_agreement",
+            "test_public_key.mojo::test_all_agreement_families",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_key_agreements.mojo",
+              "id": "test_key_agreements.mojo::test_xtr_trace_vector_and_agreement"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_key_agreements.mojo::test_xtr_trace_vector_and_agreement"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "agreement-agree": {
+          "unit": [
+            "test_key_agreements.mojo::test_xtr_trace_vector_and_agreement",
+            "test_public_key.mojo::test_all_agreement_families",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_key_agreements.mojo",
+              "id": "test_key_agreements.mojo::test_xtr_trace_vector_and_agreement"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_key_agreements.mojo::test_xtr_trace_vector_and_agreement"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_AGREEMENT/ECDH": {
+      "operations": {
+        "agreement-keygen": {
+          "unit": [
+            "test_key_agreements.mojo::test_p256_sec2_base_vector_and_ecdh",
+            "test_public_key.mojo::test_all_agreement_families",
+            "test_public_key.mojo::test_agreement_rejects_peer_tamper",
+            "test_public_key.mojo::test_prepared_agreement_key_generators",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_key_agreements.mojo",
+              "id": "test_key_agreements.mojo::test_p256_sec2_base_vector_and_ecdh"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_key_agreements.mojo::test_p256_sec2_base_vector_and_ecdh",
+            "test_public_key.mojo::test_agreement_rejects_peer_tamper"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "agreement-agree": {
+          "unit": [
+            "test_key_agreements.mojo::test_p256_sec2_base_vector_and_ecdh",
+            "test_public_key.mojo::test_all_agreement_families",
+            "test_public_key.mojo::test_agreement_rejects_peer_tamper",
+            "test_public_key.mojo::test_prepared_agreement_key_generators",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_key_agreements.mojo",
+              "id": "test_key_agreements.mojo::test_p256_sec2_base_vector_and_ecdh"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_key_agreements.mojo::test_p256_sec2_base_vector_and_ecdh",
+            "test_public_key.mojo::test_agreement_rejects_peer_tamper"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_AGREEMENT/ECMQV": {
+      "operations": {
+        "agreement-keygen": {
+          "unit": [
+            "test_key_agreements.mojo::test_ec_authenticated_families",
+            "test_public_key.mojo::test_all_agreement_families",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_key_agreements.mojo",
+              "id": "test_key_agreements.mojo::test_ec_authenticated_families"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_key_agreements.mojo::test_dh_and_dh2_agree_and_reject_peer",
+            "test_key_agreements.mojo::test_ff_mqv_families_are_distinct_and_symmetric",
+            "test_key_agreements.mojo::test_p256_sec2_base_vector_and_ecdh",
+            "test_key_agreements.mojo::test_lucdif_composition_and_tamper"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "agreement-agree": {
+          "unit": [
+            "test_key_agreements.mojo::test_ec_authenticated_families",
+            "test_public_key.mojo::test_all_agreement_families",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_key_agreements.mojo",
+              "id": "test_key_agreements.mojo::test_ec_authenticated_families"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_key_agreements.mojo::test_dh_and_dh2_agree_and_reject_peer",
+            "test_key_agreements.mojo::test_ff_mqv_families_are_distinct_and_symmetric",
+            "test_key_agreements.mojo::test_p256_sec2_base_vector_and_ecdh",
+            "test_key_agreements.mojo::test_lucdif_composition_and_tamper"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_AGREEMENT/ECHMQV": {
+      "operations": {
+        "agreement-keygen": {
+          "unit": [
+            "test_key_agreements.mojo::test_ec_authenticated_families",
+            "test_public_key.mojo::test_all_agreement_families",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_key_agreements.mojo",
+              "id": "test_key_agreements.mojo::test_ec_authenticated_families"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_key_agreements.mojo::test_dh_and_dh2_agree_and_reject_peer",
+            "test_key_agreements.mojo::test_ff_mqv_families_are_distinct_and_symmetric",
+            "test_key_agreements.mojo::test_p256_sec2_base_vector_and_ecdh",
+            "test_key_agreements.mojo::test_lucdif_composition_and_tamper"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "agreement-agree": {
+          "unit": [
+            "test_key_agreements.mojo::test_ec_authenticated_families",
+            "test_public_key.mojo::test_all_agreement_families",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_key_agreements.mojo",
+              "id": "test_key_agreements.mojo::test_ec_authenticated_families"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_key_agreements.mojo::test_dh_and_dh2_agree_and_reject_peer",
+            "test_key_agreements.mojo::test_ff_mqv_families_are_distinct_and_symmetric",
+            "test_key_agreements.mojo::test_p256_sec2_base_vector_and_ecdh",
+            "test_key_agreements.mojo::test_lucdif_composition_and_tamper"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_AGREEMENT/ECFHMQV": {
+      "operations": {
+        "agreement-keygen": {
+          "unit": [
+            "test_key_agreements.mojo::test_ec_authenticated_families",
+            "test_public_key.mojo::test_all_agreement_families",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_key_agreements.mojo",
+              "id": "test_key_agreements.mojo::test_ec_authenticated_families"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_key_agreements.mojo::test_dh_and_dh2_agree_and_reject_peer",
+            "test_key_agreements.mojo::test_ff_mqv_families_are_distinct_and_symmetric",
+            "test_key_agreements.mojo::test_p256_sec2_base_vector_and_ecdh",
+            "test_key_agreements.mojo::test_lucdif_composition_and_tamper"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "agreement-agree": {
+          "unit": [
+            "test_key_agreements.mojo::test_ec_authenticated_families",
+            "test_public_key.mojo::test_all_agreement_families",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_key_agreements.mojo",
+              "id": "test_key_agreements.mojo::test_ec_authenticated_families"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_key_agreements.mojo::test_dh_and_dh2_agree_and_reject_peer",
+            "test_key_agreements.mojo::test_ff_mqv_families_are_distinct_and_symmetric",
+            "test_key_agreements.mojo::test_p256_sec2_base_vector_and_ecdh",
+            "test_key_agreements.mojo::test_lucdif_composition_and_tamper"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_AGREEMENT/X25519": {
+      "operations": {
+        "agreement-keygen": {
+          "unit": [
+            "test_key_agreements.mojo::test_ff_mqv_families_are_distinct_and_symmetric",
+            "test_key_agreements.mojo::test_p256_sec2_base_vector_and_ecdh",
+            "test_key_agreements.mojo::test_ec_authenticated_families",
+            "test_key_agreements.mojo::test_xtr_trace_vector_and_agreement",
+            "test_public_key.mojo::test_all_agreement_families",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_key_agreements.mojo",
+              "id": "test_key_agreements.mojo::test_ff_mqv_families_are_distinct_and_symmetric"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_key_agreements.mojo::test_ff_mqv_families_are_distinct_and_symmetric",
+            "test_key_agreements.mojo::test_p256_sec2_base_vector_and_ecdh",
+            "test_key_agreements.mojo::test_xtr_trace_vector_and_agreement"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "agreement-agree": {
+          "unit": [
+            "test_key_agreements.mojo::test_ff_mqv_families_are_distinct_and_symmetric",
+            "test_key_agreements.mojo::test_p256_sec2_base_vector_and_ecdh",
+            "test_key_agreements.mojo::test_ec_authenticated_families",
+            "test_key_agreements.mojo::test_xtr_trace_vector_and_agreement",
+            "test_public_key.mojo::test_all_agreement_families",
+            "test_public_key_prepared_paths.mojo::test_prepared_ecies_matches_dispatch_both_directions",
+            "test_public_key_prepared_paths.mojo::test_prepared_agreement_matches_scalar_and_rejects_peer_tamper"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_key_agreements.mojo",
+              "id": "test_key_agreements.mojo::test_ff_mqv_families_are_distinct_and_symmetric"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_key_agreements.mojo::test_ff_mqv_families_are_distinct_and_symmetric",
+            "test_key_agreements.mojo::test_p256_sec2_base_vector_and_ecdh",
+            "test_key_agreements.mojo::test_xtr_trace_vector_and_agreement"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "prepared"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_RNG/ANSI-X9.17": {
+      "operations": {
+        "generate": {
+          "unit": [
+            "test_legacy_rng.mojo::test_dispatch_and_hardware_contract"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_legacy_rng.mojo",
+              "id": "test_legacy_rng.mojo::test_dispatch_and_hardware_contract"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_legacy_rng.mojo::test_dispatch_and_hardware_contract"
+          ],
+          "state": [
+            "rng-reseed-and-chunk"
+          ],
+          "paths": [
+            "scalar"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_RNG/RandomPool": {
+      "operations": {
+        "generate": {
+          "unit": [
+            "test_legacy_rng.mojo::test_random_pool_kat_and_reseed",
+            "test_legacy_rng.mojo::test_dispatch_and_hardware_contract"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_legacy_rng.mojo",
+              "id": "test_legacy_rng.mojo::test_random_pool_kat_and_reseed"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_legacy_rng.mojo::test_random_pool_kat_and_reseed",
+            "test_legacy_rng.mojo::test_dispatch_and_hardware_contract"
+          ],
+          "state": [
+            "rng-reseed-and-chunk"
+          ],
+          "paths": [
+            "scalar"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_RNG/NIST-Hash-DRBG": {
+      "operations": {
+        "generate": {
+          "unit": [
+            "test_legacy_rng.mojo::test_x917_reference_kat",
+            "test_legacy_rng.mojo::test_x917_3des_kat",
+            "test_legacy_rng.mojo::test_x917_chunking_and_reseed",
+            "test_legacy_rng.mojo::test_random_pool_kat_and_reseed",
+            "test_legacy_rng.mojo::test_dispatch_and_hardware_contract"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_legacy_rng.mojo",
+              "id": "test_legacy_rng.mojo::test_x917_reference_kat"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_legacy_rng.mojo::test_random_pool_kat_and_reseed",
+            "test_legacy_rng.mojo::test_dispatch_and_hardware_contract"
+          ],
+          "state": [
+            "rng-reseed-and-chunk"
+          ],
+          "paths": [
+            "scalar"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_RNG/NIST-HMAC-DRBG": {
+      "operations": {
+        "generate": {
+          "unit": [
+            "test_legacy_rng.mojo::test_x917_reference_kat",
+            "test_legacy_rng.mojo::test_x917_3des_kat",
+            "test_legacy_rng.mojo::test_x917_chunking_and_reseed",
+            "test_legacy_rng.mojo::test_random_pool_kat_and_reseed",
+            "test_legacy_rng.mojo::test_dispatch_and_hardware_contract"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_legacy_rng.mojo",
+              "id": "test_legacy_rng.mojo::test_x917_reference_kat"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_legacy_rng.mojo::test_random_pool_kat_and_reseed",
+            "test_legacy_rng.mojo::test_dispatch_and_hardware_contract"
+          ],
+          "state": [
+            "rng-reseed-and-chunk"
+          ],
+          "paths": [
+            "scalar"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_RNG/RDRAND": {
+      "operations": {
+        "generate": {
+          "unit": [
+            "test_legacy_rng.mojo::test_dispatch_and_hardware_contract"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_legacy_rng.mojo",
+              "id": "test_legacy_rng.mojo::test_dispatch_and_hardware_contract"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_legacy_rng.mojo::test_dispatch_and_hardware_contract"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "platform:rdrand"
+          ],
+          "conditions": [
+            "x86-rdrand"
+          ],
+          "path_targets": {
+            "scalar": [
+              "x86_64"
+            ],
+            "platform:rdrand": [
+              "x86_64"
+            ]
+          }
+        }
+      }
+    },
+    "REFERENCE_RNG/RDSEED": {
+      "operations": {
+        "generate": {
+          "unit": [
+            "test_legacy_rng.mojo::test_dispatch_and_hardware_contract"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_legacy_rng.mojo",
+              "id": "test_legacy_rng.mojo::test_dispatch_and_hardware_contract"
+            }
+          ],
+          "comparator": "invariant",
+          "negative": [
+            "test_legacy_rng.mojo::test_dispatch_and_hardware_contract"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "platform:rdseed"
+          ],
+          "conditions": [
+            "x86-rdseed"
+          ],
+          "path_targets": {
+            "scalar": [
+              "x86_64"
+            ],
+            "platform:rdseed": [
+              "x86_64"
+            ]
+          }
+        }
+      }
+    },
+    "REFERENCE_OTHER/Shamir-secret-sharing": {
+      "operations": {
+        "split-recover": {
+          "unit": [
+            "test_secret_sharing.mojo::test_shamir_deterministic_vector_and_threshold_subsets",
+            "test_secret_sharing.mojo::test_ida_any_threshold_and_deterministic_payload",
+            "test_secret_sharing.mojo::test_rejects_invalid_and_detectably_corrupt_shares"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_secret_sharing.mojo",
+              "id": "test_secret_sharing.mojo::test_shamir_deterministic_vector_and_threshold_subsets"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_secret_sharing.mojo::test_rejects_invalid_and_detectably_corrupt_shares"
+          ],
+          "state": [],
+          "paths": [
+            "scalar"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_OTHER/Rabin-IDA": {
+      "operations": {
+        "split-recover": {
+          "unit": [
+            "test_secret_sharing.mojo::test_shamir_deterministic_vector_and_threshold_subsets",
+            "test_secret_sharing.mojo::test_ida_any_threshold_and_deterministic_payload",
+            "test_secret_sharing.mojo::test_rejects_invalid_and_detectably_corrupt_shares"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_secret_sharing.mojo",
+              "id": "test_secret_sharing.mojo::test_shamir_deterministic_vector_and_threshold_subsets"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_secret_sharing.mojo::test_rejects_invalid_and_detectably_corrupt_shares"
+          ],
+          "state": [],
+          "paths": [
+            "scalar"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_OTHER/GF(p)": {
+      "operations": {
+        "arithmetic": {
+          "unit": [
+            "test_fields.mojo::test_prime_field_arithmetic",
+            "test_fields.mojo::test_gf256_aes_polynomial",
+            "test_fields.mojo::test_gf2_32_field_laws"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_fields.mojo",
+              "id": "test_fields.mojo::test_prime_field_arithmetic"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_fields.mojo::test_prime_field_arithmetic",
+            "test_fields.mojo::test_gf256_aes_polynomial"
+          ],
+          "state": [],
+          "paths": [
+            "scalar"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_OTHER/GF(2^n)": {
+      "operations": {
+        "arithmetic": {
+          "unit": [
+            "test_fields.mojo::test_prime_field_arithmetic",
+            "test_fields.mojo::test_gf256_aes_polynomial",
+            "test_fields.mojo::test_gf2_32_field_laws"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_fields.mojo",
+              "id": "test_fields.mojo::test_prime_field_arithmetic"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_fields.mojo::test_prime_field_arithmetic",
+            "test_fields.mojo::test_gf256_aes_polynomial"
+          ],
+          "state": [],
+          "paths": [
+            "scalar"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_OTHER/prime-generation": {
+      "operations": {
+        "generate": {
+          "unit": [
+            "test_primes.mojo::test_known_primes_and_composites",
+            "test_primes.mojo::test_carmichael_and_strong_pseudoprimes",
+            "test_primes.mojo::test_perfect_square_residue_filters_and_exactness",
+            "test_primes.mojo::test_trial_division_contract",
+            "test_primes.mojo::test_gcd_and_lcm",
+            "test_primes.mojo::test_probable_generation_width_and_oddness",
+            "test_primes.mojo::test_provable_generation_is_explicit_and_valid"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_primes.mojo",
+              "id": "test_primes.mojo::test_known_primes_and_composites"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_primes.mojo::test_known_primes_and_composites",
+            "test_primes.mojo::test_carmichael_and_strong_pseudoprimes",
+            "test_primes.mojo::test_perfect_square_residue_filters_and_exactness",
+            "test_primes.mojo::test_trial_division_contract"
+          ],
+          "state": [],
+          "paths": [
+            "scalar"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_OTHER/DEFLATE": {
+      "operations": {
+        "compress-decompress": {
+          "unit": [
+            "test_compression_pure.mojo::test_roundtrip_corpus"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_compression_pure.mojo",
+              "id": "test_compression_pure.mojo::test_roundtrip_corpus"
+            }
+          ],
+          "comparator": "semantic-decode",
+          "negative": [
+            "test_compression_pure.mojo::test_validation_errors"
+          ],
+          "state": [
+            "compression-framing"
+          ],
+          "paths": [
+            "scalar"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_OTHER/gzip": {
+      "operations": {
+        "compress-decompress": {
+          "unit": [
+            "test_compression_pure.mojo::test_roundtrip_corpus",
+            "test_compression_pure.mojo::test_dynamic_and_fixed_vectors",
+            "test_compression_pure.mojo::test_concatenated_gzip_members",
+            "test_compression_pure.mojo::test_validation_errors"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_compression_pure.mojo",
+              "id": "test_compression_pure.mojo::test_roundtrip_corpus"
+            }
+          ],
+          "comparator": "semantic-decode",
+          "negative": [
+            "test_compression_pure.mojo::test_validation_errors"
+          ],
+          "state": [
+            "compression-framing"
+          ],
+          "paths": [
+            "scalar"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_OTHER/zlib": {
+      "operations": {
+        "compress-decompress": {
+          "unit": [
+            "test_compression_pure.mojo::test_roundtrip_corpus",
+            "test_compression_pure.mojo::test_dynamic_and_fixed_vectors",
+            "test_compression_pure.mojo::test_validation_errors"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_compression_pure.mojo",
+              "id": "test_compression_pure.mojo::test_roundtrip_corpus"
+            }
+          ],
+          "comparator": "semantic-decode",
+          "negative": [
+            "test_compression_pure.mojo::test_validation_errors"
+          ],
+          "state": [
+            "compression-framing"
+          ],
+          "paths": [
+            "scalar"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_OTHER/Hex": {
+      "operations": {
+        "encode-decode": {
+          "unit": [
+            "test_encoding_pure.mojo::test_encoding_roundtrips",
+            "test_encoding_pure.mojo::test_malformed_and_noncanonical_encodings_are_rejected"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_encoding_pure.mojo",
+              "id": "test_encoding_pure.mojo::test_encoding_roundtrips"
+            }
+          ],
+          "comparator": "semantic-decode",
+          "negative": [
+            "test_encoding_pure.mojo::test_malformed_and_noncanonical_encodings_are_rejected"
+          ],
+          "state": [],
+          "paths": [
+            "scalar"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_OTHER/Base32": {
+      "operations": {
+        "encode-decode": {
+          "unit": [
+            "test_encoding_pure.mojo::test_encoding_roundtrips",
+            "test_encoding_pure.mojo::test_malformed_and_noncanonical_encodings_are_rejected"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_encoding_pure.mojo",
+              "id": "test_encoding_pure.mojo::test_encoding_roundtrips"
+            }
+          ],
+          "comparator": "semantic-decode",
+          "negative": [
+            "test_encoding_pure.mojo::test_malformed_and_noncanonical_encodings_are_rejected"
+          ],
+          "state": [],
+          "paths": [
+            "scalar"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_OTHER/Base64": {
+      "operations": {
+        "encode-decode": {
+          "unit": [
+            "test_encoding_pure.mojo::test_encoding_roundtrips",
+            "test_encoding_pure.mojo::test_malformed_and_noncanonical_encodings_are_rejected"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_encoding_pure.mojo",
+              "id": "test_encoding_pure.mojo::test_encoding_roundtrips"
+            }
+          ],
+          "comparator": "semantic-decode",
+          "negative": [
+            "test_encoding_pure.mojo::test_malformed_and_noncanonical_encodings_are_rejected"
+          ],
+          "state": [],
+          "paths": [
+            "scalar"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_OTHER/Base64URL": {
+      "operations": {
+        "encode-decode": {
+          "unit": [
+            "test_encoding_pure.mojo::test_encoding_roundtrips",
+            "test_encoding_pure.mojo::test_malformed_and_noncanonical_encodings_are_rejected"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_encoding_pure.mojo",
+              "id": "test_encoding_pure.mojo::test_encoding_roundtrips"
+            }
+          ],
+          "comparator": "semantic-decode",
+          "negative": [
+            "test_encoding_pure.mojo::test_malformed_and_noncanonical_encodings_are_rejected"
+          ],
+          "state": [],
+          "paths": [
+            "scalar"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    }
+  }
+}

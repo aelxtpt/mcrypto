@@ -1,0 +1,54 @@
+name: Native behavioral correctness
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  schedule:
+    - cron: "23 3 * * *"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: correctness-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  linux-x86-64:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 350
+    steps:
+      - uses: actions/checkout@v4
+      - uses: prefix-dev/setup-pixi@v0.9.0
+        with:
+          cache: true
+      - name: Install environment
+        run: pixi install
+      - name: Validate coverage metadata
+        run: pixi run test-coverage
+      - name: Run unoptimized suite
+        run: pixi run test-o0
+      - name: Run optimized suite
+        run: pixi run test
+      - name: Run AddressSanitizer suite
+        run: pixi run test-asan
+      - name: Run ThreadSanitizer suite
+        run: pixi run test-tsan
+
+  linux-arm64:
+    runs-on: ubuntu-24.04-arm
+    timeout-minutes: 350
+    steps:
+      - uses: actions/checkout@v4
+      - uses: prefix-dev/setup-pixi@v0.9.0
+        with:
+          cache: true
+      - name: Install environment
+        run: pixi install
+      - name: Validate coverage metadata
+        run: pixi run test-coverage
+      - name: Run unoptimized suite
+        run: pixi run test-o0
+      - name: Run optimized suite
+        run: pixi run test

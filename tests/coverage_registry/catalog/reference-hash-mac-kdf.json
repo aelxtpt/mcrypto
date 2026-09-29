@@ -1,0 +1,1869 @@
+{
+  "catalog": {
+    "REFERENCE_MAC/BLAKE2s-MAC": {
+      "operations": {
+        "authenticate-verify": {
+          "unit": [
+            "test_mac_dispatch.mojo::test_hmac_and_blake_dispatch",
+            "test_aead_mac_into_batch_paths.mojo::test_aegis_encrypt_into_nonzero_offsets_matches_scalar",
+            "test_aead_mac_into_batch_paths.mojo::test_poly1305_into_offset_and_short_output",
+            "test_aead_mac_into_batch_paths.mojo::test_chacha_aead_eight_way_matches_scalar_and_dimensions",
+            "test_aead_mac_into_batch_paths.mojo::test_xchacha_secretbox_into_and_eight_way_paths"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_mac_dispatch.mojo",
+              "id": "test_mac_dispatch.mojo::test_hmac_and_blake_dispatch"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_dispatch_negative_macs.mojo::test_every_mac_dispatch_rejects_zero_output"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "simd"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_MAC/BLAKE2b-MAC": {
+      "operations": {
+        "authenticate-verify": {
+          "unit": [
+            "test_mac_dispatch.mojo::test_hmac_and_blake_dispatch",
+            "test_aead_mac_into_batch_paths.mojo::test_aegis_encrypt_into_nonzero_offsets_matches_scalar",
+            "test_aead_mac_into_batch_paths.mojo::test_poly1305_into_offset_and_short_output",
+            "test_aead_mac_into_batch_paths.mojo::test_chacha_aead_eight_way_matches_scalar_and_dimensions",
+            "test_aead_mac_into_batch_paths.mojo::test_xchacha_secretbox_into_and_eight_way_paths"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_mac_dispatch.mojo",
+              "id": "test_mac_dispatch.mojo::test_hmac_and_blake_dispatch"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_dispatch_negative_macs.mojo::test_every_mac_dispatch_rejects_zero_output"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "simd"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_MAC/CBC-MAC": {
+      "operations": {
+        "authenticate-verify": {
+          "unit": [
+            "test_block_macs.mojo::test_cbc_mac_aes_and_truncation",
+            "test_block_macs.mojo::test_four_way_cbc_mac_matches_independent_tags",
+            "test_block_macs.mojo::test_invalid_sizes",
+            "test_aead_mac_into_batch_paths.mojo::test_aegis_encrypt_into_nonzero_offsets_matches_scalar",
+            "test_aead_mac_into_batch_paths.mojo::test_poly1305_into_offset_and_short_output",
+            "test_aead_mac_into_batch_paths.mojo::test_chacha_aead_eight_way_matches_scalar_and_dimensions",
+            "test_aead_mac_into_batch_paths.mojo::test_xchacha_secretbox_into_and_eight_way_paths"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_block_macs.mojo",
+              "id": "test_block_macs.mojo::test_cbc_mac_aes_and_truncation"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_block_macs.mojo::test_cbc_mac_aes_and_truncation",
+            "test_block_macs.mojo::test_invalid_sizes",
+            "test_dispatch_negative_macs.mojo::test_every_mac_dispatch_rejects_zero_output"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "simd"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_MAC/CMAC": {
+      "operations": {
+        "authenticate-verify": {
+          "unit": [
+            "test_cmac.mojo::test_rfc4493_vectors",
+            "test_cmac.mojo::test_four_way_cmac_matches_independent_tags",
+            "test_aead_mac_into_batch_paths.mojo::test_aegis_encrypt_into_nonzero_offsets_matches_scalar",
+            "test_aead_mac_into_batch_paths.mojo::test_poly1305_into_offset_and_short_output",
+            "test_aead_mac_into_batch_paths.mojo::test_chacha_aead_eight_way_matches_scalar_and_dimensions",
+            "test_aead_mac_into_batch_paths.mojo::test_xchacha_secretbox_into_and_eight_way_paths"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_cmac.mojo",
+              "id": "test_cmac.mojo::test_rfc4493_vectors"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_dispatch_negative_macs.mojo::test_every_mac_dispatch_rejects_zero_output"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "simd"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_MAC/DMAC": {
+      "operations": {
+        "authenticate-verify": {
+          "unit": [
+            "test_block_macs.mojo::test_dmac_aes_vector_and_verify",
+            "test_aead_mac_into_batch_paths.mojo::test_aegis_encrypt_into_nonzero_offsets_matches_scalar",
+            "test_aead_mac_into_batch_paths.mojo::test_poly1305_into_offset_and_short_output",
+            "test_aead_mac_into_batch_paths.mojo::test_chacha_aead_eight_way_matches_scalar_and_dimensions",
+            "test_aead_mac_into_batch_paths.mojo::test_xchacha_secretbox_into_and_eight_way_paths"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_block_macs.mojo",
+              "id": "test_block_macs.mojo::test_dmac_aes_vector_and_verify"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_block_macs.mojo::test_cbc_mac_aes_and_truncation",
+            "test_block_macs.mojo::test_generic_cmac_and_verify",
+            "test_block_macs.mojo::test_gmac_nist_vector_and_tamper",
+            "test_block_macs.mojo::test_poly1305_aes_reference_vectors",
+            "test_dispatch_negative_macs.mojo::test_every_mac_dispatch_rejects_zero_output"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "simd"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_MAC/GMAC": {
+      "operations": {
+        "authenticate-verify": {
+          "unit": [
+            "test_block_macs.mojo::test_gmac_nist_vector_and_tamper",
+            "test_block_macs.mojo::test_invalid_sizes",
+            "test_aead_mac_into_batch_paths.mojo::test_aegis_encrypt_into_nonzero_offsets_matches_scalar",
+            "test_aead_mac_into_batch_paths.mojo::test_poly1305_into_offset_and_short_output",
+            "test_aead_mac_into_batch_paths.mojo::test_chacha_aead_eight_way_matches_scalar_and_dimensions",
+            "test_aead_mac_into_batch_paths.mojo::test_xchacha_secretbox_into_and_eight_way_paths"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_block_macs.mojo",
+              "id": "test_block_macs.mojo::test_gmac_nist_vector_and_tamper"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_block_macs.mojo::test_gmac_nist_vector_and_tamper",
+            "test_block_macs.mojo::test_invalid_sizes",
+            "test_dispatch_negative_macs.mojo::test_every_mac_dispatch_rejects_zero_output"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "simd"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_MAC/HMAC": {
+      "operations": {
+        "authenticate-verify": {
+          "unit": [
+            "test_hmac.mojo::test_rfc4231_vectors",
+            "test_hmac.mojo::test_interop_hmac_sha512_256_vector",
+            "test_hmac.mojo::test_rfc2286_ripemd160_vectors",
+            "test_hmac.mojo::test_eight_way_hmac_matches_independent_messages",
+            "test_aead_mac_into_batch_paths.mojo::test_aegis_encrypt_into_nonzero_offsets_matches_scalar",
+            "test_aead_mac_into_batch_paths.mojo::test_poly1305_into_offset_and_short_output",
+            "test_aead_mac_into_batch_paths.mojo::test_chacha_aead_eight_way_matches_scalar_and_dimensions",
+            "test_aead_mac_into_batch_paths.mojo::test_xchacha_secretbox_into_and_eight_way_paths"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_hmac.mojo",
+              "id": "test_hmac.mojo::test_rfc4231_vectors"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_dispatch_negative_macs.mojo::test_every_mac_dispatch_rejects_zero_output"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "simd"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_MAC/PanamaMAC": {
+      "operations": {
+        "authenticate-verify": {
+          "unit": [
+            "test_panama.mojo::test_reference_vectors",
+            "test_aead_mac_into_batch_paths.mojo::test_aegis_encrypt_into_nonzero_offsets_matches_scalar",
+            "test_aead_mac_into_batch_paths.mojo::test_poly1305_into_offset_and_short_output",
+            "test_aead_mac_into_batch_paths.mojo::test_chacha_aead_eight_way_matches_scalar_and_dimensions",
+            "test_aead_mac_into_batch_paths.mojo::test_xchacha_secretbox_into_and_eight_way_paths"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_panama.mojo",
+              "id": "test_panama.mojo::test_reference_vectors"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_dispatch_negative_macs.mojo::test_every_mac_dispatch_rejects_zero_output"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "simd"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_MAC/Poly1305-AES": {
+      "operations": {
+        "authenticate-verify": {
+          "unit": [
+            "test_block_macs.mojo::test_poly1305_aes_reference_vectors",
+            "test_aead_mac_into_batch_paths.mojo::test_aegis_encrypt_into_nonzero_offsets_matches_scalar",
+            "test_aead_mac_into_batch_paths.mojo::test_poly1305_into_offset_and_short_output",
+            "test_aead_mac_into_batch_paths.mojo::test_chacha_aead_eight_way_matches_scalar_and_dimensions",
+            "test_aead_mac_into_batch_paths.mojo::test_xchacha_secretbox_into_and_eight_way_paths"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_block_macs.mojo",
+              "id": "test_block_macs.mojo::test_poly1305_aes_reference_vectors"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_block_macs.mojo::test_poly1305_aes_reference_vectors",
+            "test_dispatch_negative_macs.mojo::test_every_mac_dispatch_rejects_zero_output"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "simd"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_MAC/Poly1305": {
+      "operations": {
+        "authenticate-verify": {
+          "unit": [
+            "test_poly1305.mojo::test_rfc8439_vector",
+            "test_aead_mac_into_batch_paths.mojo::test_aegis_encrypt_into_nonzero_offsets_matches_scalar",
+            "test_aead_mac_into_batch_paths.mojo::test_poly1305_into_offset_and_short_output",
+            "test_aead_mac_into_batch_paths.mojo::test_chacha_aead_eight_way_matches_scalar_and_dimensions",
+            "test_aead_mac_into_batch_paths.mojo::test_xchacha_secretbox_into_and_eight_way_paths"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_poly1305.mojo",
+              "id": "test_poly1305.mojo::test_rfc8439_vector"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_dispatch_negative_macs.mojo::test_every_mac_dispatch_rejects_zero_output"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "simd"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_MAC/RIPEMD160-HMAC": {
+      "operations": {
+        "authenticate-verify": {
+          "unit": [
+            "test_hmac.mojo::test_rfc2286_ripemd160_vectors",
+            "test_hmac.mojo::test_eight_way_hmac_matches_independent_messages",
+            "test_aead_mac_into_batch_paths.mojo::test_aegis_encrypt_into_nonzero_offsets_matches_scalar",
+            "test_aead_mac_into_batch_paths.mojo::test_poly1305_into_offset_and_short_output",
+            "test_aead_mac_into_batch_paths.mojo::test_chacha_aead_eight_way_matches_scalar_and_dimensions",
+            "test_aead_mac_into_batch_paths.mojo::test_xchacha_secretbox_into_and_eight_way_paths"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_hmac.mojo",
+              "id": "test_hmac.mojo::test_rfc2286_ripemd160_vectors"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_dispatch_negative_macs.mojo::test_every_mac_dispatch_rejects_zero_output"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "simd"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_MAC/SipHash-2-4": {
+      "operations": {
+        "authenticate-verify": {
+          "unit": [
+            "test_siphash.mojo::test_reference_vectors",
+            "test_aead_mac_into_batch_paths.mojo::test_aegis_encrypt_into_nonzero_offsets_matches_scalar",
+            "test_aead_mac_into_batch_paths.mojo::test_poly1305_into_offset_and_short_output",
+            "test_aead_mac_into_batch_paths.mojo::test_chacha_aead_eight_way_matches_scalar_and_dimensions",
+            "test_aead_mac_into_batch_paths.mojo::test_xchacha_secretbox_into_and_eight_way_paths"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_siphash.mojo",
+              "id": "test_siphash.mojo::test_reference_vectors"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_dispatch_negative_macs.mojo::test_every_mac_dispatch_rejects_zero_output"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "simd"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_MAC/SipHash-4-8": {
+      "operations": {
+        "authenticate-verify": {
+          "unit": [
+            "test_siphash.mojo::test_reference_vectors",
+            "test_aead_mac_into_batch_paths.mojo::test_aegis_encrypt_into_nonzero_offsets_matches_scalar",
+            "test_aead_mac_into_batch_paths.mojo::test_poly1305_into_offset_and_short_output",
+            "test_aead_mac_into_batch_paths.mojo::test_chacha_aead_eight_way_matches_scalar_and_dimensions",
+            "test_aead_mac_into_batch_paths.mojo::test_xchacha_secretbox_into_and_eight_way_paths"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_siphash.mojo",
+              "id": "test_siphash.mojo::test_reference_vectors"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_dispatch_negative_macs.mojo::test_every_mac_dispatch_rejects_zero_output"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "simd"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_MAC/Two-Track-MAC": {
+      "operations": {
+        "authenticate-verify": {
+          "unit": [
+            "test_two_track.mojo::test_nessie_short_vectors",
+            "test_two_track.mojo::test_nessie_repeated_vector",
+            "test_two_track.mojo::test_lengths_are_strict",
+            "test_two_track.mojo::test_four_way_matches_independent_authentication",
+            "test_aead_mac_into_batch_paths.mojo::test_aegis_encrypt_into_nonzero_offsets_matches_scalar",
+            "test_aead_mac_into_batch_paths.mojo::test_poly1305_into_offset_and_short_output",
+            "test_aead_mac_into_batch_paths.mojo::test_chacha_aead_eight_way_matches_scalar_and_dimensions",
+            "test_aead_mac_into_batch_paths.mojo::test_xchacha_secretbox_into_and_eight_way_paths"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_two_track.mojo",
+              "id": "test_two_track.mojo::test_nessie_short_vectors"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_two_track.mojo::test_nessie_short_vectors",
+            "test_two_track.mojo::test_lengths_are_strict",
+            "test_dispatch_negative_macs.mojo::test_every_mac_dispatch_rejects_zero_output"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "simd"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_MAC/VMAC": {
+      "operations": {
+        "authenticate-verify": {
+          "unit": [
+            "test_block_macs.mojo::test_vmac_rfc4418_vectors",
+            "test_block_macs.mojo::test_eight_way_vmac_matches_independent_tags",
+            "test_block_macs.mojo::test_invalid_sizes",
+            "test_aead_mac_into_batch_paths.mojo::test_aegis_encrypt_into_nonzero_offsets_matches_scalar",
+            "test_aead_mac_into_batch_paths.mojo::test_poly1305_into_offset_and_short_output",
+            "test_aead_mac_into_batch_paths.mojo::test_chacha_aead_eight_way_matches_scalar_and_dimensions",
+            "test_aead_mac_into_batch_paths.mojo::test_xchacha_secretbox_into_and_eight_way_paths"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_block_macs.mojo",
+              "id": "test_block_macs.mojo::test_vmac_rfc4418_vectors"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_block_macs.mojo::test_vmac_rfc4418_vectors",
+            "test_block_macs.mojo::test_invalid_sizes",
+            "test_dispatch_negative_macs.mojo::test_every_mac_dispatch_rejects_zero_output"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "simd"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_HASH/Adler32": {
+      "operations": {
+        "digest": {
+          "unit": [
+            "test_checksums.mojo::test_standard_checksum_vectors",
+            "test_checksums.mojo::test_empty_checksums",
+            "test_checksums.mojo::test_adler32_unrolled_boundaries",
+            "test_hash_into_batch_paths.mojo::test_hash_into_nonzero_offsets_and_boundaries",
+            "test_hash_into_batch_paths.mojo::test_hash_batch_paths_match_scalar_with_offset_storage",
+            "test_hash_into_batch_paths.mojo::test_sha512_four_way_thresholds_match_scalar"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_checksums.mojo",
+              "id": "test_checksums.mojo::test_standard_checksum_vectors"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_checksums.mojo::test_four_way_crc32c_matches_independent_messages",
+            "test_dispatch_negative_hashes.mojo::test_every_fixed_hash_rejects_wrong_output_size"
+          ],
+          "state": [
+            "hash-finalize-once"
+          ],
+          "paths": [
+            "scalar",
+            "simd"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_HASH/CRC32": {
+      "operations": {
+        "digest": {
+          "unit": [
+            "test_checksums.mojo::test_standard_checksum_vectors",
+            "test_checksums.mojo::test_empty_checksums",
+            "test_checksums.mojo::test_four_way_crc32c_matches_independent_messages",
+            "test_hash_into_batch_paths.mojo::test_hash_into_nonzero_offsets_and_boundaries",
+            "test_hash_into_batch_paths.mojo::test_hash_batch_paths_match_scalar_with_offset_storage",
+            "test_hash_into_batch_paths.mojo::test_sha512_four_way_thresholds_match_scalar"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_checksums.mojo",
+              "id": "test_checksums.mojo::test_standard_checksum_vectors"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_checksums.mojo::test_four_way_crc32c_matches_independent_messages",
+            "test_dispatch_negative_hashes.mojo::test_every_fixed_hash_rejects_wrong_output_size"
+          ],
+          "state": [
+            "hash-finalize-once"
+          ],
+          "paths": [
+            "scalar",
+            "simd"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_HASH/CRC32C": {
+      "operations": {
+        "digest": {
+          "unit": [
+            "test_checksums.mojo::test_standard_checksum_vectors",
+            "test_checksums.mojo::test_empty_checksums",
+            "test_checksums.mojo::test_four_way_crc32c_matches_independent_messages",
+            "test_hash_into_batch_paths.mojo::test_hash_into_nonzero_offsets_and_boundaries",
+            "test_hash_into_batch_paths.mojo::test_hash_batch_paths_match_scalar_with_offset_storage",
+            "test_hash_into_batch_paths.mojo::test_sha512_four_way_thresholds_match_scalar"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_checksums.mojo",
+              "id": "test_checksums.mojo::test_standard_checksum_vectors"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_checksums.mojo::test_four_way_crc32c_matches_independent_messages",
+            "test_dispatch_negative_hashes.mojo::test_every_fixed_hash_rejects_wrong_output_size"
+          ],
+          "state": [
+            "hash-finalize-once"
+          ],
+          "paths": [
+            "scalar",
+            "simd"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_HASH/MD2": {
+      "operations": {
+        "digest": {
+          "unit": [
+            "test_md_legacy.mojo::test_rfc1319_md2_vectors",
+            "test_hash_into_batch_paths.mojo::test_hash_into_nonzero_offsets_and_boundaries",
+            "test_hash_into_batch_paths.mojo::test_hash_batch_paths_match_scalar_with_offset_storage",
+            "test_hash_into_batch_paths.mojo::test_sha512_four_way_thresholds_match_scalar"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_md_legacy.mojo",
+              "id": "test_md_legacy.mojo::test_rfc1319_md2_vectors"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_dispatch_negative_hashes.mojo::test_every_fixed_hash_rejects_wrong_output_size"
+          ],
+          "state": [
+            "hash-finalize-once"
+          ],
+          "paths": [
+            "scalar",
+            "simd"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_HASH/MD4": {
+      "operations": {
+        "digest": {
+          "unit": [
+            "test_md_legacy.mojo::test_rfc1320_md4_vectors",
+            "test_hash_into_batch_paths.mojo::test_hash_into_nonzero_offsets_and_boundaries",
+            "test_hash_into_batch_paths.mojo::test_hash_batch_paths_match_scalar_with_offset_storage",
+            "test_hash_into_batch_paths.mojo::test_sha512_four_way_thresholds_match_scalar"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_md_legacy.mojo",
+              "id": "test_md_legacy.mojo::test_rfc1320_md4_vectors"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_dispatch_negative_hashes.mojo::test_every_fixed_hash_rejects_wrong_output_size"
+          ],
+          "state": [
+            "hash-finalize-once"
+          ],
+          "paths": [
+            "scalar",
+            "simd"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_HASH/MD5": {
+      "operations": {
+        "digest": {
+          "unit": [
+            "test_md5.mojo::test_rfc1321_vectors",
+            "test_hash_into_batch_paths.mojo::test_hash_into_nonzero_offsets_and_boundaries",
+            "test_hash_into_batch_paths.mojo::test_hash_batch_paths_match_scalar_with_offset_storage",
+            "test_hash_into_batch_paths.mojo::test_sha512_four_way_thresholds_match_scalar"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_md5.mojo",
+              "id": "test_md5.mojo::test_rfc1321_vectors"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_dispatch_negative_hashes.mojo::test_every_fixed_hash_rejects_wrong_output_size"
+          ],
+          "state": [
+            "hash-finalize-once"
+          ],
+          "paths": [
+            "scalar",
+            "simd"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_HASH/BLAKE2s": {
+      "operations": {
+        "digest": {
+          "unit": [
+            "test_blake2.mojo::test_rfc7693_unkeyed_vectors",
+            "test_blake2.mojo::test_keyed_and_variable_output",
+            "test_hash_into_batch_paths.mojo::test_hash_into_nonzero_offsets_and_boundaries",
+            "test_hash_into_batch_paths.mojo::test_hash_batch_paths_match_scalar_with_offset_storage",
+            "test_hash_into_batch_paths.mojo::test_sha512_four_way_thresholds_match_scalar"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_blake2.mojo",
+              "id": "test_blake2.mojo::test_rfc7693_unkeyed_vectors"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_dispatch_negative_hashes.mojo::test_every_fixed_hash_rejects_wrong_output_size"
+          ],
+          "state": [
+            "hash-finalize-once"
+          ],
+          "paths": [
+            "scalar",
+            "simd"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_HASH/BLAKE2b": {
+      "operations": {
+        "digest": {
+          "unit": [
+            "test_blake2.mojo::test_rfc7693_unkeyed_vectors",
+            "test_blake2.mojo::test_keyed_and_variable_output",
+            "test_hash_into_batch_paths.mojo::test_hash_into_nonzero_offsets_and_boundaries",
+            "test_hash_into_batch_paths.mojo::test_hash_batch_paths_match_scalar_with_offset_storage",
+            "test_hash_into_batch_paths.mojo::test_sha512_four_way_thresholds_match_scalar"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_blake2.mojo",
+              "id": "test_blake2.mojo::test_rfc7693_unkeyed_vectors"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_dispatch_negative_hashes.mojo::test_every_fixed_hash_rejects_wrong_output_size"
+          ],
+          "state": [
+            "hash-finalize-once"
+          ],
+          "paths": [
+            "scalar",
+            "simd"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_HASH/Keccak-224": {
+      "operations": {
+        "digest": {
+          "unit": [
+            "test_keccak.mojo::test_nist_sha3_empty_vectors",
+            "test_keccak.mojo::test_keccak_and_shake_vectors",
+            "test_keccak.mojo::test_four_way_sha3_and_keccak_match_independent_hashes",
+            "test_hash_into_batch_paths.mojo::test_hash_into_nonzero_offsets_and_boundaries",
+            "test_hash_into_batch_paths.mojo::test_hash_batch_paths_match_scalar_with_offset_storage",
+            "test_hash_into_batch_paths.mojo::test_sha512_four_way_thresholds_match_scalar"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_keccak.mojo",
+              "id": "test_keccak.mojo::test_nist_sha3_empty_vectors"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_dispatch_negative_hashes.mojo::test_every_fixed_hash_rejects_wrong_output_size"
+          ],
+          "state": [
+            "hash-finalize-once"
+          ],
+          "paths": [
+            "scalar",
+            "simd"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_HASH/Keccak-256": {
+      "operations": {
+        "digest": {
+          "unit": [
+            "test_keccak.mojo::test_keccak_and_shake_vectors",
+            "test_hash_into_batch_paths.mojo::test_hash_into_nonzero_offsets_and_boundaries",
+            "test_hash_into_batch_paths.mojo::test_hash_batch_paths_match_scalar_with_offset_storage",
+            "test_hash_into_batch_paths.mojo::test_sha512_four_way_thresholds_match_scalar"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_keccak.mojo",
+              "id": "test_keccak.mojo::test_keccak_and_shake_vectors"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_dispatch_negative_hashes.mojo::test_every_fixed_hash_rejects_wrong_output_size"
+          ],
+          "state": [
+            "hash-finalize-once"
+          ],
+          "paths": [
+            "scalar",
+            "simd"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_HASH/Keccak-384": {
+      "operations": {
+        "digest": {
+          "unit": [
+            "test_keccak.mojo::test_nist_sha3_empty_vectors",
+            "test_keccak.mojo::test_keccak_and_shake_vectors",
+            "test_keccak.mojo::test_four_way_sha3_and_keccak_match_independent_hashes",
+            "test_hash_into_batch_paths.mojo::test_hash_into_nonzero_offsets_and_boundaries",
+            "test_hash_into_batch_paths.mojo::test_hash_batch_paths_match_scalar_with_offset_storage",
+            "test_hash_into_batch_paths.mojo::test_sha512_four_way_thresholds_match_scalar"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_keccak.mojo",
+              "id": "test_keccak.mojo::test_nist_sha3_empty_vectors"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_dispatch_negative_hashes.mojo::test_every_fixed_hash_rejects_wrong_output_size"
+          ],
+          "state": [
+            "hash-finalize-once"
+          ],
+          "paths": [
+            "scalar",
+            "simd"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_HASH/Keccak-512": {
+      "operations": {
+        "digest": {
+          "unit": [
+            "test_keccak.mojo::test_nist_sha3_empty_vectors",
+            "test_keccak.mojo::test_keccak_and_shake_vectors",
+            "test_keccak.mojo::test_four_way_sha3_and_keccak_match_independent_hashes",
+            "test_hash_into_batch_paths.mojo::test_hash_into_nonzero_offsets_and_boundaries",
+            "test_hash_into_batch_paths.mojo::test_hash_batch_paths_match_scalar_with_offset_storage",
+            "test_hash_into_batch_paths.mojo::test_sha512_four_way_thresholds_match_scalar"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_keccak.mojo",
+              "id": "test_keccak.mojo::test_nist_sha3_empty_vectors"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_dispatch_negative_hashes.mojo::test_every_fixed_hash_rejects_wrong_output_size"
+          ],
+          "state": [
+            "hash-finalize-once"
+          ],
+          "paths": [
+            "scalar",
+            "simd"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_HASH/LSH-224": {
+      "operations": {
+        "digest": {
+          "unit": [
+            "test_lsh256.mojo::test_reference_empty_and_short_vectors",
+            "test_hash_into_batch_paths.mojo::test_hash_into_nonzero_offsets_and_boundaries",
+            "test_hash_into_batch_paths.mojo::test_hash_batch_paths_match_scalar_with_offset_storage",
+            "test_hash_into_batch_paths.mojo::test_sha512_four_way_thresholds_match_scalar"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_lsh256.mojo",
+              "id": "test_lsh256.mojo::test_reference_empty_and_short_vectors"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_lsh256.mojo::test_reference_empty_and_short_vectors",
+            "test_dispatch_negative_hashes.mojo::test_every_fixed_hash_rejects_wrong_output_size"
+          ],
+          "state": [
+            "hash-finalize-once"
+          ],
+          "paths": [
+            "scalar",
+            "simd"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_HASH/LSH-256": {
+      "operations": {
+        "digest": {
+          "unit": [
+            "test_lsh256.mojo::test_reference_empty_and_short_vectors",
+            "test_hash_into_batch_paths.mojo::test_hash_into_nonzero_offsets_and_boundaries",
+            "test_hash_into_batch_paths.mojo::test_hash_batch_paths_match_scalar_with_offset_storage",
+            "test_hash_into_batch_paths.mojo::test_sha512_four_way_thresholds_match_scalar"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_lsh256.mojo",
+              "id": "test_lsh256.mojo::test_reference_empty_and_short_vectors"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_lsh256.mojo::test_reference_empty_and_short_vectors",
+            "test_dispatch_negative_hashes.mojo::test_every_fixed_hash_rejects_wrong_output_size"
+          ],
+          "state": [
+            "hash-finalize-once"
+          ],
+          "paths": [
+            "scalar",
+            "simd"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_HASH/LSH-384": {
+      "operations": {
+        "digest": {
+          "unit": [
+            "test_lsh512.mojo::test_reference_empty_vectors",
+            "test_hash_into_batch_paths.mojo::test_hash_into_nonzero_offsets_and_boundaries",
+            "test_hash_into_batch_paths.mojo::test_hash_batch_paths_match_scalar_with_offset_storage",
+            "test_hash_into_batch_paths.mojo::test_sha512_four_way_thresholds_match_scalar"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_lsh512.mojo",
+              "id": "test_lsh512.mojo::test_reference_empty_vectors"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_dispatch_negative_hashes.mojo::test_every_fixed_hash_rejects_wrong_output_size"
+          ],
+          "state": [
+            "hash-finalize-once"
+          ],
+          "paths": [
+            "scalar",
+            "simd"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_HASH/LSH-512": {
+      "operations": {
+        "digest": {
+          "unit": [
+            "test_lsh512.mojo::test_reference_empty_vectors",
+            "test_hash_into_batch_paths.mojo::test_hash_into_nonzero_offsets_and_boundaries",
+            "test_hash_into_batch_paths.mojo::test_hash_batch_paths_match_scalar_with_offset_storage",
+            "test_hash_into_batch_paths.mojo::test_sha512_four_way_thresholds_match_scalar"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_lsh512.mojo",
+              "id": "test_lsh512.mojo::test_reference_empty_vectors"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_dispatch_negative_hashes.mojo::test_every_fixed_hash_rejects_wrong_output_size"
+          ],
+          "state": [
+            "hash-finalize-once"
+          ],
+          "paths": [
+            "scalar",
+            "simd"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_HASH/LSH-512-256": {
+      "operations": {
+        "digest": {
+          "unit": [
+            "test_lsh512.mojo::test_reference_empty_vectors",
+            "test_hash_into_batch_paths.mojo::test_hash_into_nonzero_offsets_and_boundaries",
+            "test_hash_into_batch_paths.mojo::test_hash_batch_paths_match_scalar_with_offset_storage",
+            "test_hash_into_batch_paths.mojo::test_sha512_four_way_thresholds_match_scalar"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_lsh512.mojo",
+              "id": "test_lsh512.mojo::test_reference_empty_vectors"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_dispatch_negative_hashes.mojo::test_every_fixed_hash_rejects_wrong_output_size"
+          ],
+          "state": [
+            "hash-finalize-once"
+          ],
+          "paths": [
+            "scalar",
+            "simd"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_HASH/PanamaHash": {
+      "operations": {
+        "digest": {
+          "unit": [
+            "test_panama.mojo::test_reference_vectors",
+            "test_hash_into_batch_paths.mojo::test_hash_into_nonzero_offsets_and_boundaries",
+            "test_hash_into_batch_paths.mojo::test_hash_batch_paths_match_scalar_with_offset_storage",
+            "test_hash_into_batch_paths.mojo::test_sha512_four_way_thresholds_match_scalar"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_panama.mojo",
+              "id": "test_panama.mojo::test_reference_vectors"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_dispatch_negative_hashes.mojo::test_every_fixed_hash_rejects_wrong_output_size"
+          ],
+          "state": [
+            "hash-finalize-once"
+          ],
+          "paths": [
+            "scalar",
+            "simd"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_HASH/RIPEMD-128": {
+      "operations": {
+        "digest": {
+          "unit": [
+            "test_ripemd.mojo::test_ripemd_empty_vectors",
+            "test_ripemd.mojo::test_ripemd_abc_vectors",
+            "test_hash_into_batch_paths.mojo::test_hash_into_nonzero_offsets_and_boundaries",
+            "test_hash_into_batch_paths.mojo::test_hash_batch_paths_match_scalar_with_offset_storage",
+            "test_hash_into_batch_paths.mojo::test_sha512_four_way_thresholds_match_scalar"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_ripemd.mojo",
+              "id": "test_ripemd.mojo::test_ripemd_empty_vectors"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_dispatch_negative_hashes.mojo::test_every_fixed_hash_rejects_wrong_output_size"
+          ],
+          "state": [
+            "hash-finalize-once"
+          ],
+          "paths": [
+            "scalar",
+            "simd"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_HASH/RIPEMD-160": {
+      "operations": {
+        "digest": {
+          "unit": [
+            "test_ripemd.mojo::test_ripemd_empty_vectors",
+            "test_ripemd.mojo::test_ripemd_abc_vectors",
+            "test_hash_into_batch_paths.mojo::test_hash_into_nonzero_offsets_and_boundaries",
+            "test_hash_into_batch_paths.mojo::test_hash_batch_paths_match_scalar_with_offset_storage",
+            "test_hash_into_batch_paths.mojo::test_sha512_four_way_thresholds_match_scalar"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_ripemd.mojo",
+              "id": "test_ripemd.mojo::test_ripemd_empty_vectors"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_dispatch_negative_hashes.mojo::test_every_fixed_hash_rejects_wrong_output_size"
+          ],
+          "state": [
+            "hash-finalize-once"
+          ],
+          "paths": [
+            "scalar",
+            "simd"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_HASH/RIPEMD-256": {
+      "operations": {
+        "digest": {
+          "unit": [
+            "test_ripemd.mojo::test_ripemd_empty_vectors",
+            "test_ripemd.mojo::test_ripemd_abc_vectors",
+            "test_hash_into_batch_paths.mojo::test_hash_into_nonzero_offsets_and_boundaries",
+            "test_hash_into_batch_paths.mojo::test_hash_batch_paths_match_scalar_with_offset_storage",
+            "test_hash_into_batch_paths.mojo::test_sha512_four_way_thresholds_match_scalar"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_ripemd.mojo",
+              "id": "test_ripemd.mojo::test_ripemd_empty_vectors"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_dispatch_negative_hashes.mojo::test_every_fixed_hash_rejects_wrong_output_size"
+          ],
+          "state": [
+            "hash-finalize-once"
+          ],
+          "paths": [
+            "scalar",
+            "simd"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_HASH/RIPEMD-320": {
+      "operations": {
+        "digest": {
+          "unit": [
+            "test_ripemd.mojo::test_ripemd_empty_vectors",
+            "test_ripemd.mojo::test_ripemd_abc_vectors",
+            "test_hash_into_batch_paths.mojo::test_hash_into_nonzero_offsets_and_boundaries",
+            "test_hash_into_batch_paths.mojo::test_hash_batch_paths_match_scalar_with_offset_storage",
+            "test_hash_into_batch_paths.mojo::test_sha512_four_way_thresholds_match_scalar"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_ripemd.mojo",
+              "id": "test_ripemd.mojo::test_ripemd_empty_vectors"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_dispatch_negative_hashes.mojo::test_every_fixed_hash_rejects_wrong_output_size"
+          ],
+          "state": [
+            "hash-finalize-once"
+          ],
+          "paths": [
+            "scalar",
+            "simd"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_HASH/SHA-1": {
+      "operations": {
+        "digest": {
+          "unit": [
+            "test_sha1.mojo::test_fips180_sha1_vectors",
+            "test_sha1.mojo::test_sha1_incremental_and_single_use",
+            "test_hash_into_batch_paths.mojo::test_hash_into_nonzero_offsets_and_boundaries",
+            "test_hash_into_batch_paths.mojo::test_hash_batch_paths_match_scalar_with_offset_storage",
+            "test_hash_into_batch_paths.mojo::test_sha512_four_way_thresholds_match_scalar"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_sha1.mojo",
+              "id": "test_sha1.mojo::test_fips180_sha1_vectors"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_sha1.mojo::test_sha1_incremental_and_single_use",
+            "test_dispatch_negative_hashes.mojo::test_every_fixed_hash_rejects_wrong_output_size"
+          ],
+          "state": [
+            "hash-finalize-once"
+          ],
+          "paths": [
+            "scalar",
+            "simd"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_HASH/SHA-224": {
+      "operations": {
+        "digest": {
+          "unit": [
+            "test_sha256.mojo::test_nist_sha224_abc",
+            "test_hash_into_batch_paths.mojo::test_hash_into_nonzero_offsets_and_boundaries",
+            "test_hash_into_batch_paths.mojo::test_hash_batch_paths_match_scalar_with_offset_storage",
+            "test_hash_into_batch_paths.mojo::test_sha512_four_way_thresholds_match_scalar"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_sha256.mojo",
+              "id": "test_sha256.mojo::test_nist_sha224_abc"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_sha256.mojo::test_finalize_is_single_use",
+            "test_dispatch_negative_hashes.mojo::test_every_fixed_hash_rejects_wrong_output_size"
+          ],
+          "state": [
+            "hash-finalize-once"
+          ],
+          "paths": [
+            "scalar",
+            "simd"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_HASH/SHA-256": {
+      "operations": {
+        "digest": {
+          "unit": [
+            "test_sha256.mojo::test_nist_empty",
+            "test_sha256.mojo::test_nist_abc",
+            "test_sha256.mojo::test_nist_sha224_abc",
+            "test_sha256.mojo::test_nist_multiblock",
+            "test_sha256.mojo::test_incremental_boundaries",
+            "test_sha256.mojo::test_finalize_is_single_use",
+            "test_hash_into_batch_paths.mojo::test_hash_into_nonzero_offsets_and_boundaries",
+            "test_hash_into_batch_paths.mojo::test_hash_batch_paths_match_scalar_with_offset_storage",
+            "test_hash_into_batch_paths.mojo::test_sha512_four_way_thresholds_match_scalar"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_sha256.mojo",
+              "id": "test_sha256.mojo::test_nist_empty"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_sha256.mojo::test_finalize_is_single_use",
+            "test_dispatch_negative_hashes.mojo::test_every_fixed_hash_rejects_wrong_output_size"
+          ],
+          "state": [
+            "hash-finalize-once"
+          ],
+          "paths": [
+            "scalar",
+            "simd"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_HASH/SHA-384": {
+      "operations": {
+        "digest": {
+          "unit": [
+            "test_sha512.mojo::test_nist_sha384_abc",
+            "test_sha512.mojo::test_four_way_sha2_matches_independent_hashes",
+            "test_hash_into_batch_paths.mojo::test_hash_into_nonzero_offsets_and_boundaries",
+            "test_hash_into_batch_paths.mojo::test_hash_batch_paths_match_scalar_with_offset_storage",
+            "test_hash_into_batch_paths.mojo::test_sha512_four_way_thresholds_match_scalar"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_sha512.mojo",
+              "id": "test_sha512.mojo::test_nist_sha384_abc"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_dispatch_negative_hashes.mojo::test_every_fixed_hash_rejects_wrong_output_size"
+          ],
+          "state": [
+            "hash-finalize-once"
+          ],
+          "paths": [
+            "scalar",
+            "simd"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_HASH/SHA-512": {
+      "operations": {
+        "digest": {
+          "unit": [
+            "test_sha512.mojo::test_nist_sha384_abc",
+            "test_sha512.mojo::test_nist_sha512_empty",
+            "test_sha512.mojo::test_nist_sha512_abc",
+            "test_sha512.mojo::test_sha512_incremental",
+            "test_sha512.mojo::test_four_way_sha2_matches_independent_hashes",
+            "test_hash_into_batch_paths.mojo::test_hash_into_nonzero_offsets_and_boundaries",
+            "test_hash_into_batch_paths.mojo::test_hash_batch_paths_match_scalar_with_offset_storage",
+            "test_hash_into_batch_paths.mojo::test_sha512_four_way_thresholds_match_scalar"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_sha512.mojo",
+              "id": "test_sha512.mojo::test_nist_sha384_abc"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_dispatch_negative_hashes.mojo::test_every_fixed_hash_rejects_wrong_output_size"
+          ],
+          "state": [
+            "hash-finalize-once"
+          ],
+          "paths": [
+            "scalar",
+            "simd"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_HASH/SHA3-224": {
+      "operations": {
+        "digest": {
+          "unit": [
+            "test_keccak.mojo::test_nist_sha3_empty_vectors",
+            "test_hash_into_batch_paths.mojo::test_hash_into_nonzero_offsets_and_boundaries",
+            "test_hash_into_batch_paths.mojo::test_hash_batch_paths_match_scalar_with_offset_storage",
+            "test_hash_into_batch_paths.mojo::test_sha512_four_way_thresholds_match_scalar"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_keccak.mojo",
+              "id": "test_keccak.mojo::test_nist_sha3_empty_vectors"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_dispatch_negative_hashes.mojo::test_every_fixed_hash_rejects_wrong_output_size"
+          ],
+          "state": [
+            "hash-finalize-once"
+          ],
+          "paths": [
+            "scalar",
+            "simd"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_HASH/SHA3-256": {
+      "operations": {
+        "digest": {
+          "unit": [
+            "test_keccak.mojo::test_nist_sha3_empty_vectors",
+            "test_hash_into_batch_paths.mojo::test_hash_into_nonzero_offsets_and_boundaries",
+            "test_hash_into_batch_paths.mojo::test_hash_batch_paths_match_scalar_with_offset_storage",
+            "test_hash_into_batch_paths.mojo::test_sha512_four_way_thresholds_match_scalar"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_keccak.mojo",
+              "id": "test_keccak.mojo::test_nist_sha3_empty_vectors"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_dispatch_negative_hashes.mojo::test_every_fixed_hash_rejects_wrong_output_size"
+          ],
+          "state": [
+            "hash-finalize-once"
+          ],
+          "paths": [
+            "scalar",
+            "simd"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_HASH/SHA3-384": {
+      "operations": {
+        "digest": {
+          "unit": [
+            "test_keccak.mojo::test_nist_sha3_empty_vectors",
+            "test_hash_into_batch_paths.mojo::test_hash_into_nonzero_offsets_and_boundaries",
+            "test_hash_into_batch_paths.mojo::test_hash_batch_paths_match_scalar_with_offset_storage",
+            "test_hash_into_batch_paths.mojo::test_sha512_four_way_thresholds_match_scalar"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_keccak.mojo",
+              "id": "test_keccak.mojo::test_nist_sha3_empty_vectors"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_dispatch_negative_hashes.mojo::test_every_fixed_hash_rejects_wrong_output_size"
+          ],
+          "state": [
+            "hash-finalize-once"
+          ],
+          "paths": [
+            "scalar",
+            "simd"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_HASH/SHA3-512": {
+      "operations": {
+        "digest": {
+          "unit": [
+            "test_keccak.mojo::test_nist_sha3_empty_vectors",
+            "test_hash_into_batch_paths.mojo::test_hash_into_nonzero_offsets_and_boundaries",
+            "test_hash_into_batch_paths.mojo::test_hash_batch_paths_match_scalar_with_offset_storage",
+            "test_hash_into_batch_paths.mojo::test_sha512_four_way_thresholds_match_scalar"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_keccak.mojo",
+              "id": "test_keccak.mojo::test_nist_sha3_empty_vectors"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_dispatch_negative_hashes.mojo::test_every_fixed_hash_rejects_wrong_output_size"
+          ],
+          "state": [
+            "hash-finalize-once"
+          ],
+          "paths": [
+            "scalar",
+            "simd"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_HASH/SHAKE128": {
+      "operations": {
+        "digest": {
+          "unit": [
+            "test_hashes.mojo::test_nist_sha3_256_abc",
+            "test_hashes.mojo::test_rfc7693_blake2b_abc",
+            "test_hashes.mojo::test_legacy_md5_rfc1321",
+            "test_hashes.mojo::test_sm3_gbt32905",
+            "test_hashes.mojo::test_dispatch_boundary_checks",
+            "test_hashes.mojo::test_hash_into_reuses_caller_output",
+            "test_hashes.mojo::test_two_way_lsh256_matches_independent_hashes",
+            "test_hashes.mojo::test_two_way_md2_matches_independent_hashes",
+            "test_hash_into_batch_paths.mojo::test_hash_into_nonzero_offsets_and_boundaries",
+            "test_hash_into_batch_paths.mojo::test_hash_batch_paths_match_scalar_with_offset_storage",
+            "test_hash_into_batch_paths.mojo::test_sha512_four_way_thresholds_match_scalar"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_hashes.mojo",
+              "id": "test_hashes.mojo::test_nist_sha3_256_abc"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_hashes.mojo::test_dispatch_boundary_checks",
+            "test_hashes.mojo::test_hash_into_reuses_caller_output",
+            "test_dispatch_negative_hashes.mojo::test_every_fixed_hash_rejects_wrong_output_size"
+          ],
+          "state": [
+            "hash-finalize-once"
+          ],
+          "paths": [
+            "scalar",
+            "simd"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_HASH/SHAKE256": {
+      "operations": {
+        "digest": {
+          "unit": [
+            "test_hashes.mojo::test_nist_sha3_256_abc",
+            "test_hashes.mojo::test_rfc7693_blake2b_abc",
+            "test_hashes.mojo::test_legacy_md5_rfc1321",
+            "test_hashes.mojo::test_sm3_gbt32905",
+            "test_hashes.mojo::test_dispatch_boundary_checks",
+            "test_hashes.mojo::test_hash_into_reuses_caller_output",
+            "test_hashes.mojo::test_two_way_lsh256_matches_independent_hashes",
+            "test_hashes.mojo::test_two_way_md2_matches_independent_hashes",
+            "test_hash_into_batch_paths.mojo::test_hash_into_nonzero_offsets_and_boundaries",
+            "test_hash_into_batch_paths.mojo::test_hash_batch_paths_match_scalar_with_offset_storage",
+            "test_hash_into_batch_paths.mojo::test_sha512_four_way_thresholds_match_scalar"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_hashes.mojo",
+              "id": "test_hashes.mojo::test_nist_sha3_256_abc"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_hashes.mojo::test_dispatch_boundary_checks",
+            "test_hashes.mojo::test_hash_into_reuses_caller_output",
+            "test_dispatch_negative_hashes.mojo::test_every_fixed_hash_rejects_wrong_output_size"
+          ],
+          "state": [
+            "hash-finalize-once"
+          ],
+          "paths": [
+            "scalar",
+            "simd"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_HASH/SipHash": {
+      "operations": {
+        "digest": {
+          "unit": [
+            "test_siphash.mojo::test_reference_vectors",
+            "test_hash_into_batch_paths.mojo::test_hash_into_nonzero_offsets_and_boundaries",
+            "test_hash_into_batch_paths.mojo::test_hash_batch_paths_match_scalar_with_offset_storage",
+            "test_hash_into_batch_paths.mojo::test_sha512_four_way_thresholds_match_scalar"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_siphash.mojo",
+              "id": "test_siphash.mojo::test_reference_vectors"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_dispatch_negative_hashes.mojo::test_every_fixed_hash_rejects_wrong_output_size"
+          ],
+          "state": [
+            "hash-finalize-once"
+          ],
+          "paths": [
+            "scalar",
+            "simd"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_HASH/SM3": {
+      "operations": {
+        "digest": {
+          "unit": [
+            "test_sm3.mojo::test_gb_sm3_vectors",
+            "test_hash_into_batch_paths.mojo::test_hash_into_nonzero_offsets_and_boundaries",
+            "test_hash_into_batch_paths.mojo::test_hash_batch_paths_match_scalar_with_offset_storage",
+            "test_hash_into_batch_paths.mojo::test_sha512_four_way_thresholds_match_scalar"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_sm3.mojo",
+              "id": "test_sm3.mojo::test_gb_sm3_vectors"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_dispatch_negative_hashes.mojo::test_every_fixed_hash_rejects_wrong_output_size"
+          ],
+          "state": [
+            "hash-finalize-once"
+          ],
+          "paths": [
+            "scalar",
+            "simd"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_HASH/Tiger": {
+      "operations": {
+        "digest": {
+          "unit": [
+            "test_tiger.mojo::test_reference_vectors",
+            "test_hash_into_batch_paths.mojo::test_hash_into_nonzero_offsets_and_boundaries",
+            "test_hash_into_batch_paths.mojo::test_hash_batch_paths_match_scalar_with_offset_storage",
+            "test_hash_into_batch_paths.mojo::test_sha512_four_way_thresholds_match_scalar"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_tiger.mojo",
+              "id": "test_tiger.mojo::test_reference_vectors"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_dispatch_negative_hashes.mojo::test_every_fixed_hash_rejects_wrong_output_size"
+          ],
+          "state": [
+            "hash-finalize-once"
+          ],
+          "paths": [
+            "scalar",
+            "simd"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_HASH/Whirlpool": {
+      "operations": {
+        "digest": {
+          "unit": [
+            "test_whirlpool.mojo::test_iso_vectors",
+            "test_hash_into_batch_paths.mojo::test_hash_into_nonzero_offsets_and_boundaries",
+            "test_hash_into_batch_paths.mojo::test_hash_batch_paths_match_scalar_with_offset_storage",
+            "test_hash_into_batch_paths.mojo::test_sha512_four_way_thresholds_match_scalar"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_whirlpool.mojo",
+              "id": "test_whirlpool.mojo::test_iso_vectors"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_dispatch_negative_hashes.mojo::test_every_fixed_hash_rejects_wrong_output_size"
+          ],
+          "state": [
+            "hash-finalize-once"
+          ],
+          "paths": [
+            "scalar",
+            "simd"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_KDF/PBKDF1": {
+      "operations": {
+        "derive": {
+          "unit": [
+            "test_pbkdf.mojo::test_pbkdf1_sha256_iterated_digest_vector_and_limits"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_pbkdf.mojo",
+              "id": "test_pbkdf.mojo::test_pbkdf1_sha256_iterated_digest_vector_and_limits"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_pbkdf.mojo::test_pbkdf1_sha256_iterated_digest_vector_and_limits",
+            "test_kdf_dispatch.mojo::test_dispatch_rejects_zero_output_for_every_family"
+          ],
+          "state": [],
+          "paths": [
+            "scalar"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_KDF/PBKDF2": {
+      "operations": {
+        "derive": {
+          "unit": [
+            "test_pbkdf.mojo::test_pbkdf2_sha256_vectors"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_pbkdf.mojo",
+              "id": "test_pbkdf.mojo::test_pbkdf2_sha256_vectors"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_pbkdf.mojo::test_pbkdf1_sha256_iterated_digest_vector_and_limits",
+            "test_kdf_dispatch.mojo::test_dispatch_rejects_zero_output_for_every_family"
+          ],
+          "state": [],
+          "paths": [
+            "scalar"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_KDF/PKCS12-PBKDF": {
+      "operations": {
+        "derive": {
+          "unit": [
+            "test_kdf_random.mojo::test_pbkdf2_and_pkcs12_vectors"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_kdf_random.mojo",
+              "id": "test_kdf_random.mojo::test_pbkdf2_and_pkcs12_vectors"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_kdf_random.mojo::test_rng_and_drbg_invariants",
+            "test_kdf_dispatch.mojo::test_dispatch_rejects_zero_output_for_every_family"
+          ],
+          "state": [],
+          "paths": [
+            "scalar"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_KDF/HKDF": {
+      "operations": {
+        "derive": {
+          "unit": [
+            "test_hkdf.mojo::test_rfc5869_sha256",
+            "test_hkdf.mojo::test_reference_sha512"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_hkdf.mojo",
+              "id": "test_hkdf.mojo::test_rfc5869_sha256"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_kdf_dispatch.mojo::test_dispatch_rejects_zero_output_for_every_family"
+          ],
+          "state": [],
+          "paths": [
+            "scalar"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_KDF/Scrypt": {
+      "operations": {
+        "derive": {
+          "unit": [
+            "test_scrypt.mojo::test_rfc7914_empty_vector",
+            "test_scrypt.mojo::test_rfc7914_multiblock_parallel_vector"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_scrypt.mojo",
+              "id": "test_scrypt.mojo::test_rfc7914_empty_vector"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_kdf_dispatch.mojo::test_dispatch_rejects_zero_output_for_every_family"
+          ],
+          "state": [],
+          "paths": [
+            "scalar"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+[workspace]
+channels = ["https://conda.modular.com/max", "conda-forge"]
+name = "mcrypto"
+platforms = ["linux-64", "linux-aarch64", "osx-arm64"]
+version = "0.1.0"
+description = "Cryptographic primitives for Mojo"
+authors = ["Alex Soares <alexsanderlimare@gmail.com>"]
+license = "MIT"
+license-file = "LICENSE"
+readme = "README.md"
+repository = "https://github.com/aelxtpt/mcrypto"
+
+[tasks]
+test-sha256 = "mojo run -I src tests/test_sha256.mojo"
+test-sha512 = "mojo run -I src tests/test_sha512.mojo"
+test-hashes = "mojo run -I src tests/test_hashes.mojo"
+test-ciphers-aead-macs = "mojo run -I src tests/test_ciphers_aead_macs.mojo"
+test-public-key = "mojo run -I src tests/test_public_key.mojo"
+test-transforms = "mojo run -I src tests/test_transforms.mojo"
+test-kdf-random = "mojo run -I src tests/test_kdf_random.mojo"
+test-modern-primitives = "mojo run -I src tests/test_modern_primitives.mojo"
+test-hashes-stream-secretbox = "mojo run -I src tests/test_hashes_stream_secretbox.mojo"
+test-kdf-box-kx-macs = "mojo run -I src tests/test_kdf_box_kx_macs.mojo"
+test-aead-combined = "mojo run -I src tests/test_aead_combined.mojo"
+test-kem = "mojo run -I src tests/test_kem.mojo"
+test-groups-ipcrypt-secretstream = "mojo run -I src tests/test_groups_ipcrypt_secretstream.mojo"
+test-traits = "mojo run -I src tests/test_traits.mojo"
+test-coverage = "python3 tests/coverage_registry_io.py --self-test && python3 tests/validate_coverage.py --self-test --output reports/coverage-complete.json"
+test = "python3 tests/run_all.py --optimization O3"
+test-o0 = "python3 tests/run_all.py --optimization O0"
+test-asan = "python3 tests/run_all.py --optimization O1 --sanitize address"
+test-tsan = "python3 tests/run_all.py --optimization O1 --sanitize thread"
+format = "mojo format src tests"
+
+[dependencies]
+mojo = "==1.0.0"
+max-core = "==26.5.0"
+
+

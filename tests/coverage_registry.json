@@ -1,0 +1,13 @@
+{
+  "format_version": 1,
+  "schema_version": 3,
+  "shard_root": "coverage_registry",
+  "shards": [
+    "coverage_registry/metadata.json",
+    "coverage_registry/labels.json",
+    "coverage_registry/catalog/reference-symmetric.json",
+    "coverage_registry/catalog/reference-hash-mac-kdf.json",
+    "coverage_registry/catalog/reference-public-key-random.json",
+    "coverage_registry/catalog/interop.json"
+  ]
+}

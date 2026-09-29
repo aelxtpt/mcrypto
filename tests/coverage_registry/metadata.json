@@ -1,0 +1,313 @@
+{
+  "reference_versions": {
+    "REFERENCE_SUITE_VERSION": "embedded",
+    "INTEROP_SUITE_VERSION": "embedded"
+  },
+  "inventories": {
+    "REFERENCE_AEAD": [
+      "GCM",
+      "CCM",
+      "EAX",
+      "ChaCha20Poly1305",
+      "XChaCha20Poly1305"
+    ],
+    "REFERENCE_STREAM": [
+      "ChaCha8",
+      "ChaCha12",
+      "ChaCha20",
+      "ChaCha20IETF",
+      "XChaCha20",
+      "XChaCha20-Counter1",
+      "Panama",
+      "Salsa20",
+      "XSalsa20",
+      "Sosemanuk",
+      "ARC4",
+      "SEAL",
+      "WAKE-OFB",
+      "Rabbit",
+      "HC-128",
+      "HC-256"
+    ],
+    "REFERENCE_BLOCK": [
+      "AES",
+      "RC2",
+      "RC5",
+      "RC6",
+      "MARS",
+      "Twofish",
+      "Serpent",
+      "CAST-128",
+      "CAST-256",
+      "ARIA",
+      "Blowfish",
+      "Camellia",
+      "CHAM-64",
+      "CHAM-128",
+      "DES",
+      "DES-XEX3",
+      "DES-EDE2",
+      "DES-EDE3",
+      "3-WAY",
+      "GOST",
+      "HIGHT",
+      "IDEA",
+      "Kalyna-128",
+      "Kalyna-256",
+      "Kalyna-512",
+      "LEA",
+      "SAFER",
+      "SEED",
+      "SHACAL-2",
+      "SHARK",
+      "SIMECK-32",
+      "SIMECK-64",
+      "SIMON-64",
+      "SIMON-128",
+      "Skipjack",
+      "SPECK-64",
+      "SPECK-128",
+      "SM4",
+      "Square",
+      "TEA",
+      "Threefish-256",
+      "Threefish-512",
+      "Threefish-1024",
+      "XTEA"
+    ],
+    "REFERENCE_MODES": [
+      "ECB",
+      "CBC",
+      "CBC-CTS",
+      "CFB",
+      "OFB",
+      "CTR",
+      "XTS"
+    ],
+    "REFERENCE_MAC": [
+      "BLAKE2s-MAC",
+      "BLAKE2b-MAC",
+      "CBC-MAC",
+      "CMAC",
+      "DMAC",
+      "GMAC",
+      "HMAC",
+      "PanamaMAC",
+      "Poly1305-AES",
+      "Poly1305",
+      "RIPEMD160-HMAC",
+      "SipHash-2-4",
+      "SipHash-4-8",
+      "Two-Track-MAC",
+      "VMAC"
+    ],
+    "REFERENCE_HASH": [
+      "Adler32",
+      "CRC32",
+      "CRC32C",
+      "MD2",
+      "MD4",
+      "MD5",
+      "BLAKE2s",
+      "BLAKE2b",
+      "Keccak-224",
+      "Keccak-256",
+      "Keccak-384",
+      "Keccak-512",
+      "LSH-224",
+      "LSH-256",
+      "LSH-384",
+      "LSH-512",
+      "LSH-512-256",
+      "PanamaHash",
+      "RIPEMD-128",
+      "RIPEMD-160",
+      "RIPEMD-256",
+      "RIPEMD-320",
+      "SHA-1",
+      "SHA-224",
+      "SHA-256",
+      "SHA-384",
+      "SHA-512",
+      "SHA3-224",
+      "SHA3-256",
+      "SHA3-384",
+      "SHA3-512",
+      "SHAKE128",
+      "SHAKE256",
+      "SipHash",
+      "SM3",
+      "Tiger",
+      "Whirlpool"
+    ],
+    "REFERENCE_PUBLIC_KEY": [
+      "RSA",
+      "DSA",
+      "DSA-RFC6979",
+      "ElGamal",
+      "NR",
+      "Rabin-Williams",
+      "LUC",
+      "LUCELG",
+      "ECGDSA",
+      "DLIES",
+      "ESIGN",
+      "ECDSA",
+      "ECDSA-RFC6979",
+      "Ed25519",
+      "ECNR",
+      "ECIES"
+    ],
+    "REFERENCE_PADDING": [
+      "PKCS1-v1.5",
+      "PKCS1-v2.0",
+      "OAEP",
+      "PSS",
+      "PSSR",
+      "IEEE-P1363-EMSA2",
+      "IEEE-P1363-EMSA5"
+    ],
+    "REFERENCE_AGREEMENT": [
+      "DH",
+      "DH2",
+      "MQV",
+      "HMQV",
+      "FHMQV",
+      "LUCDIF",
+      "XTR-DH",
+      "ECDH",
+      "ECMQV",
+      "ECHMQV",
+      "ECFHMQV",
+      "X25519"
+    ],
+    "REFERENCE_KDF": [
+      "PBKDF1",
+      "PBKDF2",
+      "PKCS12-PBKDF",
+      "HKDF",
+      "Scrypt"
+    ],
+    "REFERENCE_RNG": [
+      "ANSI-X9.17",
+      "RandomPool",
+      "NIST-Hash-DRBG",
+      "NIST-HMAC-DRBG",
+      "RDRAND",
+      "RDSEED"
+    ],
+    "REFERENCE_OTHER": [
+      "Shamir-secret-sharing",
+      "Rabin-IDA",
+      "GF(p)",
+      "GF(2^n)",
+      "prime-generation",
+      "DEFLATE",
+      "gzip",
+      "zlib",
+      "Hex",
+      "Base32",
+      "Base64",
+      "Base64URL"
+    ],
+    "INTEROP_AEAD": [
+      "AEGIS-128L",
+      "AEGIS-256",
+      "AES-256-GCM",
+      "ChaCha20-Poly1305",
+      "ChaCha20-Poly1305-IETF",
+      "XChaCha20-Poly1305-IETF"
+    ],
+    "INTEROP_AUTH": [
+      "HMAC-SHA256",
+      "HMAC-SHA512",
+      "HMAC-SHA512-256"
+    ],
+    "INTEROP_BOX": [
+      "Curve25519-XSalsa20-Poly1305",
+      "Curve25519-XChaCha20-Poly1305",
+      "sealed-box"
+    ],
+    "INTEROP_CORE": [
+      "Ed25519",
+      "HChaCha20",
+      "HSalsa20",
+      "Keccak-f1600",
+      "Salsa20",
+      "Salsa20-12",
+      "Salsa20-8",
+      "Ristretto255"
+    ],
+    "INTEROP_HASH": [
+      "BLAKE2b",
+      "SHA-256",
+      "SHA-512",
+      "SHA3-224",
+      "SHA3-256",
+      "SHA3-384",
+      "SHA3-512"
+    ],
+    "INTEROP_XOF": [
+      "SHAKE128",
+      "SHAKE256",
+      "TurboSHAKE128",
+      "TurboSHAKE256"
+    ],
+    "INTEROP_KDF": [
+      "BLAKE2b-KDF",
+      "HKDF-SHA256",
+      "HKDF-SHA512"
+    ],
+    "INTEROP_KEM": [
+      "ML-KEM-768",
+      "X-Wing"
+    ],
+    "INTEROP_KX": [
+      "X25519-BLAKE2b"
+    ],
+    "INTEROP_IPCRYPT": [
+      "IPcrypt",
+      "IPcrypt-ND",
+      "IPcrypt-NDX",
+      "IPcrypt-PFX"
+    ],
+    "INTEROP_PASSWORD": [
+      "Argon2i",
+      "Argon2id",
+      "Scrypt-Salsa20-8-SHA256"
+    ],
+    "INTEROP_SCALARMULT": [
+      "X25519",
+      "Ed25519",
+      "Ristretto255"
+    ],
+    "INTEROP_SECRET": [
+      "XSalsa20-Poly1305",
+      "XChaCha20-Poly1305",
+      "XChaCha20-Poly1305-secretstream"
+    ],
+    "INTEROP_SHORT": [
+      "SipHash-2-4",
+      "SipHash-x-2-4"
+    ],
+    "INTEROP_SIGN": [
+      "Ed25519",
+      "Ed25519ph"
+    ],
+    "INTEROP_STREAM": [
+      "ChaCha20",
+      "ChaCha20-IETF",
+      "XChaCha20",
+      "Salsa20",
+      "Salsa20-12",
+      "Salsa20-8",
+      "XSalsa20"
+    ],
+    "INTEROP_UTILITIES": [
+      "Poly1305",
+      "constant-time-verify",
+      "secure-memory",
+      "system-CSPRNG"
+    ]
+  }
+}

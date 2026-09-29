@@ -1,0 +1,52 @@
+{
+  "state_labels": {
+    "hash-finalize-once": [
+      "test_sha256.mojo::test_finalize_is_single_use"
+    ],
+    "rng-reseed-and-chunk": [
+      "test_legacy_rng.mojo::test_x917_chunking_and_reseed"
+    ],
+    "secretstream-message-rekey-final": [
+      "test_secretstream_pure.mojo::test_roundtrip_rekey_final_and_tamper"
+    ],
+    "secretstream-failure-preserves-state": [
+      "test_groups_ipcrypt_secretstream.mojo::test_secretstream_authentication_failure"
+    ],
+    "compression-framing": [
+      "test_compression_pure.mojo::test_concatenated_gzip_members"
+    ],
+    "secure-memory-lifecycle": [
+      "test_secure_memory.mojo::test_page_locking_and_locked_owner"
+    ],
+    "stream-counter-continuation": [
+      "test_entropy.mojo::test_chunked_generation_matches_one_shot"
+    ]
+  },
+  "hardware_conditions": {
+    "x86-aes-pclmul": {
+      "available": true,
+      "reason": "required x86 AES/PCLMUL path",
+      "target": "x86_64"
+    },
+    "arm64-aes-pmull": {
+      "available": true,
+      "reason": "required arm64 AES/PMULL path",
+      "target": "arm64"
+    },
+    "x86-rdrand": {
+      "available": true,
+      "reason": "required x86 RDRAND path",
+      "target": "x86_64"
+    },
+    "x86-rdseed": {
+      "available": true,
+      "reason": "required x86 RDSEED path",
+      "target": "x86_64"
+    },
+    "arm64-portable": {
+      "available": true,
+      "reason": "required native ARM64 portable path",
+      "target": "arm64"
+    }
+  }
+}

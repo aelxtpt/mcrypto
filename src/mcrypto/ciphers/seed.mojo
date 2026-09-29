@@ -1,0 +1,685 @@
+"""RFC 4269 SEED 128-bit block cipher in pure Mojo."""
+
+from ..internal.bytes import load_be32, store_be32
+from std.builtin.globals import global_constant
+
+
+comptime _S0: InlineArray[UInt8, 256] = [
+    0xA9,
+    0x85,
+    0xD6,
+    0xD3,
+    0x54,
+    0x1D,
+    0xAC,
+    0x25,
+    0x5D,
+    0x43,
+    0x18,
+    0x1E,
+    0x51,
+    0xFC,
+    0xCA,
+    0x63,
+    0x28,
+    0x44,
+    0x20,
+    0x9D,
+    0xE0,
+    0xE2,
+    0xC8,
+    0x17,
+    0xA5,
+    0x8F,
+    0x3,
+    0x7B,
+    0xBB,
+    0x13,
+    0xD2,
+    0xEE,
+    0x70,
+    0x8C,
+    0x3F,
+    0xA8,
+    0x32,
+    0xDD,
+    0xF6,
+    0x74,
+    0xEC,
+    0x95,
+    0xB,
+    0x57,
+    0x5C,
+    0x5B,
+    0xBD,
+    0x1,
+    0x24,
+    0x1C,
+    0x73,
+    0x98,
+    0x10,
+    0xCC,
+    0xF2,
+    0xD9,
+    0x2C,
+    0xE7,
+    0x72,
+    0x83,
+    0x9B,
+    0xD1,
+    0x86,
+    0xC9,
+    0x60,
+    0x50,
+    0xA3,
+    0xEB,
+    0xD,
+    0xB6,
+    0x9E,
+    0x4F,
+    0xB7,
+    0x5A,
+    0xC6,
+    0x78,
+    0xA6,
+    0x12,
+    0xAF,
+    0xD5,
+    0x61,
+    0xC3,
+    0xB4,
+    0x41,
+    0x52,
+    0x7D,
+    0x8D,
+    0x8,
+    0x1F,
+    0x99,
+    0x0,
+    0x19,
+    0x4,
+    0x53,
+    0xF7,
+    0xE1,
+    0xFD,
+    0x76,
+    0x2F,
+    0x27,
+    0xB0,
+    0x8B,
+    0xE,
+    0xAB,
+    0xA2,
+    0x6E,
+    0x93,
+    0x4D,
+    0x69,
+    0x7C,
+    0x9,
+    0xA,
+    0xBF,
+    0xEF,
+    0xF3,
+    0xC5,
+    0x87,
+    0x14,
+    0xFE,
+    0x64,
+    0xDE,
+    0x2E,
+    0x4B,
+    0x1A,
+    0x6,
+    0x21,
+    0x6B,
+    0x66,
+    0x2,
+    0xF5,
+    0x92,
+    0x8A,
+    0xC,
+    0xB3,
+    0x7E,
+    0xD0,
+    0x7A,
+    0x47,
+    0x96,
+    0xE5,
+    0x26,
+    0x80,
+    0xAD,
+    0xDF,
+    0xA1,
+    0x30,
+    0x37,
+    0xAE,
+    0x36,
+    0x15,
+    0x22,
+    0x38,
+    0xF4,
+    0xA7,
+    0x45,
+    0x4C,
+    0x81,
+    0xE9,
+    0x84,
+    0x97,
+    0x35,
+    0xCB,
+    0xCE,
+    0x3C,
+    0x71,
+    0x11,
+    0xC7,
+    0x89,
+    0x75,
+    0xFB,
+    0xDA,
+    0xF8,
+    0x94,
+    0x59,
+    0x82,
+    0xC4,
+    0xFF,
+    0x49,
+    0x39,
+    0x67,
+    0xC0,
+    0xCF,
+    0xD7,
+    0xB8,
+    0xF,
+    0x8E,
+    0x42,
+    0x23,
+    0x91,
+    0x6C,
+    0xDB,
+    0xA4,
+    0x34,
+    0xF1,
+    0x48,
+    0xC2,
+    0x6F,
+    0x3D,
+    0x2D,
+    0x40,
+    0xBE,
+    0x3E,
+    0xBC,
+    0xC1,
+    0xAA,
+    0xBA,
+    0x4E,
+    0x55,
+    0x3B,
+    0xDC,
+    0x68,
+    0x7F,
+    0x9C,
+    0xD8,
+    0x4A,
+    0x56,
+    0x77,
+    0xA0,
+    0xED,
+    0x46,
+    0xB5,
+    0x2B,
+    0x65,
+    0xFA,
+    0xE3,
+    0xB9,
+    0xB1,
+    0x9F,
+    0x5E,
+    0xF9,
+    0xE6,
+    0xB2,
+    0x31,
+    0xEA,
+    0x6D,
+    0x5F,
+    0xE4,
+    0xF0,
+    0xCD,
+    0x88,
+    0x16,
+    0x3A,
+    0x58,
+    0xD4,
+    0x62,
+    0x29,
+    0x7,
+    0x33,
+    0xE8,
+    0x1B,
+    0x5,
+    0x79,
+    0x90,
+    0x6A,
+    0x2A,
+    0x9A,
+]
+comptime _S1: InlineArray[UInt8, 256] = [
+    0x38,
+    0xE8,
+    0x2D,
+    0xA6,
+    0xCF,
+    0xDE,
+    0xB3,
+    0xB8,
+    0xAF,
+    0x60,
+    0x55,
+    0xC7,
+    0x44,
+    0x6F,
+    0x6B,
+    0x5B,
+    0xC3,
+    0x62,
+    0x33,
+    0xB5,
+    0x29,
+    0xA0,
+    0xE2,
+    0xA7,
+    0xD3,
+    0x91,
+    0x11,
+    0x6,
+    0x1C,
+    0xBC,
+    0x36,
+    0x4B,
+    0xEF,
+    0x88,
+    0x6C,
+    0xA8,
+    0x17,
+    0xC4,
+    0x16,
+    0xF4,
+    0xC2,
+    0x45,
+    0xE1,
+    0xD6,
+    0x3F,
+    0x3D,
+    0x8E,
+    0x98,
+    0x28,
+    0x4E,
+    0xF6,
+    0x3E,
+    0xA5,
+    0xF9,
+    0xD,
+    0xDF,
+    0xD8,
+    0x2B,
+    0x66,
+    0x7A,
+    0x27,
+    0x2F,
+    0xF1,
+    0x72,
+    0x42,
+    0xD4,
+    0x41,
+    0xC0,
+    0x73,
+    0x67,
+    0xAC,
+    0x8B,
+    0xF7,
+    0xAD,
+    0x80,
+    0x1F,
+    0xCA,
+    0x2C,
+    0xAA,
+    0x34,
+    0xD2,
+    0xB,
+    0xEE,
+    0xE9,
+    0x5D,
+    0x94,
+    0x18,
+    0xF8,
+    0x57,
+    0xAE,
+    0x8,
+    0xC5,
+    0x13,
+    0xCD,
+    0x86,
+    0xB9,
+    0xFF,
+    0x7D,
+    0xC1,
+    0x31,
+    0xF5,
+    0x8A,
+    0x6A,
+    0xB1,
+    0xD1,
+    0x20,
+    0xD7,
+    0x2,
+    0x22,
+    0x4,
+    0x68,
+    0x71,
+    0x7,
+    0xDB,
+    0x9D,
+    0x99,
+    0x61,
+    0xBE,
+    0xE6,
+    0x59,
+    0xDD,
+    0x51,
+    0x90,
+    0xDC,
+    0x9A,
+    0xA3,
+    0xAB,
+    0xD0,
+    0x81,
+    0xF,
+    0x47,
+    0x1A,
+    0xE3,
+    0xEC,
+    0x8D,
+    0xBF,
+    0x96,
+    0x7B,
+    0x5C,
+    0xA2,
+    0xA1,
+    0x63,
+    0x23,
+    0x4D,
+    0xC8,
+    0x9E,
+    0x9C,
+    0x3A,
+    0xC,
+    0x2E,
+    0xBA,
+    0x6E,
+    0x9F,
+    0x5A,
+    0xF2,
+    0x92,
+    0xF3,
+    0x49,
+    0x78,
+    0xCC,
+    0x15,
+    0xFB,
+    0x70,
+    0x75,
+    0x7F,
+    0x35,
+    0x10,
+    0x3,
+    0x64,
+    0x6D,
+    0xC6,
+    0x74,
+    0xD5,
+    0xB4,
+    0xEA,
+    0x9,
+    0x76,
+    0x19,
+    0xFE,
+    0x40,
+    0x12,
+    0xE0,
+    0xBD,
+    0x5,
+    0xFA,
+    0x1,
+    0xF0,
+    0x2A,
+    0x5E,
+    0xA9,
+    0x56,
+    0x43,
+    0x85,
+    0x14,
+    0x89,
+    0x9B,
+    0xB0,
+    0xE5,
+    0x48,
+    0x79,
+    0x97,
+    0xFC,
+    0x1E,
+    0x82,
+    0x21,
+    0x8C,
+    0x1B,
+    0x5F,
+    0x77,
+    0x54,
+    0xB2,
+    0x1D,
+    0x25,
+    0x4F,
+    0x0,
+    0x46,
+    0xED,
+    0x58,
+    0x52,
+    0xEB,
+    0x7E,
+    0xDA,
+    0xC9,
+    0xFD,
+    0x30,
+    0x95,
+    0x65,
+    0x3C,
+    0xB6,
+    0xE4,
+    0xBB,
+    0x7C,
+    0xE,
+    0x50,
+    0x39,
+    0x26,
+    0x32,
+    0x84,
+    0x69,
+    0x93,
+    0x37,
+    0xE7,
+    0x24,
+    0xA4,
+    0xCB,
+    0x53,
+    0xA,
+    0x87,
+    0xD9,
+    0x4C,
+    0x83,
+    0x8F,
+    0xCE,
+    0x3B,
+    0x4A,
+    0xB7,
+]
+comptime _KC: InlineArray[UInt32, 16] = [
+    0x9E3779B9,
+    0x3C6EF373,
+    0x78DDE6E6,
+    0xF1BBCDCC,
+    0xE3779B99,
+    0xC6EF3733,
+    0x8DDE6E67,
+    0x1BBCDCCF,
+    0x3779B99E,
+    0x6EF3733C,
+    0xDDE6E678,
+    0xBBCDCCF1,
+    0x779B99E3,
+    0xEF3733C6,
+    0xDE6E678D,
+    0xBCDCCF1B,
+]
+
+
+def _precomputed_tables() -> InlineArray[UInt32, 1024]:
+    var s0 = materialize[_S0]()
+    var s1 = materialize[_S1]()
+    var tables = InlineArray[UInt32, 1024](fill=0)
+    comptime for i in range(256):
+        var first = UInt32(s0[i]) * 0x01010101
+        var second = UInt32(s1[i]) * 0x01010101
+        tables[i] = first & 0x3FCFF3FC
+        tables[256 + i] = second & 0xFC3FCFF3
+        tables[512 + i] = first & 0xF3FC3FCF
+        tables[768 + i] = second & 0xCFF3FC3F
+    return tables^
+
+
+comptime _ROUND_TABLES = _precomputed_tables()
+
+
+def prepare_tables() -> List[UInt32]:
+    # Key setup and rounds read the immutable table from constant storage.
+    return List[UInt32]()
+
+
+@always_inline("nodebug")
+def _g(value: UInt32, tables: List[UInt32]) -> UInt32:
+    ref constant_tables = global_constant[_ROUND_TABLES]()
+    var pointer = Span(constant_tables).unsafe_ptr()
+    return (
+        pointer.unsafe_load(Int(UInt8(value)))
+        ^ pointer.unsafe_load(256 + Int(UInt8(value >> 8)))
+        ^ pointer.unsafe_load(512 + Int(UInt8(value >> 16)))
+        ^ pointer.unsafe_load(768 + Int(UInt8(value >> 24)))
+    )
+
+
+@always_inline("nodebug")
+def _ror8(value: UInt64) -> UInt64:
+    return (value >> 8) | (value << 56)
+
+
+@always_inline("nodebug")
+def _rol8(value: UInt64) -> UInt64:
+    return (value << 8) | (value >> 56)
+
+
+def _keys[
+    key_origin: Origin
+](key: Span[UInt8, key_origin], tables: List[UInt32]) raises -> List[UInt32]:
+    if len(key) != 16:
+        raise Error("SEED key must be 16 bytes")
+    var kc = materialize[_KC]()
+    var key01 = (UInt64(load_be32(key, 0)) << 32) | UInt64(load_be32(key, 4))
+    var key23 = (UInt64(load_be32(key, 8)) << 32) | UInt64(load_be32(key, 12))
+    var output = List[UInt32](capacity=32)
+    for i in range(16):
+        var upper01 = UInt32(key01 >> 32)
+        var lower01 = UInt32(key01)
+        var upper23 = UInt32(key23 >> 32)
+        var lower23 = UInt32(key23)
+        output.append(_g(upper01 + upper23 - kc[i], tables))
+        output.append(_g(lower01 - lower23 + kc[i], tables))
+        if i & 1:
+            key23 = _rol8(key23)
+        else:
+            key01 = _ror8(key01)
+    return output^
+
+
+def prepare[
+    key_origin: Origin
+](key: Span[UInt8, key_origin]) raises -> Tuple[List[UInt32], List[UInt32]]:
+    var tables = prepare_tables()
+    var keys = _keys(key, tables)
+    return (keys^, tables^)
+
+
+def process_prepared_into[
+    decrypting: Bool,
+    block_origin: Origin,
+    output_origin: MutOrigin,
+](
+    keys: List[UInt32],
+    tables: List[UInt32],
+    block: Span[UInt8, block_origin],
+    output: Span[mut=True, UInt8, output_origin],
+    output_offset: Int,
+) raises:
+    if len(block) != 16:
+        raise Error("SEED block must be 16 bytes")
+    if len(keys) != 32:
+        raise Error("invalid SEED prepared state")
+    if output_offset < 0 or output_offset + 16 > len(output):
+        raise Error("SEED output span is too short")
+    var key_pointer = Span(keys).unsafe_ptr()
+    var a0 = load_be32(block, 0)
+    var a1 = load_be32(block, 4)
+    var b0 = load_be32(block, 8)
+    var b1 = load_be32(block, 12)
+    comptime for pair in range(8):
+        comptime first = 2 * pair
+        comptime ki = 15 - first if decrypting else first
+        var t0 = b0 ^ key_pointer.unsafe_load(2 * ki)
+        var t1 = b1 ^ key_pointer.unsafe_load(2 * ki + 1) ^ t0
+        t1 = _g(t1, tables)
+        t0 += t1
+        t0 = _g(t0, tables)
+        t1 += t0
+        t1 = _g(t1, tables)
+        a0 ^= t0 + t1
+        a1 ^= t1
+        comptime ki2 = 15 - (first + 1) if decrypting else first + 1
+        t0 = a0 ^ key_pointer.unsafe_load(2 * ki2)
+        t1 = a1 ^ key_pointer.unsafe_load(2 * ki2 + 1) ^ t0
+        t1 = _g(t1, tables)
+        t0 += t1
+        t0 = _g(t0, tables)
+        t1 += t0
+        t1 = _g(t1, tables)
+        b0 ^= t0 + t1
+        b1 ^= t1
+    store_be32(b0, output, output_offset)
+    store_be32(b1, output, output_offset + 4)
+    store_be32(a0, output, output_offset + 8)
+    store_be32(a1, output, output_offset + 12)
+
+
+def process[
+    key_origin: Origin, block_origin: Origin
+](
+    decrypt: Bool,
+    key: Span[UInt8, key_origin],
+    block: Span[UInt8, block_origin],
+) raises -> List[UInt8]:
+    var schedule = prepare(key)
+    var output = List[UInt8](length=16, fill=0)
+    if decrypt:
+        process_prepared_into[True](
+            schedule[0], schedule[1], block, Span(output), 0
+        )
+    else:
+        process_prepared_into[False](
+            schedule[0], schedule[1], block, Span(output), 0
+        )
+    return output^
