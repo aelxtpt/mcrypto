@@ -16,3 +16,6 @@ __pycache__/
 
 # Local correctness and resource evidence
 /reports/
+
+# rattler-build artifacts
+/output/
