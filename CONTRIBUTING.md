@@ -2,13 +2,12 @@
 
 ## Set up a checkout
 
-Use the source checkout and Pixi environments:
+Use the source checkout and the Pixi environment:
 
 ```sh
 git clone https://github.com/aelxtpt/mcrypto.git
 cd mcrypto
 pixi install
-pixi install -e docs
 ```
 
 Do not update dependency pins as an incidental part of another change.
