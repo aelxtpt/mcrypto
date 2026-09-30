@@ -4,11 +4,11 @@ title: Getting started
 
 # Getting started
 
-Use mcrypto directly from a source checkout on Linux x86_64 or Linux AArch64.
+Install mcrypto as a conda package on Linux x86_64, Linux AArch64, or macOS arm64.
 
-1. [Install the supported toolchain and checkout](installation.md).
+1. [Install the toolchain and the package](installation.md).
 2. [Run the executable hash example](quickstart.md).
 3. [Understand bytes, ownership, and failures](bytes-errors.md).
 
 > **Note:**
-> The Pixi workspace constrains Mojo to `>=1.0.0,<2` and pins `max-core ==26.5.0`. Use `pixi install` rather than mixing an unrelated system Mojo into these commands.
+> The published package depends on `mojo-compiler >=1.0.0,<1.1.0` and installs it for you, so use the compiler it provides. Inside an mcrypto checkout, run `pixi install` rather than mixing an unrelated system Mojo into these commands.

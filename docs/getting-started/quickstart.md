@@ -27,10 +27,11 @@ def main() raises:
     print("quickstart-hash: ok")
 ```
 
-Run the exact included file from the repository root:
+In a workspace that installed the published package, run that program with no import path flag:
 
 ```sh
-pixi run mojo run -O1 -I src docs/examples/quickstart_hash.mojo
+pixi add mcrypto
+pixi run mojo run app.mojo
 ```
 
 Expected stdout is exactly:
@@ -39,10 +40,10 @@ Expected stdout is exactly:
 quickstart-hash: ok
 ```
 
-In a consumer repository, replace `src` with mcrypto's absolute source path:
+From an mcrypto checkout, the same source runs against the checked-in `src` directory:
 
 ```sh
-pixi run mojo run -I /absolute/path/to/mcrypto/src app.mojo
+pixi run mojo run -O1 -I src docs/examples/quickstart_hash.mojo
 ```
 
-The root `mcrypto` module re-exports only `initialize`, core traits and constant-time equality, plus SHA-224/256/384/512 types and helpers. Import other algorithms from their documented modules. Next, read [bytes and errors](bytes-errors.md).
+Every algorithm is imported from its own documented module. The root `mcrypto` module only marks the package directory and re-exports nothing. Next, read [bytes and errors](bytes-errors.md).
