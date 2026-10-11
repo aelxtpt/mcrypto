@@ -11,6 +11,8 @@ readme = "README.md"
 repository = "https://github.com/aelxtpt/mcrypto"
 
 [tasks]
+test-xeddsa = "mojo run -I src tests/test_xeddsa.mojo"
+debug-xeddsa = "mojo build -O0 -g -D ASSERT=all -I src tests/test_xeddsa.mojo -o .pixi/test_xeddsa_debug"
 test-sha256 = "mojo run -I src tests/test_sha256.mojo"
 test-sha512 = "mojo run -I src tests/test_sha512.mojo"
 test-hashes = "mojo run -I src tests/test_hashes.mojo"

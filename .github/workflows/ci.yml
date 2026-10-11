@@ -19,5 +19,7 @@ jobs:
         run: pixi install
       - name: Validate executed coverage
         run: pixi run test-coverage
+      - name: Run signature AddressSanitizer tests
+        run: pixi run python3 tests/run_all.py --optimization O1 --sanitize address --module test_ed25519_pure --module test_xeddsa
       - name: Run optimized test suite
         run: pixi run test
