@@ -105,3 +105,5 @@ Prepared DSA/NR and public-key math helpers amortize domain/key work. The generi
 ## Inventory and test evidence
 
 See [`ECDSA-RFC6979`](../reference/algorithms.md#signature-ecdsa-rfc6979), [`Ed25519ph`](../reference/algorithms.md#signature-ed25519ph), and [`IEEE-P1363-EMSA5`](../reference/algorithms.md#scheme-ieee-p1363-emsa5). Representative tests: `tests/test_public_key.mojo`, `tests/test_ed25519.mojo`, and `tests/test_legacy_public_key.mojo`.
+
+See [Standard building blocks](standard-building-blocks.md) for ML-KEM-512, HKDF stages, PKCS#7, strict unpadded Base64URL, and bounded decompression.

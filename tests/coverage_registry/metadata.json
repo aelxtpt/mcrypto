@@ -165,7 +165,8 @@
       "PSS",
       "PSSR",
       "IEEE-P1363-EMSA2",
-      "IEEE-P1363-EMSA5"
+      "IEEE-P1363-EMSA5",
+      "PKCS7"
     ],
     "REFERENCE_AGREEMENT": [
       "DH",
@@ -208,7 +209,8 @@
       "Hex",
       "Base32",
       "Base64",
-      "Base64URL"
+      "Base64URL",
+      "Base64URL-NoPad"
     ],
     "INTEROP_AEAD": [
       "AEGIS-128L",
@@ -259,6 +261,7 @@
       "HKDF-SHA512"
     ],
     "INTEROP_KEM": [
+      "ML-KEM-512",
       "ML-KEM-768",
       "X-Wing"
     ],

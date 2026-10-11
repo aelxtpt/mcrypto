@@ -106,3 +106,5 @@ BLAKE2b-KDF exposes `PreparedBLAKE2bKDF` and `derive_into`; other calls return o
 ## Inventory and test evidence
 
 See [`HKDF`](../reference/algorithms.md#kdf-hkdf), [`Argon2id`](../reference/algorithms.md#password-hash-argon2id), and [`Scrypt-Salsa20-8-SHA256`](../reference/algorithms.md#password-hash-scrypt-salsa20-8-sha256). Representative tests: `tests/test_kdf_dispatch.mojo`, `tests/test_argon2.mojo`, and `tests/test_scrypt.mojo`.
+
+See [Standard building blocks](standard-building-blocks.md) for ML-KEM-512, HKDF stages, PKCS#7, strict unpadded Base64URL, and bounded decompression.

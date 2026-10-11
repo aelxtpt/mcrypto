@@ -1835,6 +1835,60 @@
           "conditions": [
             "arm64-portable"
           ]
+        },
+        "extract": {
+          "unit": [
+            "test_hkdf.mojo::test_stages_sha256_rfc_case1",
+            "test_hkdf.mojo::test_stages_sha256_empty_salt",
+            "test_hkdf.mojo::test_stages_sha256_long_inputs",
+            "test_hkdf.mojo::test_stages_sha512_rfc_case1",
+            "test_hkdf.mojo::test_stages_sha512_empty_salt",
+            "test_hkdf.mojo::test_stages_sha512_long_inputs"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_hkdf.mojo",
+              "id": "test_hkdf.mojo::test_stages_sha256_rfc_case1"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_hkdf.mojo::test_stage_boundaries_and_validation"
+          ],
+          "state": [],
+          "paths": [
+            "scalar"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "expand": {
+          "unit": [
+            "test_hkdf.mojo::test_stages_sha256_rfc_case1",
+            "test_hkdf.mojo::test_stages_sha256_empty_salt",
+            "test_hkdf.mojo::test_stages_sha256_long_inputs",
+            "test_hkdf.mojo::test_stages_sha512_rfc_case1",
+            "test_hkdf.mojo::test_stages_sha512_empty_salt",
+            "test_hkdf.mojo::test_stages_sha512_long_inputs"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_hkdf.mojo",
+              "id": "test_hkdf.mojo::test_stages_sha256_rfc_case1"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_hkdf.mojo::test_stage_boundaries_and_validation"
+          ],
+          "state": [],
+          "paths": [
+            "scalar"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
         }
       }
     },

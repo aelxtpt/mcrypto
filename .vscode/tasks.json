@@ -1,0 +1,120 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build hkdf tests",
+      "type": "process",
+      "command": "pixi",
+      "args": [
+        "run",
+        "mojo",
+        "build",
+        "-O0",
+        "-g",
+        "-D",
+        "ASSERT=all",
+        "-I",
+        "src",
+        "tests/test_hkdf.mojo",
+        "-o",
+        ".pixi/test_hkdf_debug"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Build pkcs7 tests",
+      "type": "process",
+      "command": "pixi",
+      "args": [
+        "run",
+        "mojo",
+        "build",
+        "-O0",
+        "-g",
+        "-D",
+        "ASSERT=all",
+        "-I",
+        "src",
+        "tests/test_pkcs7.mojo",
+        "-o",
+        ".pixi/test_pkcs7_debug"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Build encoding_pure tests",
+      "type": "process",
+      "command": "pixi",
+      "args": [
+        "run",
+        "mojo",
+        "build",
+        "-O0",
+        "-g",
+        "-D",
+        "ASSERT=all",
+        "-I",
+        "src",
+        "tests/test_encoding_pure.mojo",
+        "-o",
+        ".pixi/test_encoding_pure_debug"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Build compression_limits tests",
+      "type": "process",
+      "command": "pixi",
+      "args": [
+        "run",
+        "mojo",
+        "build",
+        "-O0",
+        "-g",
+        "-D",
+        "ASSERT=all",
+        "-I",
+        "src",
+        "tests/test_compression_limits.mojo",
+        "-o",
+        ".pixi/test_compression_limits_debug"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Build mlkem512 tests",
+      "type": "process",
+      "command": "pixi",
+      "args": [
+        "run",
+        "mojo",
+        "build",
+        "-O0",
+        "-g",
+        "-D",
+        "ASSERT=all",
+        "-I",
+        "src",
+        "tests/test_mlkem512.mojo",
+        "-o",
+        ".pixi/test_mlkem512_debug"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    }
+  ]
+}

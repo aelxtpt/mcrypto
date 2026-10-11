@@ -1102,6 +1102,54 @@
           "conditions": [
             "arm64-portable"
           ]
+        },
+        "extract": {
+          "unit": [
+            "test_hkdf.mojo::test_stages_sha256_rfc_case1",
+            "test_hkdf.mojo::test_stages_sha256_empty_salt",
+            "test_hkdf.mojo::test_stages_sha256_long_inputs"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_hkdf.mojo",
+              "id": "test_hkdf.mojo::test_stages_sha256_rfc_case1"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_hkdf.mojo::test_stage_boundaries_and_validation"
+          ],
+          "state": [],
+          "paths": [
+            "scalar"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "expand": {
+          "unit": [
+            "test_hkdf.mojo::test_stages_sha256_rfc_case1",
+            "test_hkdf.mojo::test_stages_sha256_empty_salt",
+            "test_hkdf.mojo::test_stages_sha256_long_inputs"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_hkdf.mojo",
+              "id": "test_hkdf.mojo::test_stages_sha256_rfc_case1"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_hkdf.mojo::test_stage_boundaries_and_validation"
+          ],
+          "state": [],
+          "paths": [
+            "scalar"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
         }
       }
     },
@@ -1122,6 +1170,54 @@
           "negative": [
             "test_kdf_box_kx_macs.mojo::test_box_roundtrip_and_tamper",
             "test_kdf_box_kx_macs.mojo::test_mac_families"
+          ],
+          "state": [],
+          "paths": [
+            "scalar"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "extract": {
+          "unit": [
+            "test_hkdf.mojo::test_stages_sha512_rfc_case1",
+            "test_hkdf.mojo::test_stages_sha512_empty_salt",
+            "test_hkdf.mojo::test_stages_sha512_long_inputs"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_hkdf.mojo",
+              "id": "test_hkdf.mojo::test_stages_sha512_rfc_case1"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_hkdf.mojo::test_stage_boundaries_and_validation"
+          ],
+          "state": [],
+          "paths": [
+            "scalar"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "expand": {
+          "unit": [
+            "test_hkdf.mojo::test_stages_sha512_rfc_case1",
+            "test_hkdf.mojo::test_stages_sha512_empty_salt",
+            "test_hkdf.mojo::test_stages_sha512_long_inputs"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_hkdf.mojo",
+              "id": "test_hkdf.mojo::test_stages_sha512_rfc_case1"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_hkdf.mojo::test_stage_boundaries_and_validation"
           ],
           "state": [],
           "paths": [
@@ -1155,6 +1251,75 @@
           "state": [],
           "paths": [
             "scalar"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "keygen": {
+          "unit": [
+            "test_mlkem512.mojo::test_acvp_keygen_768_complete_keys"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_mlkem512.mojo",
+              "id": "test_mlkem512.mojo::test_acvp_keygen_768_complete_keys"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_mlkem512.mojo::test_acvp_decapsulation_768_including_implicit_rejection"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "simd"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "encapsulate": {
+          "unit": [
+            "test_mlkem512.mojo::test_acvp_encapsulation_768_complete_ciphertext_and_secret"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_mlkem512.mojo",
+              "id": "test_mlkem512.mojo::test_acvp_encapsulation_768_complete_ciphertext_and_secret"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_mlkem512.mojo::test_acvp_decapsulation_768_including_implicit_rejection"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "simd"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "decapsulate": {
+          "unit": [
+            "test_mlkem512.mojo::test_acvp_decapsulation_768_including_implicit_rejection"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_mlkem512.mojo",
+              "id": "test_mlkem512.mojo::test_acvp_decapsulation_768_including_implicit_rejection"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_mlkem512.mojo::test_acvp_decapsulation_768_including_implicit_rejection"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "simd"
           ],
           "conditions": [
             "arm64-portable"
@@ -2111,6 +2276,105 @@
           "state": [],
           "paths": [
             "scalar"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "INTEROP_KEM/ML-KEM-512": {
+      "operations": {
+        "keygen": {
+          "unit": [
+            "test_mlkem512.mojo::test_acvp_keygen_512_complete_keys"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_mlkem512.mojo",
+              "id": "test_mlkem512.mojo::test_acvp_keygen_512_complete_keys"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_mlkem512.mojo::test_mlkem512_rejects_invalid_input_lengths_and_noncanonical_keys",
+            "test_mlkem512.mojo::test_mlkem512_rejects_corrupted_decapsulation_key_hash"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "simd"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "encapsulate": {
+          "unit": [
+            "test_mlkem512.mojo::test_acvp_encapsulation_512_complete_ciphertext_and_secret"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_mlkem512.mojo",
+              "id": "test_mlkem512.mojo::test_acvp_encapsulation_512_complete_ciphertext_and_secret"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_mlkem512.mojo::test_mlkem512_rejects_invalid_input_lengths_and_noncanonical_keys",
+            "test_mlkem512.mojo::test_mlkem512_rejects_corrupted_decapsulation_key_hash"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "simd"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "decapsulate": {
+          "unit": [
+            "test_mlkem512.mojo::test_acvp_decapsulation_512_including_implicit_rejection"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_mlkem512.mojo",
+              "id": "test_mlkem512.mojo::test_acvp_decapsulation_512_including_implicit_rejection"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_mlkem512.mojo::test_mlkem512_rejects_invalid_input_lengths_and_noncanonical_keys",
+            "test_mlkem512.mojo::test_mlkem512_rejects_corrupted_decapsulation_key_hash"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "simd"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "dispatch-random": {
+          "unit": [
+            "test_mlkem512.mojo::test_mlkem512_random_and_dispatch_paths"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_mlkem512.mojo",
+              "id": "test_mlkem512.mojo::test_mlkem512_random_and_dispatch_paths"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_mlkem512.mojo::test_mlkem512_rejects_invalid_input_lengths_and_noncanonical_keys"
+          ],
+          "state": [],
+          "paths": [
+            "scalar",
+            "simd"
           ],
           "conditions": [
             "arm64-portable"

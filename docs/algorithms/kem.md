@@ -80,3 +80,5 @@ Direct modules expose deterministic seed-based keypair/encapsulation helpers for
 ## Inventory and test evidence
 
 See [`ML-KEM-768`](../reference/algorithms.md#kem-ml-kem-768) and [`X-Wing`](../reference/algorithms.md#kem-x-wing). Representative tests: `tests/test_kem.mojo` and `tests/test_public_key_prepared_paths.mojo`.
+
+See [Standard building blocks](standard-building-blocks.md) for ML-KEM-512, HKDF stages, PKCS#7, strict unpadded Base64URL, and bounded decompression.

@@ -128,3 +128,5 @@ Some field/prime objects retain prepared arithmetic state; transforms and sharin
 ## Inventory and test evidence
 
 See [`Hex`](../reference/algorithms.md#encoding-hex), [`Shamir secret sharing`](../reference/algorithms.md#secret-sharing-shamir-secret-sharing), and [`Rabin IDA`](../reference/algorithms.md#secret-sharing-rabin-ida). Representative tests: `tests/test_encoding_pure.mojo`, `tests/test_transforms.mojo`, and `tests/test_secret_sharing.mojo`.
+
+See [Standard building blocks](standard-building-blocks.md) for ML-KEM-512, HKDF stages, PKCS#7, strict unpadded Base64URL, and bounded decompression.
