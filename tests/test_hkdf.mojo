@@ -226,5 +226,34 @@ def test_stage_boundaries_and_validation() raises:
         _ = expand(HashAlgorithm.SHA1, Span(other_empty), Span(empty), 0)
 
 
+def test_expand_long_prk_and_final_counter_reference() raises:
+    # Python hashlib/hmac reference, including the final legal counter 255.
+    var context = List("counter boundary".as_bytes())
+    var key_sha256 = hex_bytes(
+        "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f202122232425262728292a2b2c2d2e2f303132333435363738393a3b3c3d3e3f404142434445464748494a4b4c4d4e4f505152535455565758595a5b5c5d5e5f606162636465666768696a6b6c6d6e6f707172737475767778797a7b7c7d7e7f808182838485868788898a8b8c8d8e8f909192939495969798999a9b9c9d9e9fa0a1a2a3a4a5a6a7a8a9aaabacadaeafb0b1b2b3b4b5b6b7b8b9babbbcbdbebfc0c1c2c3c4c5c6c7"
+    )
+    var output_sha256 = expand(
+        HashAlgorithm.SHA256, Span(key_sha256), Span(context), 8160
+    )
+    assert_equal(
+        List(Span(output_sha256)[8128:]),
+        hex_bytes(
+            "c63ad43cfb878caa8e289b2d32dc7cda2c75a1f0ac8580f8f6b7274c8031c248"
+        ),
+    )
+    var key_sha512 = hex_bytes(
+        "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f202122232425262728292a2b2c2d2e2f303132333435363738393a3b3c3d3e3f404142434445464748494a4b4c4d4e4f505152535455565758595a5b5c5d5e5f606162636465666768696a6b6c6d6e6f707172737475767778797a7b7c7d7e7f808182838485868788898a8b8c8d8e8f909192939495969798999a9b9c9d9e9fa0a1a2a3a4a5a6a7a8a9aaabacadaeafb0b1b2b3b4b5b6b7b8b9babbbcbdbebfc0c1c2c3c4c5c6c7"
+    )
+    var output_sha512 = expand(
+        HashAlgorithm.SHA512, Span(key_sha512), Span(context), 16320
+    )
+    assert_equal(
+        List(Span(output_sha512)[16256:]),
+        hex_bytes(
+            "59d84ff008b44f326872a63fcf74d9e31adaf864c8d3e4d1ba9efb3146e4183a8b3d333b1cb81834740ea901745ee7606f9385f7363fcd7ad70f87ed6bc5aa6e"
+        ),
+    )
+
+
 def main() raises:
     TestSuite.discover_tests[__functions_in_module()]().run()

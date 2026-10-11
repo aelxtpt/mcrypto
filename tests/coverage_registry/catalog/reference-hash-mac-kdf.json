@@ -1870,7 +1870,8 @@
             "test_hkdf.mojo::test_stages_sha256_long_inputs",
             "test_hkdf.mojo::test_stages_sha512_rfc_case1",
             "test_hkdf.mojo::test_stages_sha512_empty_salt",
-            "test_hkdf.mojo::test_stages_sha512_long_inputs"
+            "test_hkdf.mojo::test_stages_sha512_long_inputs",
+            "test_hkdf.mojo::test_expand_long_prk_and_final_counter_reference"
           ],
           "vectors": [
             {
