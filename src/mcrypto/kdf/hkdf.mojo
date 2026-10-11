@@ -1,41 +1,57 @@
-"""HKDF-SHA256 and HKDF-SHA512 in pure Mojo."""
+"""RFC 5869 HKDF-SHA256 and HKDF-SHA512 in pure Mojo."""
 
 from ..hashes.algorithm import HashAlgorithm
 from ..macs.algorithm import HmacAlgorithm
-from ..macs.hmac import _HMACKey
+from ..macs.hmac import _HMACKey, authenticate
+from ..internal.secret import secure_zero
 from std.collections import InlineArray
 
 
-def derive[
-    salt_origin: Origin, key_origin: Origin, context_origin: Origin
+def _parameters(
+    hash_algorithm: HashAlgorithm,
+) raises -> Tuple[Int, HmacAlgorithm]:
+    if hash_algorithm == HashAlgorithm.SHA256:
+        return (32, HmacAlgorithm.SHA256)
+    if hash_algorithm == HashAlgorithm.SHA512:
+        return (64, HmacAlgorithm.SHA512)
+    raise Error("HKDF requires SHA-256 or SHA-512")
+
+
+def extract[
+    salt_origin: Origin, key_origin: Origin
 ](
     hash_algorithm: HashAlgorithm,
     salt: Span[UInt8, salt_origin],
-    key: Span[UInt8, key_origin],
+    input_key_material: Span[UInt8, key_origin],
+) raises -> List[UInt8]:
+    """Extract a HashLen-byte PRK; an empty salt means HashLen zero bytes."""
+    var parameters = _parameters(hash_algorithm)
+    if len(salt) == 0:
+        var zero_salt = InlineArray[UInt8, 64](fill=0)
+        return authenticate(
+            parameters[1],
+            Span(zero_salt)[0 : parameters[0]],
+            input_key_material,
+        )
+    return authenticate(parameters[1], salt, input_key_material)
+
+
+def expand[
+    key_origin: Origin, context_origin: Origin
+](
+    hash_algorithm: HashAlgorithm,
+    pseudorandom_key: Span[UInt8, key_origin],
     context: Span[UInt8, context_origin],
     output_bytes: Int,
 ) raises -> List[UInt8]:
-    if (
-        hash_algorithm != HashAlgorithm.SHA256
-        and hash_algorithm != HashAlgorithm.SHA512
-    ):
-        raise Error("HKDF requires SHA-256 or SHA-512")
-    var hash_bytes = 32 if hash_algorithm == HashAlgorithm.SHA256 else 64
-    var hmac_algorithm = (
-        HmacAlgorithm.SHA256 if hash_algorithm
-        == HashAlgorithm.SHA256 else HmacAlgorithm.SHA512
-    )
-    if output_bytes <= 0 or output_bytes > 255 * hash_bytes:
+    """Expand an already extracted PRK into 0..255*HashLen bytes."""
+    var parameters = _parameters(hash_algorithm)
+    var hash_bytes = parameters[0]
+    if len(pseudorandom_key) < hash_bytes:
+        raise Error("HKDF pseudorandom key must contain at least HashLen bytes")
+    if output_bytes < 0 or output_bytes > 255 * hash_bytes:
         raise Error("invalid HKDF output length")
-    var prk = InlineArray[UInt8, 64](uninitialized=True)
-    if len(salt) == 0:
-        var zero_salt = InlineArray[UInt8, 64](fill=0)
-        var extract = _HMACKey(hmac_algorithm, Span(zero_salt))
-        extract.authenticate_into(key, prk)
-    else:
-        var extract = _HMACKey(hmac_algorithm, salt)
-        extract.authenticate_into(key, prk)
-    var expand = _HMACKey(hmac_algorithm, Span(prk)[0:hash_bytes])
+    var prepared = _HMACKey(parameters[1], pseudorandom_key)
     var output = List[UInt8](length=output_bytes, fill=0)
     var previous = InlineArray[UInt8, 64](uninitialized=True)
     var next = InlineArray[UInt8, 64](uninitialized=True)
@@ -46,14 +62,14 @@ def derive[
     while output_offset < output_bytes:
         counter_buffer[0] = UInt8(counter)
         if counter & 1:
-            expand.authenticate_parts_into(
+            prepared.authenticate_parts_into(
                 Span(previous)[0:previous_bytes],
                 context,
                 Span(counter_buffer),
                 next,
             )
         else:
-            expand.authenticate_parts_into(
+            prepared.authenticate_parts_into(
                 Span(next)[0:previous_bytes],
                 context,
                 Span(counter_buffer),
@@ -69,4 +85,31 @@ def derive[
         previous_bytes = hash_bytes
         output_offset += copy_bytes
         counter += 1
+    secure_zero(Span(previous))
+    secure_zero(Span(next))
     return output^
+
+
+def derive[
+    salt_origin: Origin, key_origin: Origin, context_origin: Origin
+](
+    hash_algorithm: HashAlgorithm,
+    salt: Span[UInt8, salt_origin],
+    key: Span[UInt8, key_origin],
+    context: Span[UInt8, context_origin],
+    output_bytes: Int,
+) raises -> List[UInt8]:
+    """Extract then expand, retaining the existing positive-length contract."""
+    var parameters = _parameters(hash_algorithm)
+    if output_bytes <= 0 or output_bytes > 255 * parameters[0]:
+        raise Error("invalid HKDF output length")
+    var pseudorandom_key = extract(hash_algorithm, salt, key)
+    try:
+        var output = expand(
+            hash_algorithm, Span(pseudorandom_key), context, output_bytes
+        )
+        secure_zero(Span(pseudorandom_key))
+        return output^
+    except error:
+        secure_zero(Span(pseudorandom_key))
+        raise error^
