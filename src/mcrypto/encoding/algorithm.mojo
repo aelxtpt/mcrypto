@@ -18,8 +18,15 @@ struct EncodingTransform(Equatable, ImplicitlyCopyable):
     comptime BASE64URL_ENCODE = EncodingTransform(_EncodingTransformToken[6]())
     comptime BASE64URL_DECODE = EncodingTransform(_EncodingTransformToken[7]())
 
+    comptime BASE64URL_NOPAD_ENCODE = EncodingTransform(
+        _EncodingTransformToken[8]()
+    )
+    comptime BASE64URL_NOPAD_DECODE = EncodingTransform(
+        _EncodingTransformToken[9]()
+    )
+
     def __init__[value: UInt8](out self, token: _EncodingTransformToken[value]):
-        comptime assert value < 8, "invalid EncodingTransform value"
+        comptime assert value < 10, "invalid EncodingTransform value"
         self._value = value
 
     @always_inline
@@ -48,4 +55,8 @@ def parse_encoding_transform(name: String) raises -> EncodingTransform:
         return EncodingTransform.BASE64URL_ENCODE
     if name == "Base64URLDecode":
         return EncodingTransform.BASE64URL_DECODE
+    if name == "Base64URLNoPadEncode":
+        return EncodingTransform.BASE64URL_NOPAD_ENCODE
+    if name == "Base64URLNoPadDecode":
+        return EncodingTransform.BASE64URL_NOPAD_DECODE
     raise Error("unknown encoding transform")
