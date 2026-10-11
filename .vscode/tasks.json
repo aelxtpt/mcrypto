@@ -115,6 +115,19 @@
         "cwd": "${workspaceFolder}"
       },
       "problemMatcher": []
+    },
+    {
+      "label": "Build XEd25519 tests",
+      "type": "process",
+      "command": "pixi",
+      "args": [
+        "run",
+        "debug-xeddsa"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
     }
   ]
 }

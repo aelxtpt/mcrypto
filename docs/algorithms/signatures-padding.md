@@ -24,7 +24,7 @@ def sign[private_origin: Origin, message_origin: Origin](algorithm: SignatureAlg
 def verify[public_origin: Origin, message_origin: Origin, signature_origin: Origin](algorithm: SignatureAlgorithm, public_key: Span[UInt8, public_origin], message: Span[UInt8, message_origin], signature: Span[UInt8, signature_origin]) -> Bool
 ```
 
-`Ed25519ph` is direct-only through `sign_ph`/`verify_ph`; it has no generic dispatcher spelling.
+`Ed25519ph` is direct-only through `sign_ph`/`verify_ph`; it has no generic dispatcher spelling. [XEd25519](xeddsa.md) is also direct-only, through `mcrypto.signatures.xeddsa`, and uses raw X25519 keys.
 
 ## Inventory names and invocation spellings
 

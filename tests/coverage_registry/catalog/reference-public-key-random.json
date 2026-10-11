@@ -1607,6 +1607,111 @@
         }
       }
     },
+    "REFERENCE_PUBLIC_KEY/XEd25519": {
+      "operations": {
+        "pk-sign": {
+          "unit": [
+            "test_xeddsa.mojo::test_signal_published_vector",
+            "test_xeddsa.mojo::test_reference_empty_message_sign_zero",
+            "test_xeddsa.mojo::test_reference_abc",
+            "test_xeddsa.mojo::test_reference_binary_message_sign_one",
+            "test_xeddsa.mojo::test_reference_block_boundary",
+            "test_xeddsa.mojo::test_clamping_and_input_preservation",
+            "test_xeddsa.mojo::test_randomness_changes_signature",
+            "test_xeddsa.mojo::test_os_randomness_and_long_message",
+            "test_xeddsa.mojo::test_tampering_and_wrong_key",
+            "test_xeddsa.mojo::test_invalid_lengths"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_xeddsa.mojo",
+              "id": "test_xeddsa.mojo::test_signal_published_vector"
+            },
+            {
+              "source": "tests/test_xeddsa.mojo",
+              "id": "test_xeddsa.mojo::test_reference_empty_message_sign_zero"
+            },
+            {
+              "source": "tests/test_xeddsa.mojo",
+              "id": "test_xeddsa.mojo::test_reference_abc"
+            },
+            {
+              "source": "tests/test_xeddsa.mojo",
+              "id": "test_xeddsa.mojo::test_reference_binary_message_sign_one"
+            },
+            {
+              "source": "tests/test_xeddsa.mojo",
+              "id": "test_xeddsa.mojo::test_reference_block_boundary"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_xeddsa.mojo::test_invalid_lengths"
+          ],
+          "state": [],
+          "paths": [
+            "scalar"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "pk-verify": {
+          "unit": [
+            "test_xeddsa.mojo::test_signal_published_vector",
+            "test_xeddsa.mojo::test_reference_empty_message_sign_zero",
+            "test_xeddsa.mojo::test_reference_abc",
+            "test_xeddsa.mojo::test_reference_binary_message_sign_one",
+            "test_xeddsa.mojo::test_reference_block_boundary",
+            "test_xeddsa.mojo::test_clamping_and_input_preservation",
+            "test_xeddsa.mojo::test_randomness_changes_signature",
+            "test_xeddsa.mojo::test_os_randomness_and_long_message",
+            "test_xeddsa.mojo::test_tampering_and_wrong_key",
+            "test_xeddsa.mojo::test_invalid_lengths",
+            "test_xeddsa.mojo::test_noncanonical_and_invalid_public_keys",
+            "test_xeddsa.mojo::test_scalar_malleability_and_legacy_sign_bit",
+            "test_xeddsa.mojo::test_small_order_forgery_and_identity_r"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_xeddsa.mojo",
+              "id": "test_xeddsa.mojo::test_signal_published_vector"
+            },
+            {
+              "source": "tests/test_xeddsa.mojo",
+              "id": "test_xeddsa.mojo::test_reference_empty_message_sign_zero"
+            },
+            {
+              "source": "tests/test_xeddsa.mojo",
+              "id": "test_xeddsa.mojo::test_reference_abc"
+            },
+            {
+              "source": "tests/test_xeddsa.mojo",
+              "id": "test_xeddsa.mojo::test_reference_binary_message_sign_one"
+            },
+            {
+              "source": "tests/test_xeddsa.mojo",
+              "id": "test_xeddsa.mojo::test_reference_block_boundary"
+            }
+          ],
+          "comparator": "cross-verify",
+          "negative": [
+            "test_xeddsa.mojo::test_tampering_and_wrong_key",
+            "test_xeddsa.mojo::test_invalid_lengths",
+            "test_xeddsa.mojo::test_noncanonical_and_invalid_public_keys",
+            "test_xeddsa.mojo::test_scalar_malleability_and_legacy_sign_bit",
+            "test_xeddsa.mojo::test_small_order_forgery_and_identity_r"
+          ],
+          "state": [],
+          "paths": [
+            "scalar"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
     "REFERENCE_PUBLIC_KEY/ECNR": {
       "operations": {
         "pk-signature-keygen": {

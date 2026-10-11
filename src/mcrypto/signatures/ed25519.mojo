@@ -478,8 +478,8 @@ def _encode(point: _Point) raises -> List[UInt8]:
     _field_multiply(x, point.x, inverse_z)
     _field_multiply(y, point.y, inverse_z)
     var output = _field_pack(y)
-    if _field_is_negative(x):
-        output[31] |= 0x80
+    # Encoding is also used on secret-derived points during signing.
+    output[31] |= UInt8(_field_is_negative(x)) << 7
     return output^
 
 

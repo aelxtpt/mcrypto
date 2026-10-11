@@ -45,6 +45,15 @@
       "program": "${workspaceFolder}/.pixi/test_mlkem512_debug",
       "cwd": "${workspaceFolder}",
       "stopOnEntry": false
+    },
+    {
+      "name": "Mojo: XEd25519 tests",
+      "type": "mojo-lldb",
+      "request": "launch",
+      "preLaunchTask": "Build XEd25519 tests",
+      "program": "${workspaceFolder}/.pixi/test_xeddsa_debug",
+      "cwd": "${workspaceFolder}",
+      "stopOnEntry": false
     }
   ]
 }
