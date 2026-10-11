@@ -1,0 +1,206 @@
+{
+  "repository": "https://github.com/usnistgov/ACVP-Server",
+  "revision": "975de31eb83d87039ec88934fdc47d8c312b892d",
+  "files": {
+    "ML-KEM-keyGen-FIPS203": "d7a62a2c3476957f56dd8d24f9004ea6776ccfe995ffe71a65bb9506dc9c7b1b",
+    "ML-KEM-encapDecap-FIPS203": "a556952ce869bb89c3a3196a701dad89647c193a34c86eafb61a9d710d5b810f"
+  },
+  "cases": [
+    {
+      "set": "ML-KEM-512",
+      "operation": "keygen",
+      "tgId": 1,
+      "tcId": 1,
+      "reason": null
+    },
+    {
+      "set": "ML-KEM-512",
+      "operation": "keygen",
+      "tgId": 1,
+      "tcId": 2,
+      "reason": null
+    },
+    {
+      "set": "ML-KEM-512",
+      "operation": "encapsulation",
+      "tgId": 1,
+      "tcId": 1,
+      "reason": null
+    },
+    {
+      "set": "ML-KEM-512",
+      "operation": "encapsulation",
+      "tgId": 1,
+      "tcId": 2,
+      "reason": null
+    },
+    {
+      "set": "ML-KEM-512",
+      "operation": "decapsulation",
+      "tgId": 4,
+      "tcId": 76,
+      "reason": "modified ciphertext"
+    },
+    {
+      "set": "ML-KEM-512",
+      "operation": "decapsulation",
+      "tgId": 4,
+      "tcId": 77,
+      "reason": "modified ciphertext"
+    },
+    {
+      "set": "ML-KEM-512",
+      "operation": "decapsulation",
+      "tgId": 4,
+      "tcId": 78,
+      "reason": "modified ciphertext"
+    },
+    {
+      "set": "ML-KEM-512",
+      "operation": "decapsulation",
+      "tgId": 4,
+      "tcId": 79,
+      "reason": "valid decapsulation"
+    },
+    {
+      "set": "ML-KEM-512",
+      "operation": "decapsulation",
+      "tgId": 4,
+      "tcId": 80,
+      "reason": "valid decapsulation"
+    },
+    {
+      "set": "ML-KEM-512",
+      "operation": "decapsulation",
+      "tgId": 4,
+      "tcId": 81,
+      "reason": "valid decapsulation"
+    },
+    {
+      "set": "ML-KEM-512",
+      "operation": "decapsulation",
+      "tgId": 4,
+      "tcId": 82,
+      "reason": "modified ciphertext"
+    },
+    {
+      "set": "ML-KEM-512",
+      "operation": "decapsulation",
+      "tgId": 4,
+      "tcId": 83,
+      "reason": "modified ciphertext"
+    },
+    {
+      "set": "ML-KEM-512",
+      "operation": "decapsulation",
+      "tgId": 4,
+      "tcId": 84,
+      "reason": "valid decapsulation"
+    },
+    {
+      "set": "ML-KEM-512",
+      "operation": "decapsulation",
+      "tgId": 4,
+      "tcId": 85,
+      "reason": "valid decapsulation"
+    },
+    {
+      "set": "ML-KEM-768",
+      "operation": "keygen",
+      "tgId": 2,
+      "tcId": 26,
+      "reason": null
+    },
+    {
+      "set": "ML-KEM-768",
+      "operation": "keygen",
+      "tgId": 2,
+      "tcId": 27,
+      "reason": null
+    },
+    {
+      "set": "ML-KEM-768",
+      "operation": "encapsulation",
+      "tgId": 2,
+      "tcId": 26,
+      "reason": null
+    },
+    {
+      "set": "ML-KEM-768",
+      "operation": "encapsulation",
+      "tgId": 2,
+      "tcId": 27,
+      "reason": null
+    },
+    {
+      "set": "ML-KEM-768",
+      "operation": "decapsulation",
+      "tgId": 5,
+      "tcId": 86,
+      "reason": "valid decapsulation"
+    },
+    {
+      "set": "ML-KEM-768",
+      "operation": "decapsulation",
+      "tgId": 5,
+      "tcId": 87,
+      "reason": "valid decapsulation"
+    },
+    {
+      "set": "ML-KEM-768",
+      "operation": "decapsulation",
+      "tgId": 5,
+      "tcId": 88,
+      "reason": "modified ciphertext"
+    },
+    {
+      "set": "ML-KEM-768",
+      "operation": "decapsulation",
+      "tgId": 5,
+      "tcId": 89,
+      "reason": "valid decapsulation"
+    },
+    {
+      "set": "ML-KEM-768",
+      "operation": "decapsulation",
+      "tgId": 5,
+      "tcId": 90,
+      "reason": "valid decapsulation"
+    },
+    {
+      "set": "ML-KEM-768",
+      "operation": "decapsulation",
+      "tgId": 5,
+      "tcId": 91,
+      "reason": "modified ciphertext"
+    },
+    {
+      "set": "ML-KEM-768",
+      "operation": "decapsulation",
+      "tgId": 5,
+      "tcId": 92,
+      "reason": "modified ciphertext"
+    },
+    {
+      "set": "ML-KEM-768",
+      "operation": "decapsulation",
+      "tgId": 5,
+      "tcId": 93,
+      "reason": "modified ciphertext"
+    },
+    {
+      "set": "ML-KEM-768",
+      "operation": "decapsulation",
+      "tgId": 5,
+      "tcId": 94,
+      "reason": "valid decapsulation"
+    },
+    {
+      "set": "ML-KEM-768",
+      "operation": "decapsulation",
+      "tgId": 5,
+      "tcId": 95,
+      "reason": "modified ciphertext"
+    }
+  ]
+}
