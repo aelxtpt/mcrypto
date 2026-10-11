@@ -1,0 +1,14 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Mojo: XEd25519 tests",
+            "type": "mojo-lldb",
+            "request": "launch",
+            "preLaunchTask": "Build XEd25519 tests",
+            "program": "${workspaceFolder}/.pixi/test_xeddsa_debug",
+            "cwd": "${workspaceFolder}",
+            "stopOnEntry": false
+        }
+    ]
+}

@@ -155,6 +155,7 @@
       "ECDSA",
       "ECDSA-RFC6979",
       "Ed25519",
+      "XEd25519",
       "ECNR",
       "ECIES"
     ],
