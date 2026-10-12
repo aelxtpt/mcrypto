@@ -156,6 +156,31 @@ def _base64_decode[
     return output^
 
 
+def _base64url_nopad[origin: Origin](input: Span[UInt8, origin]) -> List[UInt8]:
+    var output = _base64(input, True)
+    while len(output) > 0:
+        if output[len(output) - 1] != UInt8(61):
+            break
+        _ = output.pop()
+    return output^
+
+
+def _base64url_nopad_decode[
+    origin: Origin
+](input: Span[UInt8, origin]) raises -> List[UInt8]:
+    if len(input) % 4 == 1:
+        raise Error("invalid unpadded base64url length")
+    for byte in input:
+        if byte == UInt8(61):
+            raise Error("unpadded base64url must not contain padding")
+    # RFC 7515 Appendix C: restore only the missing padding, then use the
+    # strict shared decoder for alphabet and canonical trailing-bit checks.
+    var padded = List(input)
+    while len(padded) % 4 != 0:
+        padded.append(UInt8(61))
+    return _base64_decode(Span(padded), True)
+
+
 def _base32[origin: Origin](input: Span[UInt8, origin]) -> List[UInt8]:
     var table = "ABCDEFGHIJKLMNOPQRSTUVWXYZ234567".as_bytes()
     var output = List[UInt8]()
@@ -249,4 +274,8 @@ def transform[
         return _base64(input, True)
     if algorithm == EncodingTransform.BASE64URL_DECODE:
         return _base64_decode(input, True)
+    if algorithm == EncodingTransform.BASE64URL_NOPAD_ENCODE:
+        return _base64url_nopad(input)
+    if algorithm == EncodingTransform.BASE64URL_NOPAD_DECODE:
+        return _base64url_nopad_decode(input)
     raise Error("invalid encoding selector")

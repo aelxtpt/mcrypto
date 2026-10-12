@@ -1,14 +1,59 @@
 {
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "name": "Mojo: XEd25519 tests",
-            "type": "mojo-lldb",
-            "request": "launch",
-            "preLaunchTask": "Build XEd25519 tests",
-            "program": "${workspaceFolder}/.pixi/test_xeddsa_debug",
-            "cwd": "${workspaceFolder}",
-            "stopOnEntry": false
-        }
-    ]
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Mojo: hkdf tests",
+      "type": "mojo-lldb",
+      "request": "launch",
+      "preLaunchTask": "Build hkdf tests",
+      "program": "${workspaceFolder}/.pixi/test_hkdf_debug",
+      "cwd": "${workspaceFolder}",
+      "stopOnEntry": false
+    },
+    {
+      "name": "Mojo: pkcs7 tests",
+      "type": "mojo-lldb",
+      "request": "launch",
+      "preLaunchTask": "Build pkcs7 tests",
+      "program": "${workspaceFolder}/.pixi/test_pkcs7_debug",
+      "cwd": "${workspaceFolder}",
+      "stopOnEntry": false
+    },
+    {
+      "name": "Mojo: encoding_pure tests",
+      "type": "mojo-lldb",
+      "request": "launch",
+      "preLaunchTask": "Build encoding_pure tests",
+      "program": "${workspaceFolder}/.pixi/test_encoding_pure_debug",
+      "cwd": "${workspaceFolder}",
+      "stopOnEntry": false
+    },
+    {
+      "name": "Mojo: compression_limits tests",
+      "type": "mojo-lldb",
+      "request": "launch",
+      "preLaunchTask": "Build compression_limits tests",
+      "program": "${workspaceFolder}/.pixi/test_compression_limits_debug",
+      "cwd": "${workspaceFolder}",
+      "stopOnEntry": false
+    },
+    {
+      "name": "Mojo: mlkem512 tests",
+      "type": "mojo-lldb",
+      "request": "launch",
+      "preLaunchTask": "Build mlkem512 tests",
+      "program": "${workspaceFolder}/.pixi/test_mlkem512_debug",
+      "cwd": "${workspaceFolder}",
+      "stopOnEntry": false
+    },
+    {
+      "name": "Mojo: XEd25519 tests",
+      "type": "mojo-lldb",
+      "request": "launch",
+      "preLaunchTask": "Build XEd25519 tests",
+      "program": "${workspaceFolder}/.pixi/test_xeddsa_debug",
+      "cwd": "${workspaceFolder}",
+      "stopOnEntry": false
+    }
+  ]
 }

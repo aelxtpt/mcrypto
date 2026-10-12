@@ -10,7 +10,7 @@ A KEM creates a shared secret for a recipient public key and a ciphertext the re
 
 ## Safe selection and legacy warning
 
-Use the KEM selected by a reviewed hybrid protocol, derive context-bound keys from the shared secret, and protect data with AEAD. ML-KEM-768 and X-Wing have different wire formats and cannot be substituted silently.
+Use the KEM selected by a reviewed hybrid protocol, derive context-bound keys from the shared secret, and protect data with AEAD. ML-KEM-512, ML-KEM-768 and X-Wing have different wire formats and cannot be substituted silently.
 
 ## Public imports and signatures
 
@@ -29,7 +29,7 @@ The dispatcher accepts `KemAlgorithm.ML_KEM_768` and `KemAlgorithm.X_WING`; exte
 
 ## Dimensions
 
-ML-KEM-768: public key 1184, secret key 2400, ciphertext 1088, shared secret 32 bytes. X-Wing: public key 1216, secret key 32, ciphertext 1120, shared secret 32 bytes.
+ML-KEM-512: public key 800, secret key 1632, ciphertext 768, shared secret 32 bytes. ML-KEM-768: public key 1184, secret key 2400, ciphertext 1088, shared secret 32 bytes. X-Wing: public key 1216, secret key 32, ciphertext 1120, shared secret 32 bytes.
 
 ## Return and wire layout
 
@@ -80,3 +80,5 @@ Direct modules expose deterministic seed-based keypair/encapsulation helpers for
 ## Inventory and test evidence
 
 See [`ML-KEM-768`](../reference/algorithms.md#kem-ml-kem-768) and [`X-Wing`](../reference/algorithms.md#kem-x-wing). Representative tests: `tests/test_kem.mojo` and `tests/test_public_key_prepared_paths.mojo`.
+
+See [Standard building blocks](standard-building-blocks.md) for ML-KEM-512, HKDF stages, PKCS#7, strict unpadded Base64URL, and bounded decompression.

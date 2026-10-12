@@ -12,8 +12,10 @@ struct KemAlgorithm(Equatable, ImplicitlyCopyable):
     comptime ML_KEM_768 = KemAlgorithm(_KemAlgorithmToken[0]())
     comptime X_WING = KemAlgorithm(_KemAlgorithmToken[1]())
 
+    comptime ML_KEM_512 = KemAlgorithm(_KemAlgorithmToken[2]())
+
     def __init__[value: UInt8](out self, token: _KemAlgorithmToken[value]):
-        comptime assert value < 2, "invalid KemAlgorithm value"
+        comptime assert value < 3, "invalid KemAlgorithm value"
         self._value = value
 
     @always_inline
@@ -30,4 +32,6 @@ def parse_kem_algorithm(name: String) raises -> KemAlgorithm:
         return KemAlgorithm.ML_KEM_768
     if name == "X-Wing":
         return KemAlgorithm.X_WING
+    if name == "ML-KEM-512":
+        return KemAlgorithm.ML_KEM_512
     raise Error("unknown KEM algorithm")

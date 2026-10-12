@@ -1,2 +1,2 @@
 """Key encapsulation mechanisms."""
-from . import mlkem768, xwing
+from . import mlkem512, mlkem768, xwing

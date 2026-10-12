@@ -3698,6 +3698,36 @@
           "conditions": [
             "arm64-portable"
           ]
+        },
+        "bounded-decompress": {
+          "unit": [
+            "test_compression_limits.mojo::test_stored_block_budget",
+            "test_compression_limits.mojo::test_fixed_block_budget",
+            "test_compression_limits.mojo::test_dynamic_block_budget",
+            "test_compression_limits.mojo::test_decoder_stops_before_backreference_growth",
+            "test_compression_limits.mojo::test_dispatcher_propagates_budget_and_rejects_compressors"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_compression_limits.mojo",
+              "id": "test_compression_limits.mojo::test_stored_block_budget"
+            }
+          ],
+          "comparator": "semantic-decode",
+          "negative": [
+            "test_compression_limits.mojo::test_stored_block_budget",
+            "test_compression_limits.mojo::test_fixed_block_budget",
+            "test_compression_limits.mojo::test_dynamic_block_budget",
+            "test_compression_limits.mojo::test_decoder_stops_before_backreference_growth",
+            "test_compression_limits.mojo::test_dispatcher_propagates_budget_and_rejects_compressors"
+          ],
+          "state": [],
+          "paths": [
+            "scalar"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
         }
       }
     },
@@ -3729,6 +3759,30 @@
           "conditions": [
             "arm64-portable"
           ]
+        },
+        "bounded-decompress": {
+          "unit": [
+            "test_compression_limits.mojo::test_wrapper_budgets_and_concatenated_gzip",
+            "test_compression_limits.mojo::test_dispatcher_propagates_budget_and_rejects_compressors"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_compression_limits.mojo",
+              "id": "test_compression_limits.mojo::test_wrapper_budgets_and_concatenated_gzip"
+            }
+          ],
+          "comparator": "semantic-decode",
+          "negative": [
+            "test_compression_limits.mojo::test_wrapper_budgets_and_concatenated_gzip",
+            "test_compression_limits.mojo::test_dispatcher_propagates_budget_and_rejects_compressors"
+          ],
+          "state": [],
+          "paths": [
+            "scalar"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
         }
       }
     },
@@ -3753,6 +3807,30 @@
           "state": [
             "compression-framing"
           ],
+          "paths": [
+            "scalar"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        },
+        "bounded-decompress": {
+          "unit": [
+            "test_compression_limits.mojo::test_wrapper_budgets_and_concatenated_gzip",
+            "test_compression_limits.mojo::test_dispatcher_propagates_budget_and_rejects_compressors"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_compression_limits.mojo",
+              "id": "test_compression_limits.mojo::test_wrapper_budgets_and_concatenated_gzip"
+            }
+          ],
+          "comparator": "semantic-decode",
+          "negative": [
+            "test_compression_limits.mojo::test_wrapper_budgets_and_concatenated_gzip",
+            "test_compression_limits.mojo::test_dispatcher_propagates_budget_and_rejects_compressors"
+          ],
+          "state": [],
           "paths": [
             "scalar"
           ],
@@ -3859,6 +3937,60 @@
           "comparator": "semantic-decode",
           "negative": [
             "test_encoding_pure.mojo::test_malformed_and_noncanonical_encodings_are_rejected"
+          ],
+          "state": [],
+          "paths": [
+            "scalar"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_PADDING/PKCS7": {
+      "operations": {
+        "pad-unpad": {
+          "unit": [
+            "test_pkcs7.mojo::test_all_block_and_padding_sizes",
+            "test_pkcs7.mojo::test_aes_cbc_openssl_empty_message_vector"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_pkcs7.mojo",
+              "id": "test_pkcs7.mojo::test_all_block_and_padding_sizes"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_pkcs7.mojo::test_corruption_of_each_padding_position",
+            "test_pkcs7.mojo::test_invalid_lengths_and_block_sizes"
+          ],
+          "state": [],
+          "paths": [
+            "scalar"
+          ],
+          "conditions": [
+            "arm64-portable"
+          ]
+        }
+      }
+    },
+    "REFERENCE_OTHER/Base64URL-NoPad": {
+      "operations": {
+        "encode-decode": {
+          "unit": [
+            "test_encoding_pure.mojo::test_unpadded_rfc4648_vectors_and_binary_alphabet"
+          ],
+          "vectors": [
+            {
+              "source": "tests/test_encoding_pure.mojo",
+              "id": "test_encoding_pure.mojo::test_unpadded_rfc4648_vectors_and_binary_alphabet"
+            }
+          ],
+          "comparator": "byte-exact",
+          "negative": [
+            "test_encoding_pure.mojo::test_unpadded_rejects_noncanonical_representations"
           ],
           "state": [],
           "paths": [

@@ -28,3 +28,6 @@ Choose by protocol requirement, not by inventory position.
 - [Legacy compatibility](legacy-compatibility.md)
 
 For every exact catalog name, accepted spelling, API, example, and status, use the [generated inventory](../reference/algorithms.md).
+
+
+See [Standard building blocks](standard-building-blocks.md) for ML-KEM-512, HKDF stages, PKCS#7, strict unpadded Base64URL, and bounded decompression.

@@ -1,10 +1,26 @@
 """Pure-Mojo DEFLATE (RFC 1951), zlib (RFC 1950), and gzip (RFC 1952)."""
 from .algorithm import CompressionTransform
+from std.collections import Optional
 
 from ..hashes.checksums import (
     adler32 as _adler32_digest,
     crc32 as _crc32_digest,
 )
+
+
+def _validate_output_limit(max_output_bytes: Optional[Int]) raises:
+    if max_output_bytes:
+        if max_output_bytes.value() < 0:
+            raise Error("decompression output limit must be nonnegative")
+
+
+def _check_output_growth(
+    current_bytes: Int, additional_bytes: Int, max_output_bytes: Optional[Int]
+) raises:
+    if max_output_bytes:
+        # Subtract rather than adding lengths, so the budget check cannot overflow.
+        if additional_bytes > max_output_bytes.value() - current_bytes:
+            raise Error("decompression output limit exceeded")
 
 
 def _length_base() -> List[Int]:
@@ -378,6 +394,7 @@ def _inflate_codes[
     lit_lengths: List[Int],
     dist_lengths: List[Int],
     max_distance: Int,
+    max_output_bytes: Optional[Int],
 ) raises:
     if len(lit_lengths) <= 256 or lit_lengths[256] == 0:
         raise Error("DEFLATE tree has no end-of-block code")
@@ -402,6 +419,7 @@ def _inflate_codes[
             input, position, bits, bit_count, lit_table, lit_table_bits
         )
         if symbol < 256:
+            _check_output_growth(len(output), 1, max_output_bytes)
             output.append(UInt8(symbol))
         elif symbol == 256:
             return
@@ -430,6 +448,7 @@ def _inflate_codes[
                 or distance > max_distance
             ):
                 raise Error("invalid DEFLATE back-reference")
+            _check_output_growth(len(output), match_length, max_output_bytes)
             var output_offset = len(output)
             output.resize(output_offset + match_length, 0)
             var output_pointer = Span(output).unsafe_ptr()
@@ -548,8 +567,12 @@ struct _InflateResult(Movable):
 def _inflate_raw[
     origin: Origin
 ](
-    input: Span[UInt8, origin], start: Int = 0, max_distance: Int = 32768
+    input: Span[UInt8, origin],
+    start: Int = 0,
+    max_distance: Int = 32768,
+    max_output_bytes: Optional[Int] = None,
 ) raises -> _InflateResult:
+    _validate_output_limit(max_output_bytes)
     var position = start
     var bits = UInt64(0)
     var bit_count = 0
@@ -574,6 +597,7 @@ def _inflate_raw[
                 raise Error("invalid stored DEFLATE block length")
             if position + block_len > len(input):
                 raise Error("truncated stored DEFLATE payload")
+            _check_output_growth(len(output), block_len, max_output_bytes)
             var output_offset = len(output)
             output.resize(output_offset + block_len, 0)
             var input_pointer = input.unsafe_ptr()
@@ -604,6 +628,7 @@ def _inflate_raw[
                 literal,
                 distance,
                 max_distance,
+                max_output_bytes,
             )
         elif block_type == 2:
             var trees = _dynamic_lengths(input, position, bits, bit_count)
@@ -616,6 +641,7 @@ def _inflate_raw[
                 trees[0],
                 trees[1],
                 max_distance,
+                max_output_bytes,
             )
         else:
             raise Error("reserved DEFLATE block type")
@@ -761,8 +787,12 @@ def deflate[origin: Origin](input: Span[UInt8, origin]) raises -> List[UInt8]:
     return output^
 
 
-def inflate[origin: Origin](input: Span[UInt8, origin]) raises -> List[UInt8]:
-    var result = _inflate_raw(input)
+def inflate[
+    origin: Origin
+](
+    input: Span[UInt8, origin], *, max_output_bytes: Optional[Int] = None
+) raises -> List[UInt8]:
+    var result = _inflate_raw(input, max_output_bytes=max_output_bytes)
     if result.consumed != len(input):
         raise Error("trailing data after DEFLATE stream")
     return result^.into_output()
@@ -839,7 +869,10 @@ def zlib_compress[
 
 def zlib_decompress[
     origin: Origin
-](input: Span[UInt8, origin]) raises -> List[UInt8]:
+](
+    input: Span[UInt8, origin], *, max_output_bytes: Optional[Int] = None
+) raises -> List[UInt8]:
+    _validate_output_limit(max_output_bytes)
     if len(input) < 6:
         raise Error("truncated zlib stream")
     var cmf = Int(input[0])
@@ -848,7 +881,7 @@ def zlib_decompress[
         raise Error("invalid zlib header")
     if (flg & 0x20) != 0:
         raise Error("zlib preset dictionaries are unsupported")
-    var result = _inflate_raw(input, 2, 1 << ((cmf >> 4) + 8))
+    var result = _inflate_raw(input, 2, 1 << ((cmf >> 4) + 8), max_output_bytes)
     var trailer = result.consumed
     if trailer + 4 != len(input):
         raise Error("truncated or trailing zlib data")
@@ -871,7 +904,10 @@ def gzip_compress[
 
 def gzip_decompress[
     origin: Origin
-](input: Span[UInt8, origin]) raises -> List[UInt8]:
+](
+    input: Span[UInt8, origin], *, max_output_bytes: Optional[Int] = None
+) raises -> List[UInt8]:
+    _validate_output_limit(max_output_bytes)
     var member_start = 0
     var output = List[UInt8]()
     while member_start < len(input):
@@ -921,7 +957,10 @@ def gzip_decompress[
             if expected != actual:
                 raise Error("gzip header checksum mismatch")
             position += 2
-        var result = _inflate_raw(input, position)
+        var remaining = max_output_bytes
+        if remaining:
+            remaining = remaining.value() - len(output)
+        var result = _inflate_raw(input, position, max_output_bytes=remaining)
         var trailer = result.consumed
         if trailer + 8 > len(input):
             raise Error("truncated gzip data")
@@ -939,19 +978,30 @@ def gzip_decompress[
 
 def transform[
     origin: Origin
-](algorithm: CompressionTransform, input: Span[UInt8, origin]) raises -> List[
-    UInt8
-]:
+](
+    algorithm: CompressionTransform,
+    input: Span[UInt8, origin],
+    *,
+    max_output_bytes: Optional[Int] = None,
+) raises -> List[UInt8]:
+    _validate_output_limit(max_output_bytes)
+    if max_output_bytes:
+        if (
+            algorithm == CompressionTransform.DEFLATE
+            or algorithm == CompressionTransform.ZLIB_COMPRESS
+            or algorithm == CompressionTransform.GZIP
+        ):
+            raise Error("output limit is only supported for decompression")
     if algorithm == CompressionTransform.DEFLATE:
         return deflate(input)
     if algorithm == CompressionTransform.INFLATE:
-        return inflate(input)
+        return inflate(input, max_output_bytes=max_output_bytes)
     if algorithm == CompressionTransform.ZLIB_COMPRESS:
         return zlib_compress(input)
     if algorithm == CompressionTransform.ZLIB_DECOMPRESS:
-        return zlib_decompress(input)
+        return zlib_decompress(input, max_output_bytes=max_output_bytes)
     if algorithm == CompressionTransform.GZIP:
         return gzip_compress(input)
     if algorithm == CompressionTransform.GUNZIP:
-        return gzip_decompress(input)
+        return gzip_decompress(input, max_output_bytes=max_output_bytes)
     raise Error("invalid compression selector")
