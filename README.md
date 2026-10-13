@@ -1,6 +1,6 @@
 # mcrypto
 
-mcrypto is a Mojo library of cryptographic primitives, compatibility algorithms, and batched implementations. Version `0.1.0` targets Mojo `1.0.0` on Linux x86_64, Linux AArch64, and macOS arm64.
+mcrypto is a Mojo library of cryptographic primitives, compatibility algorithms, and batched implementations. Version `0.2.0` targets Mojo `1.0.0` on Linux x86_64, Linux AArch64, and macOS arm64.
 
 > **Disclaimer:** This library was written with the assistance of AI and may contain errors.
 

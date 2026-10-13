@@ -2,7 +2,7 @@
 channels = ["https://conda.modular.com/max", "conda-forge"]
 name = "mcrypto"
 platforms = ["linux-64", "linux-aarch64", "osx-arm64"]
-version = "0.1.0"
+version = "0.2.0"
 description = "Cryptographic primitives for Mojo"
 authors = ["Alex Soares <alexsanderlimare@gmail.com>"]
 license = "MIT"
