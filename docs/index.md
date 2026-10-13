@@ -4,7 +4,7 @@ title: Home
 
 # mcrypto
 
-mcrypto `0.1.0` is a cryptography library for Mojo `1.0.0`. It provides fixed hashes and XOFs, symmetric and public-key primitives, KDFs, secure-memory helpers, compatibility algorithms, and prepared/batched paths.
+mcrypto `0.2.0` is a cryptography library for Mojo `1.0.0`. It provides fixed hashes and XOFs, symmetric and public-key primitives, KDFs, secure-memory helpers, compatibility algorithms, and prepared/batched paths.
 
 > **Disclaimer:** This library was written with the assistance of AI and may contain errors.
 
